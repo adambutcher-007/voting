@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meanwhile in Minnesota — Your Eden Prairie 2026 Ballot</title>
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#22303c; --muted:#6b7a88; --line:#e6e1d6;
+  --accent:#2f6fed; --accent2:#12a06b; --gold:#e8a13a; --dfl:#2f6fed; --gop:#d64545; --np:#8b6fc2; --ind:#5c8a8a;
+  --shadow:0 6px 24px rgba(34,48,60,.08); --r:18px;
+}
+[data-theme="dark"]{
+  --bg:#141a21; --card:#1d2630; --ink:#e8edf2; --muted:#93a3b3; --line:#2c3947;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+/* ---------- THEME PACKS ---------- */
+[data-theme="modern"]{
+  --bg:#fafbfc; --card:#ffffff; --ink:#111827; --muted:#6b7280; --line:#e5e7eb;
+  --accent:#4f46e5; --accent2:#0ea5e9; --gold:#f59e0b;
+  --shadow:0 1px 3px rgba(0,0,0,.07),0 8px 24px rgba(17,24,39,.06); --r:12px;
+}
+[data-theme="retro"]{
+  --bg:#1a1033; --card:#241650; --ink:#e8e6ff; --muted:#9d94d0; --line:#3c2a78;
+  --accent:#ff2e97; --accent2:#00e5a0; --gold:#ffd23f;
+  --shadow:4px 4px 0 rgba(0,0,0,.45); --r:4px;
+  --font:'Courier New',Courier,monospace;
+}
+[data-theme="retro"] body,body[data-theme="retro"]{background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.02) 3px 4px)}
+[data-theme="retro"] .hero h1{text-shadow:3px 3px 0 rgba(255,46,151,.35)}
+[data-theme="l337"]{
+  --bg:#050a05; --card:#0a140a; --ink:#2aff5d; --muted:#1a9e3f; --line:#114a1e;
+  --accent:#2aff5d; --accent2:#00ccff; --gold:#ffe600;
+  --shadow:0 0 14px rgba(42,255,93,.14); --r:6px;
+  --font:Consolas,'Courier New',monospace;
+}
+[data-theme="l337"] .hero h1 em{background:none;color:#2aff5d;text-shadow:0 0 12px rgba(42,255,93,.7)}
+[data-theme="l337"] .tab.active,[data-theme="l337"] .btn.primary{color:#050a05}
+[data-theme="cowboy"]{
+  --bg:#f3e3c3; --card:#fbf1dc; --ink:#4a2e19; --muted:#8a6a4a; --line:#d9c194;
+  --accent:#a0522d; --accent2:#6b8e23; --gold:#b8860b;
+  --shadow:0 4px 14px rgba(74,46,25,.18); --r:10px;
+  --font:Georgia,'Times New Roman',serif;
+}
+[data-theme="forest"]{
+  --bg:#122019; --card:#1b2f24; --ink:#e4efe6; --muted:#8fae9a; --line:#2c4a39;
+  --accent:#4caf7d; --accent2:#a3c65c; --gold:#e0b34c;
+  --shadow:0 8px 26px rgba(0,0,0,.35); --r:20px;
+}
+[data-theme="underwater"]{
+  --bg:#06283d; --card:#0b3a55; --ink:#dff3ff; --muted:#86b8d0; --line:#14506f;
+  --accent:#00c2d8; --accent2:#37e0b0; --gold:#ffcf6e;
+  --shadow:0 10px 30px rgba(0,10,20,.45); --r:26px;
+}
+body[data-theme="underwater"]{background-image:radial-gradient(ellipse at 20% 0%,rgba(0,194,216,.10),transparent 55%),radial-gradient(ellipse at 80% 100%,rgba(55,224,176,.08),transparent 55%)}
+[data-theme="rave"]{
+  --bg:#0b0212; --card:#180527; --ink:#f5e9ff; --muted:#b78ae0; --line:#33104f;
+  --accent:#ff00c8; --accent2:#00ffe1; --gold:#ccff00;
+  --shadow:0 0 20px rgba(255,0,200,.22); --r:22px;
+}
+body[data-theme="rave"]{background-image:radial-gradient(circle at 15% 20%,rgba(255,0,200,.12),transparent 45%),radial-gradient(circle at 85% 70%,rgba(0,255,225,.10),transparent 45%)}
+[data-theme="rave"] .hero h1 em{animation:raveHue 3s linear infinite}
+@keyframes raveHue{to{filter:hue-rotate(360deg)}}
+[data-theme="winter"]{
+  --bg:#eef4f9; --card:#ffffff; --ink:#1e3a4f; --muted:#6e8ba0; --line:#d6e4ef;
+  --accent:#2b7bb9; --accent2:#5aa8c9; --gold:#c68b3f;
+  --shadow:0 6px 22px rgba(43,123,185,.12); --r:18px;
+}
+[data-theme="fair"]{
+  --bg:#fff4e0; --card:#fffdf6; --ink:#4a2c1a; --muted:#96704c; --line:#f0dcb8;
+  --accent:#d94f30; --accent2:#2a9d8f; --gold:#e9a319;
+  --shadow:0 6px 20px rgba(217,79,48,.14); --r:24px;
+}
+[data-theme="newsprint"]{
+  --bg:#efece4; --card:#f8f6ef; --ink:#1c1b18; --muted:#6e6a5e; --line:#d8d3c4;
+  --accent:#8a1c1c; --accent2:#38536b; --gold:#9c7a2e;
+  --shadow:0 3px 10px rgba(28,27,24,.12); --r:6px;
+  --font:Georgia,'Times New Roman',serif;
+}
+/* theme picker grid */
+.themegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:16px}
+.swatch{border:2px solid var(--line);border-radius:14px;padding:12px;cursor:pointer;transition:transform .15s,border-color .2s;text-align:left}
+.swatch:hover{transform:translateY(-3px)}
+.swatch.cur{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 30%,transparent)}
+.swatch .strip{display:flex;gap:4px;margin-bottom:8px}
+.swatch .strip i{height:16px;flex:1;border-radius:6px}
+.swatch b{font-size:.85rem}
+.swatch small{display:block;color:var(--muted);font-size:.72rem}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--font:'Segoe UI',system-ui,-apple-system,sans-serif}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);transition:background .4s,color .4s;line-height:1.55}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.ctrl{display:flex;gap:8px}
+.iconbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:.9rem;transition:transform .15s,background .3s;box-shadow:var(--shadow)}
+.iconbtn:hover{transform:translateY(-2px)}
+.hero{padding:56px 0 28px;text-align:center}
+.hero h1{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:620px;margin:12px auto 0}
+.badgesrow{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.pill{border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:600;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.countdowns{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:30px 0}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);text-align:center;animation:pop .6s ease both}
+.cd h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.cd .num{font-size:2.4rem;font-weight:800;color:var(--accent)}
+.cd.gen .num{color:var(--accent2)}
+.cd small{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:30px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-align:center;box-shadow:var(--shadow);animation:pop .6s ease both}
+.stat b{display:block;font-size:1.9rem;color:var(--gold)}
+.stat span{font-size:.82rem;color:var(--muted)}
+h2.sect{font-size:1.4rem;font-weight:800;margin:36px 0 6px;letter-spacing:-.02em}
+p.sub{color:var(--muted);margin-bottom:16px;font-size:.95rem}
+.chartcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);margin-bottom:20px}
+.bar{display:flex;align-items:center;gap:10px;margin:8px 0}
+.bar .lbl{width:200px;font-size:.85rem;text-align:right;color:var(--muted);flex-shrink:0}
+.bar .track{flex:1;background:var(--line);border-radius:999px;height:16px;overflow:hidden}
+.bar .fill{height:100%;border-radius:999px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.bar .val{width:26px;font-weight:700;font-size:.85rem}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:.8rem;color:var(--muted)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.donutwrap{display:flex;gap:26px;align-items:center;flex-wrap:wrap;justify-content:center}
+.facts{position:relative;background:linear-gradient(120deg,var(--accent),var(--accent2));border-radius:var(--r);padding:26px;color:#fff;box-shadow:var(--shadow);margin-bottom:8px;min-height:120px;overflow:hidden}
+.facts h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+.facts p{font-size:1.05rem;font-weight:600;margin-top:8px;animation:fadeUp .5s ease}
+.facts button{position:absolute;right:16px;bottom:14px;background:rgba(255,255,255,.22);border:none;color:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 18px;position:sticky;top:62px;z-index:40;padding:8px 0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px)}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:8px 16px;cursor:pointer;font-size:.88rem;font-weight:600;transition:all .2s}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff;transform:scale(1.05)}
+.race{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden;animation:fadeUp .5s ease both}
+.racehead{padding:20px 22px 8px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.racehead h3{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:999px;padding:4px 10px}
+.tag.open{background:#fce8c8;color:#9a6410}[data-theme="dark"] .tag.open{background:#4a3a14;color:#f0c674}
+.tag.inc{background:#d9e9ff;color:#1d4fa0}[data-theme="dark"] .tag.inc{background:#1d3a63;color:#9cc3f5}
+.tag.lvl{background:var(--line);color:var(--muted)}
+.tag.upd{background:var(--gold);color:#fff;animation:pulseTag 2s ease-in-out infinite}
+@keyframes pulseTag{0%,100%{opacity:1}50%{opacity:.65}}
+.cand .newpill{position:absolute;top:-9px;left:14px;font-size:.62rem;font-weight:800;border-radius:999px;padding:3px 8px;background:var(--gold);color:#fff;letter-spacing:.03em;box-shadow:0 2px 5px rgba(0,0,0,.25);z-index:2}
+.updatebox{background:linear-gradient(120deg,color-mix(in srgb,var(--gold) 18%,var(--card)),var(--card));border:1.5px solid var(--gold);border-radius:14px;padding:14px 16px;margin-top:16px}
+.updatebox h5{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:4px}
+.updatebox p{font-size:.9rem}
+.whatsnew{background:var(--card);border:1.5px solid var(--gold);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);margin-bottom:20px}
+.whatsnew h4{font-size:.95rem;font-weight:800;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.whatsnew ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.whatsnew li{font-size:.9rem;padding-left:20px;position:relative}
+.whatsnew li::before{content:"●";color:var(--gold);position:absolute;left:0}
+.whatsnew a{color:var(--accent);text-decoration:none;font-weight:600}
+.freshtag{display:inline-block;margin-left:8px;font-size:.65rem;font-weight:800;background:var(--gold);color:#fff;border-radius:999px;padding:2px 8px;vertical-align:middle;animation:pulseTag 2s ease-in-out infinite}
+.racewhy{padding:0 22px 14px;color:var(--muted);font-size:.93rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;padding:0 22px 16px}
+.cand{border:1.5px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;transition:transform .18s,border-color .2s,box-shadow .2s;position:relative;background:var(--bg)}
+.cand:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.cand.sel{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 30%,transparent)}
+.cand h4{font-size:1rem;font-weight:700}
+.cand .partypill{display:inline-block;font-size:.7rem;font-weight:800;color:#fff;border-radius:999px;padding:3px 9px;margin:6px 0}
+.cand .mini{font-size:.82rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cand .badge{position:absolute;top:10px;right:10px;font-size:.65rem;font-weight:800;border-radius:999px;padding:3px 8px;background:var(--gold);color:#fff}
+.cand .medalbadge{position:absolute;bottom:8px;right:10px;font-size:1.5rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));animation:pop .35s ease}
+.medalrow{display:flex;gap:6px;margin-top:8px;align-items:center}
+.medalbtn{border:1.5px solid var(--line);background:var(--bg);border-radius:10px;width:32px;height:32px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,border-color .2s,filter .2s;opacity:.55}
+.medalbtn:hover{transform:translateY(-2px) scale(1.08);opacity:1}
+.medalbtn.on{opacity:1;border-color:var(--gold);background:color-mix(in srgb,var(--gold) 18%,var(--bg));box-shadow:0 0 0 2px color-mix(in srgb,var(--gold) 35%,transparent)}
+.medalbtn.taken{opacity:.25;filter:grayscale(1)}
+.leanhint{font-size:.7rem;color:var(--muted);margin-left:2px}
+.modalmedals{display:flex;gap:8px;align-items:center;margin-top:14px;padding:12px;border:1.5px dashed var(--line);border-radius:12px}
+.modalmedals .medalbtn{width:38px;height:38px;font-size:1.2rem}
+.raceactions{padding:0 22px 20px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:none;border-radius:999px;padding:9px 18px;cursor:pointer;font-weight:700;font-size:.87rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--muted)}
+.emptynote{padding:0 22px 20px;color:var(--muted);font-size:.9rem;font-style:italic}
+/* modal */
+.overlay{position:fixed;inset:0;background:rgba(10,14,18,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:18px}
+.overlay.show{display:flex;animation:fadeIn .25s ease}
+.modal{background:var(--card);border-radius:22px;max-width:860px;width:100%;max-height:88vh;overflow-y:auto;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:pop .3s ease}
+.modal h3{font-size:1.3rem;margin-bottom:4px}
+.modal .close{float:right;font-size:1.1rem;background:var(--line);border:none;border-radius:999px;width:34px;height:34px;cursor:pointer;color:var(--ink)}
+.detailsec{margin-top:16px}
+.detailsec h5{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+.detailsec p{font-size:.93rem}
+.srcs{margin-top:18px;font-size:.8rem;color:var(--muted)}
+.srcs a{color:var(--accent);text-decoration:none}
+.cmptable{width:100%;border-collapse:collapse;margin-top:14px}
+.cmptable th,.cmptable td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.88rem;text-align:left}
+.summaryBox{margin-top:16px;background:color-mix(in srgb,var(--accent) 6%,var(--card));border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.85rem;line-height:1.55;max-height:44vh;overflow-y:auto}
+.summaryActions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.summaryBtn{border:1.5px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--card));color:var(--accent);border-radius:14px;padding:11px 18px;font-weight:800;font-size:.88rem;cursor:pointer;transition:transform .15s,background .2s;flex:1;min-width:140px}
+.summaryBtn:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--accent) 18%,var(--card))}
+.summaryBtn.copied{background:var(--good,#12a06b);color:#fff;border-color:transparent}
+@media print{
+  body>*:not(.overlay){display:none!important}
+  .overlay{position:static!important;background:none!important;display:block!important;padding:0!important}
+  .overlay .modal{box-shadow:none!important;max-width:100%!important;max-height:none!important;animation:none!important}
+  .overlay .modal .close,.overlay .modal .summaryActions,.overlay .modal .modalmedals{display:none!important}
+  .summaryBox{max-height:none!important;overflow:visible!important;border:none!important;background:none!important}
+}
+.cmptable th{font-size:1rem}
+.cmptable td:first-child{font-weight:700;color:var(--muted);width:110px;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.drBtnRow{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.drBtn{width:100%;border:1.5px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--card));color:var(--accent);border-radius:14px;padding:12px;font-weight:800;font-size:.92rem;cursor:pointer;transition:transform .15s,background .2s}
+.drBtn:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--accent) 18%,var(--card))}
+.drBack{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 16px;font-weight:700;font-size:.82rem;cursor:pointer;margin-bottom:14px}
+.drCat{margin-top:20px}
+.drCat h5{font-size:.95rem;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:10px;color:var(--ink)}
+.drCat h5 .n{font-size:.68rem;font-weight:800;background:var(--line);color:var(--muted);border-radius:999px;padding:2px 9px}
+.drEmpty{font-size:.85rem;color:var(--muted);font-style:italic;padding-left:2px}
+.drTimeline{position:relative;padding-left:20px;border-left:2px solid var(--line)}
+.drItem{position:relative;padding-bottom:14px}
+.drItem:last-child{padding-bottom:0}
+.drItem::before{content:"";position:absolute;left:-25px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--card)}
+.drDate{display:inline-block;font-size:.7rem;font-weight:800;color:#fff;background:var(--accent2);border-radius:999px;padding:2px 9px;margin-bottom:4px}
+.drText{font-size:.87rem}
+.drSrcs{font-size:.75rem;color:var(--muted);margin-top:3px}
+.drSrcs a{color:var(--accent);text-decoration:none}
+footer{margin:50px 0 30px;text-align:center;color:var(--muted);font-size:.82rem}
+footer a{color:var(--accent)}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:640px){.bar .lbl{width:120px}}
+</style>
+</head>
+<body>
+<header><div class="wrap topbar">
+  <div class="logo">Meanwhile <span>in Minnesota</span></div>
+  <div class="ctrl">
+    <button class="iconbtn" id="soundBtn" title="Toggle sound">🔊</button>
+    <button class="iconbtn" id="themesBtn" title="Choose a theme">🎨</button>
+    <button class="iconbtn" id="printBtn" title="Summarize &amp; print my leans">🖨️</button>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>Your Eden Prairie ballot, <em>decoded</em>.</h1>
+    <p>Everything on your fall 2026 Minnesota ballot — who's running, what they say they'll do, and what their critics say — in plain English. No jargon, no spin, sources included.</p>
+    <div class="badgesrow">
+      <span class="pill">📍 Eden Prairie · Hennepin County</span>
+      <span class="pill">🗳️ Primary: Aug 11</span>
+      <span class="pill">🍂 General: Nov 3</span>
+      <span class="pill">📅 Updated Aug 7, 2026</span>
+    </div>
+  </section>
+
+  <div class="countdowns">
+    <div class="cd"><h3>Primary Election</h3><div class="num" id="cdPrim">—</div><small>days until Aug 11 · narrows every crowded race to finalists</small></div>
+    <div class="cd gen"><h3>General Election</h3><div class="num" id="cdGen">—</div><small>days until Nov 3 · the one that decides it all</small></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="stRaces">0</b><span>races on your ballot</span></div>
+    <div class="stat"><b id="stCands">0</b><span>candidates so far</span></div>
+    <div class="stat"><b id="stOpen">0</b><span>open seats (no incumbent)</span></div>
+    <div class="stat"><b>2</b><span>trips to the polls</span></div>
+  </div>
+
+  <div class="whatsnew" id="whatsnew">
+    <h4>🆕 What's new since your last visit<span class="freshtag">Aug 7</span></h4>
+    <ul id="whatsnewList"></ul>
+  </div>
+
+  <div class="facts" id="factbox">
+    <h4>💡 Did you know?</h4>
+    <p id="factText"></p>
+    <button onclick="nextFact()">Another one →</button>
+  </div>
+
+  <h2 class="sect">This ballot is unusually wide open</h2>
+  <p class="sub">An "open seat" means no incumbent is running — a genuinely fresh choice. You have a remarkable number of them this year.</p>
+  <div class="chartcard" id="openChart"></div>
+
+  <h2 class="sect">How crowded is each primary?</h2>
+  <p class="sub">More bars = more choices on August 11. Tap any race below to meet the candidates.</p>
+  <div class="chartcard" id="crowdChart"></div>
+
+  <h2 class="sect">The races</h2>
+  <p class="sub">Tap a candidate for their full profile. Mark who you're leaning toward with 🥇🥈🥉 — handy for multi-seat races like City Council or School Board. Select two (⭐) in the same race to Compare. Both are saved on this device and restored next time you visit.</p>
+  <div class="tabs" id="tabs"></div>
+  <div id="racelist"></div>
+
+  <footer>
+    Made for informed voting, not persuasion. Every claim links to its source inside candidate profiles.<br>
+    Verify your exact ballot at <a href="https://myballotmn.sos.mn.gov/" target="_blank">MyBallotMN</a> · Data compiled July 11, 2026 · last refreshed Aug 7, 2026.
+  </footer>
+</div>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()"><div class="modal" id="modal"></div></div>
+
+<script>
+/* ---------- DATA (compiled from local research repo, July 11, 2026) ---------- */
+const PARTY = {
+  DFL:{c:"var(--dfl)",label:"DFL"},
+  GOP:{c:"var(--gop)",label:"Republican"},
+  IND:{c:"var(--ind)",label:"Independent"},
+  NP:{c:"var(--np)",label:"Nonpartisan"},
+  OTH:{c:"var(--ind)",label:"Other"}
+};
+const S = {
+  bpSen:["Ballotpedia — US Senate MN 2026","https://ballotpedia.org/United_States_Senate_election_in_Minnesota,_2026"],
+  strib1:["Star Tribune — outside spending","https://www.startribune.com/angie-craig-peggy-flanagan-minnesota-senate-race-outside-spending-donor-pac/601851815"],
+  axios1:["Axios Twin Cities — ICE backlash","https://www.axios.com/local/twin-cities/2026/03/30/minnesota-senate-primary-flanagan-craig-ice-raids-dfl-endorsement-delegates"],
+  nbc1:["NBC News — ICE attack ad","https://www.nbcnews.com/politics/2026-election/democratic-group-launches-ice-attack-rep-angie-craig-minnesota-senate-rcna345888"],
+  kaal:["KAAL — spending clash","https://www.kaaltv.com/news/lieutenant-governor-and-u-s-senate-candidate-peggy-flanagan-raises-questions-about-campaign-spending-rep-angie-craig-responds/"],
+  cbsSen:["CBS Minnesota — DFL Senate primary","https://www.cbsnews.com/minnesota/news/minnesota-dfl-u-s-senate-primary-angie-craig-peggy-flanagan/"],
+  kare:["KARE 11 — DFL primary","https://www.kare11.com/article/news/politics/minnesota-dfl-primary-for-us-senate-heats-up-between-lt-gov-peggy-flanagan-and-rep-angie-craig/89-5fde0e39-7ce5-42d0-b665-ff1e08f73bcf"],
+  strib2:["Star Tribune — GOP endorsement","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"],
+  minnpost1:["MinnPost — GOP primary ahead","https://www.minnpost.com/elections/2026/05/gop-primary-awaits-after-schwarze-tops-tafoya-for-partys-u-s-senate-endorsement/"],
+  bpGov:["Ballotpedia — MN Governor 2026","https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026"],
+  bpGov7:["Ballotpedia News — 7-way GOP primary","https://news.ballotpedia.org/2026/06/11/record-high-seven-candidates-running-in-minnesotas-republican-gubernatorial-primary/"],
+  cbsGov:["CBS Minnesota — GOP gov primary","https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/"],
+  refQ:["MN Reformer — Qualls endorsed","https://minnesotareformer.com/2026/05/30/kendall-qualls-wins-gop-endorsement-for-governor/"],
+  stribK:["Star Tribune — MN Poll: Klobuchar leads","https://www.startribune.com/minnesota-poll-klobuchar-leads-all-gop-candidates-for-governor/601850018"],
+  stribK2:["Star Tribune — Klobuchar's first real test","https://www.startribune.com/amy-klobuchar-dominated-her-senate-races-will-she-do-the-same-in-governors-race/601651767"],
+  refMoney:["MN Reformer — fundraising","https://minnesotareformer.com/briefs/klobuchar-continues-to-far-out-raise-gop-candidates-for-minnesota-governor/"],
+  bpH3:["Ballotpedia — MN-3 2026","https://ballotpedia.org/Minnesota's_3rd_Congressional_District_election,_2026"],
+  bpMorr:["Ballotpedia — Kelly Morrison","https://ballotpedia.org/Kelly_Morrison"],
+  bpSos:["Ballotpedia — MN Sec. of State 2026","https://ballotpedia.org/Minnesota_Secretary_of_State_election,_2026"],
+  bpAud:["Ballotpedia — MN Auditor 2026","https://ballotpedia.org/Minnesota_Auditor_election,_2026"],
+  wikiAG:["Wikipedia — MN AG 2026","https://en.wikipedia.org/wiki/2026_Minnesota_Attorney_General_election"],
+  epl1:["EP Local News — 2026 ballots take shape","https://eplocalnews.org/2026/06/24/2026-ballots-take-shape-for-eden-prairie-voters/"],
+  epl2:["EP Local News — GOP endorsements","https://eplocalnews.org/2026/05/28/gop-endorses-candidates-for-eden-prairie-area-legislative-races/"],
+  epl3:["EP Local News — Houdek endorsed","https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/"],
+  epl4:["EP Local News — Falconer wins 49A (2024)","https://eplocalnews.org/2024/11/06/falconer-wins-49a-kotyza-witthuhn-holds-49b-in-eden-prairie-state-house-races/"],
+  fox9:["FOX 9 — county attorney field","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"],
+  ccx:["CCX Media — LWV forum","https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/"],
+  stribF:["Star Tribune — Frazier endorsed","https://www.startribune.com/hennepin-county-attorney-race-cedrick-frazier-dfl-endorsement/601856726"],
+  stribW:["Star Tribune — sheriff endorsement fight","https://www.startribune.com/hennepin-county-dfl-sheriff-endorsement/601856965"],
+  hts:["Hometown Source — 2 file for sheriff","https://www.hometownsource.com/sun_sailor/free/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html"],
+  epcity:["City of Eden Prairie — 2026 elections","https://www.edenprairiemn.gov/city-government/elections"],
+  henn:["Hennepin County — offices on the ballot","https://www.hennepincounty.gov/services/elections/offices-on-the-ballot"],
+  minnlaw:["Minnesota Lawyer — who's running","https://minnlawyer.com/2025/11/13/hennepin-county-attorney-race-2026/"],
+  eplFile:["EP Local News — who filed for local offices","https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/"],
+  epBioCase:["City of Eden Prairie — Mayor Ron Case","https://www.edenprairiemn.gov/city-government/city-council/ron-case"],
+  epBioFrei:["City of Eden Prairie — Mark Freiberg","https://www.edenprairiemn.gov/city-government/city-council/mark-freiberg"],
+  epBioNel:["City of Eden Prairie — Kathy Nelson","https://www.edenprairiemn.gov/city-government/city-council/kathy-nelson"],
+  bpLehman:["Ballotpedia — Greg Lehman (2022)","https://ballotpedia.org/Greg_Lehman_(Eden_Prairie_City_Council,_Minnesota,_candidate_2022)"],
+  dirkSite:["Dirk Tedmon campaign site","https://forwardwithdirk.com/"],
+  dfl49:["DFL SD49 — candidates seeking endorsement","https://dfl49.org/2026-candidates-seeking-endorsement"],
+  stecherSite:["Dr. Kellie Stecher campaign site","https://drkelliestecher49.com/"],
+  stecherEpl:["EP Local News — Stecher and the SD49 endorsement","https://eplocalnews.org/2026/04/01/stecher-backed-for-dfl-senate-district-49-endorsement/"],
+  mprWitt:["MPR News — Witt says feds threatened to arrest her","https://www.mprnews.org/story/2026/08/06/hennepin-county-sheriff-dawanna-witt-says-feds-threatened-to-arrest-her"],
+  hoodline:["Hoodline — Witt faces felony threat from feds","https://hoodline.com/2026/08/hennepin-sheriff-witt-faces-felony-threat-from-feds-fires-back-come-get-me/"],
+  townhall:["Townhall — conservative outlet, different framing","https://townhall.com/news/amy-curtis/2026/08/07/ice-threatens-to-arrest-hennepin-co-sheriff-n2680860"],
+  mnRefSen:["Minnesota Reformer — state of the Senate race","https://minnesotareformer.com/2026/07/31/state-of-the-race-for-u-s-senate/"],
+  nativeNews:["Native News Online — reports a DLGA-commissioned poll","https://nativenewsonline.net/currents/new-poll-shows-peggy-flanagan-expanding-lead-in-minnesota-democratic-u-s-senate-primary/"],
+  mprFarmfest:["MPR News — Farmfest governor debate","https://www.mprnews.org/story/2026/08/05/klobuchar-demuth-qualls-lindell-tangle-in-farmfest-debate-as-the-vie-to-be-next-governor"],
+  mnRefFarmfest:["Minnesota Reformer — candidates pitch farmers at Farmfest","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"],
+  bpSchwarze:["Ballotpedia — Adam Schwarze","https://ballotpedia.org/Adam_Schwarze"],
+  mprSchwarze:["MPR News — Schwarze wins GOP endorsement","https://www.mprnews.org/story/2026/05/29/schwarze-wins-gop-endorsement-in-us-senate-race"],
+  polOrgSchwarze:["political.org — Schwarze blasts DC establishment","https://political.org/2026/06/01/minnesota-gop-endorsed-senate-candidate-adam-schwarze-blasts-dcs-establishment-class-after-defeating-michele-tafoya/"],
+  minnpostTafoya:["MinnPost — Tafoya's national vs. state support","https://www.minnpost.com/national/washington/2026/05/michele-tafoya-has-support-of-national-gop-but-winning-over-state-activists-challenge/"],
+  notusTafoya:["NOTUS — Tafoya interview","https://www.notus.org/2026-election/republican-top-senate-recruit-minnesota-michele-tafoya-interview"],
+  foxViewTafoya:["Fox News — Tafoya on The View, vaccine mandates","https://www.foxnews.com/media/the-view-coronavirus-vaccines-choice"],
+  bpLonerBlue:["Ballotpedia — Loner Blue","https://ballotpedia.org/Loner_Blue"],
+  vsLonerBlue:["VoteSmart — Loner Blue","https://justfacts.votesmart.org/candidate/218179/loner-blue"],
+  wikiSen2024:["Wikipedia — 2024 US Senate election in Minnesota","https://en.wikipedia.org/wiki/2024_United_States_Senate_election_in_Minnesota"],
+  krhinSite:["krhin4gov.com — About","https://krhin4gov.com/about/"],
+  kttcKrhin:["KTTC — John Krhin interview","https://www.kttc.com/2026/05/14/one-on-one-with-minnesota-gubernatorial-candidate-john-krhin/"],
+  nujKrhin:["New Ulm Journal — Krhin prayer tour","https://www.nujournal.com/news/local-news/2026/07/11/gop-governor-candidates-prayer-tour-reaches-brown-county/"],
+  bemidjiKrhin:["Bemidji Pioneer — Krhin visits Bemidji churches","https://www.bemidjipioneer.com/news/gop-governor-hopeful-john-krhin-visits-bemidji-connects-with-local-churches"],
+  bpSchutz:["Ballotpedia — Ron Schutz","https://ballotpedia.org/Ron_Schutz"],
+  stribSchutz:["Star Tribune — Schutz enters AG race","https://www.startribune.com/republican-ron-schutz-enters-race-for-minnesota-attorney-general/601488275"],
+  mprSchutz:["MPR News — Republicans endorse Schutz","https://www.mprnews.org/story/2026/05/29/republicans-endorse-trial-lawyer-ron-schutz-for-attorney-general"],
+  hoodlineSchutz:["Hoodline — Schutz leaves Robins Kaplan","https://hoodline.com/2026/03/top-twin-cities-trial-star-ditches-power-firm-to-take-on-keith-ellison/"],
+  kttcSchutz:["KTTC — Schutz interview","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"],
+  dflSchutz:["Minnesota DFL — statement on Schutz","https://dfl.org/dfl-party-statement-on-ron-schutzs-run-for-attorney-general/"],
+  dufaultSite:["dufaultformn.com","https://dufaultformn.com/"],
+  dufaultLaw:["DuFault Law Firm — About","https://www.dufault-law.com/about"],
+  houdekLinkedin:["LinkedIn — Jeff Houdek","https://www.linkedin.com/in/jeffhoudek/"],
+  creggAnnounce:["Hometown Source — Cregg announces HD 49B bid","https://www.hometownsource.com/sun_sailor/free/eden-prairies-cregg-announces-republican-bid-for-hd-49b/article_d79bb7c1-a9af-41b9-b4b4-ca9ed3fd42b4.html"],
+  creggLetter:["EP Local News — reader letter on Cregg","https://eplocalnews.org/2026/06/23/cregg-would-restore-accountability-in-minnesota/"],
+  bpEngen:["Ballotpedia — Elliott Engen","https://ballotpedia.org/Elliott_Engen"],
+  kstpEngen:["KSTP — Engen announces auditor bid","https://kstp.com/kstp-news/top-news/republican-representative-engen-announces-bid-for-minnesota-auditor/"],
+  yahooEngen:["Yahoo News — Engen drops auditor bid, DWI","https://www.yahoo.com/news/politics/articles/rep-engen-drops-financial-watchdog-161407000.html"],
+  fox9Engen:["FOX 9 — Engen drops auditor bid, files House reelection","https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026"],
+  bpGeorge:["Ballotpedia — Nate George","https://ballotpedia.org/Nate_George"],
+  mngopGeorge:["MN GOP — George earns endorsement for auditor","https://mngop.com/republican-party-of-minnesota-congratulates-nate-george-on-earning-gop-endorsement-for-state-auditor-2/"],
+  minnpostGeorge:["MinnPost — George's 'certified fraud examiner' claim","https://www.minnpost.com/elections/2026/07/nate-george-state-auditor-resume-claims-certified-fraud-examiner/"],
+  kstpGeorge:["KSTP — George clarifies misstated qualifications","https://kstp.com/kstp-news/local-news/gop-endorsed-candidate-for-state-auditor-clarifies-posts-that-misstated-qualifications/"],
+  bpJensenAud:["Ballotpedia — Scott Jensen (auditor race)","https://ballotpedia.org/Scott_Jensen_(Minnesota)"],
+  kttcJensen:["KTTC — Jensen withdraws from governor's race","https://www.kttc.com/2026/02/09/scott-jensen-withdraws-minnesota-governors-race-pursue-state-auditor-position/"],
+  mprJensen:["MPR News — Jensen drops gov bid, runs for auditor","https://www.mprnews.org/story/2026/02/09/jensen-drops-out-gop-race-minnesota-governor-run-state-auditor"],
+  lrlJensen:["MN Legislative Reference Library — Scott Jensen record","https://www.lrl.mn.gov/legdb/fulldetail?id=15484"],
+  bpJude:["Ballotpedia — Tad Jude","https://ballotpedia.org/Tad_Jude"],
+  inforumJude:["InForum — Jude announces SOS bid","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"],
+  alphaJude:["AlphaNews — Jude launches on election transparency","https://alphanews.org/tad-jude-launches-run-for-secretary-of-state-on-promise-of-transparency-in-elections/"],
+  bpPhillips:["Ballotpedia — Wendy Phillips","https://ballotpedia.org/Wendy_Phillips"],
+  kimtPhillips:["KIMT — Phillips promises fresh ideas","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"],
+  kttcPhillips:["KTTC — Phillips announces SOS campaign","https://www.kttc.com/2026/01/05/oronoco-native-wendy-phillips-announces-campaign-mn-secretary-state/"],
+  bpBass:["Ballotpedia — Tyler Bass","https://ballotpedia.org/Tyler_Bass"],
+  htsBass:["Hometown Source — 3 candidates file in MN-3","https://www.hometownsource.com/abc_newspapers/free/3-candidates-file-in-third-congressional-district/article_1e14c605-3f5b-4e67-ae1a-c32818471212.html"],
+  bassSite:["bassforcongress.com — About","https://bassforcongress.com/about/"],
+  bpWestby:["Ballotpedia — Jeremy Westby","https://ballotpedia.org/Jeremy_Westby"],
+  termlimitsWestby:["U.S. Term Limits — Westby pledge","https://termlimits.com/jeremy-westby-pledges-to-support-term-limits-on-congress/"],
+  bpBanks:["Ballotpedia — Joseph Banks","https://ballotpedia.org/Joseph_Banks"],
+  ccxBanks:["CCX Media — Joseph Banks candidate profile","https://ccxmedia.org/joseph-banks-hennepin-county-sheriff-election-candidate/"],
+  srBanks:["Spokesman-Recorder — Meet Joseph Banks","https://spokesman-recorder.com/2022/05/20/meet-hennepin-county-sheriff-candidate-joseph-banks/"],
+  htsBanks2022:["Hometown Source — Witt, Banks lead 2022 sheriff race","https://www.hometownsource.com/sun_current/free/dawanna-witt-joseph-banks-lead-in-the-hennepin-county-sheriff-race/article_bfc6f5de-1861-11ed-b805-f7a118bff2bb.html"],
+  stribKrenz:["Star Tribune — Krenz running for Hennepin County Attorney","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"],
+  eplKrenz:["EP Local News — five candidates seek to succeed Moriarty","https://eplocalnews.org/2026/08/10/five-candidates-seek-to-succeed-moriarty-as-hennepin-county-attorney/"],
+  mtKrenz:["Minneapolis Times — Krenz announces campaign","https://minneapolistimes.com/diane-m-krenz-announces-campaign-for-hennepin-county-attorney/"],
+  mmNguyen:["Minneapoli Media — Nguyen announces candidacy","https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county"],
+  eplNguyen:["EP Local News — Hao Nguyen for Hennepin County attorney","https://eplocalnews.org/2026/07/24/hao-nguyen-for-hennepin-county-attorney/"]
+};
+const stub = (name,party,note,src,website)=>({name,party,says:null,known:note||null,service:null,critics:null,srcs:src?[src]:[],stub:true,website:website||null});
+
+const RACES=[
+{id:"us-senate",office:"U.S. Senate",lvl:"Federal",open:true,
+ why:"Sen. Tina Smith is retiring, so Minnesota picks a brand-new senator. The Flanagan–Craig DFL primary has become the most expensive primary in state history. New: fresh (partisan-sponsored) polling shows Flanagan's lead widening — see both profiles.",
+ cands:[
+  {name:"Angie Craig",party:"DFL",says:"Runs as a pragmatic moderate, leaning on her agriculture-policy work as ranking member of the House Agriculture Committee.",known:"U.S. Rep for MN-2 since flipping a Republican-held district in 2018.",service:"Held a swing district for the DFL four times; sought but lost the 2026 party endorsement.",critics:"Flanagan attacks her Laken Riley Act vote (she says she regrets it) and the ~$12M in outside PAC money backing her.",srcs:[S.cbsSen,S.axios1,S.nbc1,S.strib1],website:"https://angiecraig.com/",
+   update:"A Flanagan-aligned (DLGA-commissioned) poll taken July 23–24 shows her trailing 32%–46%, a wider gap than a month earlier — though earlier nonpartisan KSTP/SurveyUSA polling had her modestly ahead. Read the DLGA poll as a partisan source.",updateSrcs:[S.mnRefSen,S.nativeNews]},
+  {name:"Peggy Flanagan",party:"DFL",badge:"DFL endorsed",says:"Runs as a staunch progressive; campaigns against ICE enforcement tactics and outside corporate money in the primary.",known:"Lieutenant Governor under Tim Walz; former chair of the Democratic Lt. Governors Association.",service:"Won the 2026 DFL endorsement; two terms as lieutenant governor.",critics:"Craig's campaign says she took millions in corporate money at the DLGA — including from an ICE-contractor — and faces questions over Medicaid fraud on the Walz administration's watch.",srcs:[S.kare,S.axios1,S.kaal,S.cbsSen],website:"https://peggyflanagan.com/",
+   update:"A poll commissioned by her own allies (the DLGA) shows her lead over Craig widening to 14 points (46%–32%), roughly double a prior 7-point edge. Treat this as a partisan-sponsored poll — earlier nonpartisan polling had shown Craig slightly ahead.",updateSrcs:[S.mnRefSen,S.nativeNews]},
+  stub("Billy Nord","DFL","Filed in the DFL primary; little public information yet.",S.bpSen,"https://billynordforminnesota.carrd.co/"),
+  {name:"Adam Schwarze",party:"GOP",badge:"GOP endorsed",says:"Pitches himself as an uncompromising conservative closely aligned with President Trump.",known:"Former Navy SEAL — Marine after 9/11, Iraq combat, embassy security, then nine SEAL deployments across 70 countries.",service:"Won the MN GOP endorsement with ~63% of delegates after six convention ballots.",critics:"Tafoya argues a hardliner can't win statewide; a May poll showed him far behind her among primary voters.",srcs:[S.strib2,S.minnpost1],website:"https://www.schwarzeforsenate.com/",
+   dr:{
+    bills:null,
+    companies:null,
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026-05-29",t:"Won the Minnesota GOP US Senate endorsement on the sixth ballot at the state convention in Duluth, with roughly 63% of delegates.",s:[["MPR News","https://www.mprnews.org/story/2026/05/29/schwarze-wins-gop-endorsement-in-us-senate-race"],["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]}],
+    rallies:null,
+    petitions:null,
+    covid:[{d:"2020",t:"Says he entered politics after being arrested for allegedly violating Hawaii's COVID-19 quarantine rules by visiting a grocery store.",s:[["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]}],
+    guns:[{d:"2026-06 (approx.)",t:"Clashed with primary rival Michele Tafoya, saying she is \"out of step with the party\" on guns and abortion.",s:[["MinnPost","https://www.minnpost.com/elections/2026/05/gop-primary-awaits-after-schwarze-tops-tafoya-for-partys-u-s-senate-endorsement/"]]}],
+    trump:[{d:"General",t:"Pitches himself as an uncompromising conservative closely aligned with President Trump.",s:[["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]},
+      {d:"2026-06-01",t:"After defeating Tafoya for the endorsement, blasted Washington's \"establishment class,\" positioning himself as an outsider in the Trump mold.",s:[["political.org","https://political.org/2026/06/01/minnesota-gop-endorsed-senate-candidate-adam-schwarze-blasts-dcs-establishment-class-after-defeating-michele-tafoya/"]]}],
+    fraud:null
+   }},
+  {name:"Michele Tafoya",party:"GOP",says:"Argues her appeal to moderates and independents is the GOP's best shot at ending a two-decade statewide losing streak.",known:"Former NFL sideline reporter and broadcaster; led one May primary poll by ~43 points.",service:"Lost the party endorsement to Schwarze and is running in the primary anyway.",critics:"Party loyalists fault her for bucking the convention's endorsement.",srcs:[S.strib2,S.minnpost1],website:"https://micheletafoya.com/",
+   dr:{
+    bills:null,
+    companies:null,
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026-05-29",t:"Lost the Minnesota GOP US Senate endorsement to Adam Schwarze, but had already said she would continue to the primary regardless.",s:[["MinnPost","https://www.minnpost.com/elections/2026/05/gop-primary-awaits-after-schwarze-tops-tafoya-for-partys-u-s-senate-endorsement/"]]}],
+    rallies:null,
+    petitions:null,
+    covid:[{d:"Undated (as ABC \"The View\" guest co-host)",t:"Stood firm in opposition to COVID-19 vaccine mandates, arguing alternatives like testing should be available instead.",s:[["Fox News","https://www.foxnews.com/media/the-view-coronavirus-vaccines-choice"]]}],
+    guns:[{d:"Undated",t:"Has expressed support for \"red flag\" laws allowing temporary removal of weapons from people a court assesses as dangerous — a position opposed by many gun-rights convention delegates.",s:[["MinnPost","https://www.minnpost.com/national/washington/2026/05/michele-tafoya-has-support-of-national-gop-but-winning-over-state-activists-challenge/"]]},
+      {d:"Undated",t:"On a radio show, did not rule out supporting some type of gun limits, though her campaign said she wants to enforce existing laws rather than pass new ones.",s:[["MinnPost","https://www.minnpost.com/national/washington/2026/05/michele-tafoya-has-support-of-national-gop-but-winning-over-state-activists-challenge/"]]}],
+    trump:[{d:"2022",t:"Wrote an open letter to Trump saying she hoped he would not run again, praising his accomplishments while calling his politics \"messy.\"",s:null},
+      {d:"2026",t:"Has since aligned more closely with Trump's platform; said she'd be \"honored\" to have his endorsement, adding \"if he wants to support or endorse, I would welcome it,\" while stressing she is running her own campaign.",s:[["NOTUS","https://www.notus.org/2026-election/republican-top-senate-recruit-minnesota-michele-tafoya-interview"]]}],
+    fraud:null
+   }},
+  {name:"Royce White",party:"GOP",says:null,known:"Former NBA player; previous statewide GOP candidate.",service:"Eliminated during the six-round 2026 endorsement balloting; staying in the primary.",critics:null,srcs:[S.strib2,S.bpSen],website:"https://roycewhite.us/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated",t:"Founder and CEO, Anxious Minds, Inc., a mental-health advocacy nonprofit.",s:[["Good Men Project","https://goodmenproject.com/featured-content/an-open-letter-to-the-nba-a-call-to-action-on-mental-health-mkdn/"]]},
+      {d:"Undated",t:"Worked as a radio/podcast host, including commentary critiquing fiat currency, central banking, and U.S. foreign policy.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]}],
+    offices:[{d:"2022",t:"Ran for the Republican nomination for US House, MN-5; lost the primary to Cicely Davis, 48.0% to 37.2%.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
+      {d:"2024",t:"Won the Republican US Senate primary, then lost the general election to incumbent Sen. Amy Klobuchar (D), roughly 56%–40%.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
+      {d:"2026",t:"Declared candidacy again for US Senate; running in the Aug. 11 Republican primary against Adam Schwarze and Michele Tafoya.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"],["Star Tribune","https://www.startribune.com/mn-senate-republican-gop-candidates-tuesday-primary-election-tafoya-schwarze-white/601874785"]]}],
+    rallies:null,
+    petitions:[{d:"2016–2018",t:"Publicly campaigned via open letters and media appearances urging the NBA and NBPA to adopt a formal mental-health policy for players; four doctors co-signed his open letter.",s:[["Good Men Project","https://goodmenproject.com/featured-content/an-open-letter-to-the-nba-a-call-to-action-on-mental-health-mkdn/"]]},
+      {d:"2018-05",t:"Succeeded: the NBPA hired its first mental health director, with the hire crediting White (among other players) as instrumental in prompting the change.",s:[["NBC News","https://www.nbcnews.com/health/mental-health/how-two-nba-players-larry-sanders-royce-white-are-bringing-n1004351"]]}],
+    covid:[{d:"2024",t:"Campaign platform called COVID-19 mandates a \"globalist COVID-19 power grab attempt to snatch away freedom\" and pledged to \"hold those responsible for the COVID-19 deceit accountable.\"",s:[["Ballotpedia, quoting campaign site","https://ballotpedia.org/Royce_White"]]}],
+    guns:[{d:"2026",t:"\"The 2ND amendment is a constitutional right that can never be infringed upon. It is one of the most important political mechanisms to safeguard the freedoms of citizens in this country.\"",s:[["roycewhite.us/issues","https://roycewhite.us/issues/"]]}],
+    trump:[{d:"2024",t:"Campaign site said his priorities \"can be addressed on day 1 of Donald Trump's presidency,\" aligning his platform explicitly with a Trump administration.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
+      {d:"2026",t:"Received an endorsement from Trump advisor Steve Bannon during his 2026 Senate run.",s:[["The Week","https://theweek.com/politics/royce-white-amy-klobuchar-minnesota-jews-women-republicans"]]},
+      {d:"2026",t:"Has called for Trump to serve an unconstitutional third term.",s:[["The Week","https://theweek.com/politics/royce-white-amy-klobuchar-minnesota-jews-women-republicans"],["Star Tribune","https://www.startribune.com/mn-senate-republican-gop-candidates-tuesday-primary-election-tafoya-schwarze-white/601874785"]]}],
+    fraud:[{d:"2022",t:"Not a policy statement, but a controversy about his own campaign's conduct: his 2022 US House campaign amended finance reports labeling 30+ expenditures — including retail purchases and an alleged $1,200 reimbursement to a Miami strip club — as \"non-authorized,\" claiming personal reimbursement; reporting found over $157,000 in donor funds went to personal expenses.",s:[["Star Tribune","https://www.startribune.com/royce-white-campaign-claims-to-reimburse-non-authorized-charges-on-strip-club-retail-water-parks/600381315"]]}]
+   }}
+ ]},
+{id:"mn-governor",office:"Governor",lvl:"Statewide",open:true,
+ why:"Gov. Walz quit the race in January — and U.S. Sen. Amy Klobuchar jumped in. A record seven Republicans are fighting for the other spot. New: the top four candidates held their first joint debate at Farmfest on Aug. 5.",
+ cands:[
+  {name:"Amy Klobuchar",party:"DFL",says:"Launched Jan 29, 2026; detailed platform still thin — rivals note her sparse campaign website.",known:"U.S. Senator since 2007, former Hennepin County Attorney, 2020 presidential candidate — historically Minnesota's biggest statewide vote-getter.",service:"Longtime DFL standard-bearer; far out-raising every GOP rival.",critics:"GOP attacks: slipping rural support, closeness to Walz and Biden (\"WalzThirdTerm.com\"), old reports about staff treatment, and low engagement in the race so far.",srcs:[S.bpGov,S.stribK,S.stribK2,S.cbsGov,S.refMoney],website:"https://www.amyklobuchar.com/",
+   update:"Shared a debate stage with all three GOP rivals for the first time at Farmfest on Aug. 5, fielding questions on rural and agricultural policy.",updateSrcs:[S.mprFarmfest,S.mnRefFarmfest]},
+  {name:"Kendall Qualls",party:"GOP",badge:"GOP endorsed",says:"Runs as an outsider; hammers state spending and welfare fraud. Calls this race Klobuchar's \"first real test.\"",known:"Businessman and Army veteran; prior GOP candidate for Congress and governor.",service:"Won the 2026 MN GOP endorsement for governor.",critics:"Demuth says polling shows she, not Qualls, matches up best against Klobuchar.",srcs:[S.refQ,S.cbsGov],website:"https://kqformn.com/",
+   update:"Debated Klobuchar, Demuth, and Lindell at the Aug. 5 Farmfest forum.",updateSrcs:[S.mnRefFarmfest],
+   dr:{
+    bills:null,
+    companies:[{d:"1985–1990",t:"U.S. Army Field Artillery officer, rank of Captain, including a deployment near the Korean DMZ.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
+      {d:"~1990s–2010s",t:"Roughly 27 years at Fortune 100 healthcare companies — Johnson & Johnson, Roche Labs, Medtronic, and Covidien — rising to Global Vice President with P&L responsibility for an $850 million business unit.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
+      {d:"Current",t:"Vice President and Chief Commercial Officer, PotentiaMetrics, a healthcare data-analytics/AI company.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
+      {d:"2021-01",t:"Founded TakeCharge Minnesota, a conservative nonprofit advocacy group; Star Tribune later reported questions about the \"opaque\" nature of the nonprofit's political activity.",s:[["Star Tribune","https://www.startribune.com/as-he-runs-for-governor-kendall-qualls-faces-questions-about-his-nonprofits-political-activity/601863738"]]}],
+    offices:[{d:"2020",t:"Republican nominee, US House MN-3; lost to Democrat Dean Phillips by 11 points. Has never held elected office.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
+      {d:"2022",t:"Sought the GOP gubernatorial endorsement; lost to Scott Jensen.",s:null},
+      {d:"2026-05-30",t:"Won the Minnesota GOP gubernatorial endorsement after 10 ballots at the state convention in Duluth, defeating Lisa Demuth.",s:[["Northern News Now","https://northernnewsnow.com/2026/05/30/gop-delegates-weigh-candidates-governor-endorsement/"]]}],
+    rallies:[{d:"2026",t:"Met with roughly 40 Rochester-area gun owners to discuss gun policy.",s:[["KAALtv","https://kaaltv.com/news/minnesota-governor-candidate-talks-with-local-gun-owners-about-gun-control-policies/"]]},
+      {d:"2026-05-30",t:"Spoke at the Minnesota GOP state convention in Duluth upon winning the endorsement.",s:[["Northern News Now","https://northernnewsnow.com/2026/05/30/gop-delegates-weigh-candidates-governor-endorsement/"]]},
+      {d:"2026-08-05",t:"Debated Klobuchar, Demuth, and Lindell at the Farmfest candidate forum.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]}],
+    petitions:null,
+    covid:[{d:"Undated, low-confidence",t:"A policy-aggregation site (isidewith.com) attributed a general statement to Qualls describing the federal COVID-19 response as economically effective and citing vaccine approval as important to recovery — not independently verified against a primary source.",s:null}],
+    guns:[{d:"2026",t:"Told a gathering of Rochester-area gun owners: \"We don't have a second amendment problem... We have a mental health problem in our country,\" opposing further gun restrictions.",s:[["KAALtv","https://kaaltv.com/news/minnesota-governor-candidate-talks-with-local-gun-owners-about-gun-control-policies/"]]}],
+    trump:[{d:"2026-07-17",t:"After Trump endorsed rival Mike Lindell, Qualls said he was not shaken: \"President Trump is loyal to his people that have been loyal to him... I don't take it as a personal slight.\"",s:[["KAALtv","https://kaaltv.com/news/kendall-qualls-releases-statement-on-president-trumps-endorsement-of-mike-lindell-in-minnesota-gubernatorial-race/"]]},
+      {d:"2026-07-23",t:"Said he would govern by \"emulating Donald Trump,\" crediting Trump with \"saving\" the country, and pledged to support Trump's \"America First\" policies as governor.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/07/23/kendall-qualls-wants-to-cut-taxes-and-spending-and-apologize-to-law-enforcement/"]]}],
+    fraud:[{d:"2026-07-23",t:"Platform centers on cutting taxes and state spending; a dedicated, itemized anti-fraud plan comparable to rivals' was not located in available sources.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/07/23/kendall-qualls-wants-to-cut-taxes-and-spending-and-apologize-to-law-enforcement/"]]},
+      {d:"General messaging",t:"Criticizes state government spending and \"welfare fraud\" broadly.",s:[["CBS Minnesota","https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/"]]}]
+   }},
+  {name:"Lisa Demuth",party:"GOP",says:"Says she's the Republican who can actually beat Klobuchar in November, and ties Klobuchar to Walz via her WalzThirdTerm.com site.",known:"Speaker of the Minnesota House.",service:"Led House Republicans to the speakership; staying in the primary despite losing the endorsement.",critics:"Lindell and Qualls call her too willing to work with Democrats and blame her for not cutting spending or welfare fraud.",srcs:[S.cbsGov,S.refQ],website:"https://lisaformn.com/",
+   update:"Made her case to farmers and ag-industry professionals at the Aug. 5 Farmfest debate.",updateSrcs:[S.mnRefFarmfest],
+   dr:{
+    bills:[{d:"Undated (MN House term)",t:"Chief-authored an early bill targeting daycare fraud.",s:[["AlphaNews","https://alphanews.org/karin-miller-a-window-into-the-leadership-of-lisa-demuth/"]]},
+      {d:"Undated (MN House term)",t:"Championed a \"Heartbeat Bill\" restricting abortion.",s:[["AlphaNews","https://alphanews.org/karin-miller-a-window-into-the-leadership-of-lisa-demuth/"]]},
+      {d:"2026",t:"Chief author of House File 1, establishing a centralized state Office of Inspector General to consolidate agency fraud-investigation functions, require payment holds on suspected fraud, and create a fraud-reporting hotline.",s:[["KSTP","https://kstp.com/kstp-news/top-news/house-dfl-rolls-out-nearly-a-dozen-bills-as-part-of-anti-fraud-package/"]]}],
+    companies:[{d:"Undated",t:"Manages commercial properties. (Her husband Nick Demuth, not Lisa, is president of Avon Plastics in Paynesville — some coverage conflates the two.)",s:[["Star Tribune","https://www.startribune.com/who-is-republican-lisa-demuth-minnesotas-first-house-speaker-of-color/601218089"]]}],
+    offices:[{d:"2007–2018",t:"Rockville-Cold Spring-Richmond (ROCORI) School District school board member, first elected as a write-in in 2007 and reelected twice.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Lisa_Demuth"]]},
+      {d:"2019-01-08",t:"Elected to the Minnesota House of Representatives, District 13A (first elected Nov. 2018); serving to present.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Lisa_Demuth"]]},
+      {d:"2021–2022",t:"Assistant Minority Leader, MN House.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Lisa_Demuth"]]},
+      {d:"2022–2025",t:"House Minority Leader.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Lisa_Demuth"]]},
+      {d:"2025-02-06",t:"Became Speaker of the Minnesota House — first Black person and first female Republican to hold the role; serving to present.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Lisa_Demuth"]]},
+      {d:"2025-11-02",t:"Announced campaign for Governor of Minnesota.",s:[["Minnesota Reformer","https://minnesotareformer.com/2025/11/02/gop-minnesota-house-speaker-lisa-demuth-launches-campaign-for-governor/"]]}],
+    rallies:[{d:"2024-07",t:"Appeared on stage with Donald Trump at a campaign rally in St. Cloud, Minnesota.",s:[["MinnPost","https://minnpost.com/state-government/2025/11/house-speaker-lisa-demuth-seeks-trumps-endorsement-in-bid-to-unseat-gov-tim-walz/"]]},
+      {d:"2026-05-30",t:"Spoke at the Minnesota GOP state convention in Duluth.",s:[["Minnesota Reformer","https://minnesotareformer.com/briefs/lisa-demuth-to-run-in-gop-primary-for-governor-setting-up-three-way-election-in-august/"]]},
+      {d:"2026-08-05",t:"Debated Klobuchar, Qualls, and Lindell at the Farmfest candidate forum.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]}],
+    petitions:null,
+    covid:[{d:"2021-01",t:"Sent a letter to Gov. Walz opposing/questioning a statewide student-athlete mask mandate.",s:[["MN House member news","https://house.mn.gov/members/profile/news/15498/49989"]]},
+      {d:"2020–2021",t:"As House Republican leadership, opposed extending the governor's COVID-era emergency powers used to implement pandemic mandates.",s:null}],
+    guns:[{d:"2026",t:"As Speaker, blocked a floor vote on a DFL-passed Senate bill to ban \"assault weapons\" and high-capacity magazines: \"I said, 'Yes, I am that vote.' I will continue to protect our Second Amendment rights.\"",s:[["KARE 11","https://kare11.com/article/news/politics/assault-weapons-ban-gun-package-unlikely-vote-tied-minnesota-house/89-e082285c-0387-420d-9771-b9a4ef94199a"]]},
+      {d:"2026-05-16",t:"Minnesota Reformer reported she had personally benefited from a \"red flag\" law she had voted against.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/05/16/house-speaker-lisa-demuth-protected-by-red-flag-law-she-voted-against/"]]},
+      {d:"2026",t:"Endorsed by the NRA and the Minnesota Gun Owners Caucus/PAC.",s:[["gunowners.mn","https://gunowners.mn/press-release-lisa-demuth-endorsed/"]]}],
+    trump:[{d:"2024-07",t:"Appeared on stage with Trump at a St. Cloud campaign rally.",s:[["MinnPost","https://minnpost.com/state-government/2025/11/house-speaker-lisa-demuth-seeks-trumps-endorsement-in-bid-to-unseat-gov-tim-walz/"]]},
+      {d:"2025-11 onward",t:"Actively sought Trump's endorsement for governor.",s:[["MinnPost","https://minnpost.com/state-government/2025/11/house-speaker-lisa-demuth-seeks-trumps-endorsement-in-bid-to-unseat-gov-tim-walz/"]]},
+      {d:"2025-12",t:"Trump ultimately endorsed rival Mike Lindell instead of Demuth.",s:[["Star Tribune","https://www.startribune.com/demuth-wont-change-her-style-even-as-her-path-narrows-for-the-gop-governor-nomination/601873295"]]}],
+    fraud:[{d:"2026",t:"Led creation of the House Fraud Prevention and Agency Oversight Committee, holding oversight hearings on Walz-administration spending.",s:[["MN House member news","https://house.mn.gov/members/profile/news/15498/49989"]]},
+      {d:"2026",t:"Chief-authored House File 1 establishing a centralized state Office of Inspector General for fraud prevention.",s:[["KSTP","https://kstp.com/kstp-news/top-news/house-dfl-rolls-out-nearly-a-dozen-bills-as-part-of-anti-fraud-package/"]]},
+      {d:"2026",t:"Helped implement work requirements for \"able-bodied\" welfare recipients in Minnesota.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]},
+      {d:"Note",t:"A conservative-aligned opinion outlet (Action4Liberty) published a claim she \"funded the fraud she complains about\" — flagged as advocacy-source opinion, not independently verified.",s:null}]
+   }},
+  {name:"Mike Lindell",party:"GOP",says:"Outsider pitch; attacks Demuth for cooperating with Democrats.",known:"MyPillow founder and prominent promoter of 2020 election-fraud claims.",service:"Longtime Trump ally; seeking Trump's endorsement.",critics:null,srcs:[S.cbsGov,S.bpGov7],website:"https://mikelindellgov.com/",
+   update:"Debated Klobuchar, Demuth, and Qualls at the Aug. 5 Farmfest forum.",updateSrcs:[S.mnRefFarmfest],
+   dr:{
+    bills:null,
+    companies:[{d:"1980s",t:"Operated small businesses in Carver County, MN, including carpet cleaning, lunch wagons, and bars/restaurants.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2004–2025",t:"Invented the \"MyPillow\" product and founded/led My Pillow, Inc. as CEO, growing it into a Minnesota manufacturing company.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020",t:"Named his son Darren Lindell as My Pillow's Chief Operating Officer, citing his own political ambitions.",s:[["Wikipedia, citing Politico","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025",t:"Stepped down from day-to-day leadership of My Pillow to campaign full-time for governor.",s:[["Newsweek","https://www.newsweek.com/mike-lindell-steps-down-from-mypillow-to-campaign-for-governor-of-minnesota-12284619"]]},
+      {d:"2021-04–2025-04",t:"Founder of FrankSpeech Network, Inc.; renamed Mike Lindell Media Corporation effective 2025-04-23, operating LindellTV.com (launched 2021-04-19) and Vocl.com (formerly FrankSocial, launched 2022-04).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"Undated",t:"Financial stake and board connection to Phoenix Biotechnology, tied to his 2020 promotion of oleandrin as a COVID-19 treatment.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2019",t:"Founded the Lindell Foundation, an addiction-recovery nonprofit, and the Lindell Recovery Network.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020-05",t:"Became Minnesota campaign chair for Trump's 2020 reelection campaign.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2023-01-27",t:"Ran for Chair of the Republican National Committee; lost, receiving 4 of 167 votes.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2020",t:"Reportedly considered running for MN governor in 2022, at Trump's urging, but ultimately did not run.",s:[["Wikipedia, citing Politico","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-12-03",t:"Filed paperwork to run in the 2026 Minnesota gubernatorial election.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-12-11",t:"Formally announced candidacy for Governor of Minnesota, live-streamed from his MyPillow factory in Shakopee.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"],["PBS NewsHour","https://www.pbs.org/newshour/amp/politics/mypillow-founder-and-trump-ally-mike-lindell-to-run-for-minnesota-governor-in-2026"]]}],
+    rallies:[{d:"2016-10-19",t:"Attended the final 2016 presidential debate in Las Vegas.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2016-11-06",t:"Spoke at a Trump campaign rally in Minneapolis.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2017",t:"Attended Trump's inauguration; sat with Trump at a White House industry roundtable.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2018-06-27",t:"Trump praised Lindell's \"business acumen\" at a Fargo, ND rally.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2018-10-04",t:"Spoke at a Trump rally in Rochester, Minnesota.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2019-08",t:"Spoke at the Conservative Political Action Conference (CPAC), calling Trump \"the greatest president in history.\"",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2019-08",t:"Spoke at Liberty University.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020-03",t:"Appeared with Trump at a White House coronavirus press briefing.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020-11–2020-12-14",t:"Sponsored and spoke at five stops on a two-week post-election \"election fraud\" bus tour ending in Washington, D.C.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2021-01-06",t:"Attended the Trump rally preceding the Capitol riot (did not enter the Capitol).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2021-08-10–2021-08-12",t:"Hosted a three-day \"Cyber Symposium\" in South Dakota promising \"irrefutable\" proof of 2020 election fraud; none was produced, and an outside cybersecurity expert called the data presented \"a pile of nothing.\"",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-12-11",t:"Governor campaign launch event at the MyPillow factory in Shakopee, streamed on LindellTV.",s:[["PBS NewsHour","https://www.pbs.org/newshour/amp/politics/mypillow-founder-and-trump-ally-mike-lindell-to-run-for-minnesota-governor-in-2026"]]},
+      {d:"2026-08-05",t:"Debated Klobuchar, Demuth, and Qualls at the Farmfest candidate forum.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]}],
+    petitions:[{d:"2021-08",t:"Public $5 million \"prove me wrong\" data challenge tied to the Cyber Symposium — closest analog to a petition. A challenger's team was ruled by an arbitration panel to have disproven his election-data claims (2023-04-20); a federal court confirmed the $5M award (2024-02-21); the 8th Circuit later overturned that award in Lindell's favor (2025-07-23).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
+    covid:[{d:"2020",t:"Promoted oleandrin, a cardiotoxic plant compound, as a COVID-19 treatment, including arranging a pitch meeting between Trump and a fellow board member of Phoenix Biotechnology, a company in which Lindell holds a financial stake; no scientific evidence supports oleandrin as safe or effective for this use.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020-03",t:"Said on Fox News that MyPillow's factories were being refocused on face-mask production at the Trump administration's request.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
+    guns:null,
+    trump:[{d:"2016-08",t:"First met Trump and became a vocal, avid supporter.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020-05",t:"Became Minnesota campaign chair for Trump's reelection campaign.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2020–ongoing",t:"Central, financially significant figure in efforts to overturn the 2020 election result on Trump's behalf, including funding lawsuits, a bus tour, documentaries, and the Cyber Symposium.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-12",t:"Received Trump's public endorsement for the 2026 Minnesota governor's race.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
+    fraud:[{d:"Note",t:"Lindell's public \"fraud\" focus is almost entirely about alleged election fraud, not welfare fraud; no welfare-specific statement found.",s:null},
+      {d:"2020-11–2021",t:"Central promoter of false claims that Dominion Voting Systems and Smartmatic conspired to rig the 2020 election.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2021-02-05",t:"Aired the \"Absolute Proof\" documentary on OANN.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2021-02-22",t:"Dominion filed a $1.3 billion defamation suit against Lindell and My Pillow.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2021-04-19",t:"My Pillow filed a $1.6 billion countersuit against Dominion alleging defamation.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2022-05",t:"A federal court dismissed Lindell/My Pillow's claims against Dominion and Smartmatic, finding some claims frivolous under Rule 11.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2023-08",t:"Said he would fly drones with wireless \"sniffing\" devices near polling places to detect internet-connected voting machines, framed as preventing voting fraud.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-06-16",t:"A federal jury in Colorado found Lindell liable for defaming Eric Coomer, a former Dominion security director, ordering Lindell and FrankSpeech to pay $2.3 million.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
+      {d:"2025-09-26",t:"A federal judge ruled Lindell had defamed Smartmatic with 51 false claims; damages proceedings ongoing.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}]
+   }},
+  stub("Rick DeVoe","DFL","Filed in the DFL primary.",S.bpGov), stub("Paul Ference","DFL","Filed in the DFL primary.",S.bpGov),
+  stub("Kobey Layne","DFL","Filed in the DFL primary.",S.bpGov), stub("Christopher Seymore","DFL","Filed in the DFL primary.",S.bpGov,"https://chrisseymoreforminnesotagovernore.blogspot.com/"),
+  {name:"Loner Blue",party:"GOP",says:null,known:"Retiree; perennial statewide candidate — sought the GOP nod for governor in 2022 and ran for US Senate in 2024, running again for governor in 2026 with running mate Andrew Maass.",service:null,critics:null,srcs:[S.bpLonerBlue],website:null,
+   dr:{
+    bills:null, companies:null,
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2022",t:"Ran for the Republican nomination for Governor of Minnesota.",s:[["Ballotpedia","https://ballotpedia.org/Loner_Blue"]]},
+      {d:"2024-08-13",t:"Lost the Republican primary for US Senate.",s:[["Wikipedia","https://en.wikipedia.org/wiki/2024_United_States_Senate_election_in_Minnesota"]]},
+      {d:"2026",t:"Running for governor again, with running mate Andrew Maass, on the Aug. 11 Republican primary ballot.",s:[["Ballotpedia","https://ballotpedia.org/Loner_Blue"]]}],
+    rallies:null, petitions:null, covid:null, guns:null, trump:null, fraud:null
+   }},
+  stub("Raul Estrada","GOP","Filed in the GOP primary.",S.bpGov,"https://raul2026-crushcommunism.com/"),
+  {name:"John Krhin",party:"GOP",says:"Describes himself as the \"values candidate\" and a \"constitutional conservative\" with an \"originalist view of the constitution\"; has said abortion is the biggest issue hurting Minnesota.",known:"Born in Chisholm, MN, youngest of 8 children; ordained minister since 1981; married to wife Julia for nearly 53 years, with 8 children and 34 grandchildren.",service:null,critics:null,srcs:[S.krhinSite,S.kttcKrhin],website:"https://krhin4gov.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"1981–present",t:"Ordained minister of the Gospel, working as a pastor for decades.",s:[["krhin4gov.com","https://krhin4gov.com/about/"]]},
+      {d:"Undated",t:"Owns business property; describes over fifty years of leadership experience across ministry, business, labor, and property management.",s:[["krhin4gov.com","https://krhin4gov.com/about/"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026",t:"Declared candidacy for Governor of Minnesota in the Aug. 11 Republican primary.",s:[["Ballotpedia","https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026"]]}],
+    rallies:[{d:"2026-07 (ongoing)",t:"Conducting a \"prayer tour\" to all 87 Minnesota county seats to pray for local communities, public servants, and governing authorities; reached Brown County by mid-July and visited churches in Bemidji.",s:[["New Ulm Journal","https://www.nujournal.com/news/local-news/2026/07/11/gop-governor-candidates-prayer-tour-reaches-brown-county/"],["Bemidji Pioneer","https://www.bemidjipioneer.com/news/gop-governor-hopeful-john-krhin-visits-bemidji-connects-with-local-churches"]]}],
+    petitions:null, covid:null, guns:null,
+    trump:null,
+    fraud:[{d:"Note",t:"His stated top issue is abortion, not fraud or welfare policy.",s:[["KTTC","https://www.kttc.com/2026/05/14/one-on-one-with-minnesota-gubernatorial-candidate-john-krhin/"]]}]
+   }},
+  stub("Ross Nova","GOP","Filed in the GOP primary.",S.bpGov,"https://www.rossnovaforgovernor.com/")
+ ]},
+{id:"us-house-mn3",office:"U.S. House — District 3",lvl:"Federal",open:false,
+ why:"Eden Prairie's seat in Congress. Incumbent Kelly Morrison seeks a second term; two Republicans compete to face her.",
+ cands:[
+  {name:"Kelly Morrison",party:"DFL",badge:"Incumbent",says:"Platform details pending — see her campaign site.",known:"OB-GYN physician; U.S. Rep since 2024; former state senator and representative.",service:"Kept MN-3 in DFL hands after Dean Phillips' departure.",critics:null,srcs:[S.bpMorr,S.bpH3]},
+  {name:"Tyler Bass",party:"GOP",says:"Wants to bring \"real-world experience, common sense leadership, and accountability back to Washington,\" focused on U.S. workers, small businesses, and stopping illegal-labor hiring.",known:"Founder of At Home Fitness; later a Twin Cities general contractor; Minnetonka small business owner with 12+ years running businesses.",service:null,critics:null,srcs:[S.bpBass,S.htsBass,S.bassSite],website:"https://bassforcongress.com/",
+   dr:{
+    bills:null,
+    companies:[
+     {d:"Undated",t:"Founder, At Home Fitness, an in-home personal training company.",s:[["Ballotpedia","https://ballotpedia.org/Tyler_Bass"]]},
+     {d:"Undated",t:"Transitioned into construction; worked as a general contractor completing interior and exterior projects throughout the Twin Cities.",s:[["Ballotpedia","https://ballotpedia.org/Tyler_Bass"]]}
+    ],
+    offices:[
+     {d:"2026",t:"Filed as a Republican candidate for U.S. House, Minnesota's 3rd Congressional District.",s:[["Hometown Source","https://www.hometownsource.com/abc_newspapers/free/3-candidates-file-in-third-congressional-district/article_1e14c605-3f5b-4e67-ae1a-c32818471212.html"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:null
+   }},
+  {name:"Jeremy Westby",party:"GOP",says:"Signed the U.S. Term Limits pledge to support congressional term limits.",known:"Previously ran as a Republican U.S. House candidate for MN-2 in 2022.",service:null,critics:null,srcs:[S.bpWestby,S.termlimitsWestby],website:"https://westbyforcongress.com/",
+   dr:{
+    bills:null,
+    companies:null,
+    offices:[
+     {d:"2022",t:"Ran as a Republican U.S. House candidate for Minnesota's 2nd Congressional District (unsuccessful).",s:[["Ballotpedia","https://ballotpedia.org/Jeremy_Westby"]]},
+     {d:"2026",t:"Filed as a Republican candidate for U.S. House, Minnesota's 3rd Congressional District.",s:[["FEC.gov","https://www.fec.gov/data/candidate/H6MN03162/"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,fraud:null
+   }}
+ ]},
+{id:"mn-sos",office:"Secretary of State",lvl:"Statewide",open:false,
+ why:"Minnesota's chief elections officer. Incumbent Steve Simon runs again; Tad Jude and Wendy Phillips compete in the GOP primary.",
+ cands:[
+  {name:"Steve Simon",party:"DFL",badge:"Incumbent",says:"Platform details pending.",known:"Secretary of State since 2015; former DFL legislator; known for expanding voter access.",service:"Multi-term statewide DFL officeholder.",critics:null,srcs:[S.bpSos],website:"https://www.stevesimonmn.com/"},
+  {name:"Tad Jude",party:"GOP",says:"Running on a promise of \"transparency in elections,\" citing his experience as a legislator, district judge, attorney and small business owner.",known:"Age 73, of Maple Grove; was the youngest person ever elected to the MN Legislature (1972, age 20); later six years in the state Senate; 11 years as a 10th Judicial District court judge; ran for AG in 2022 and MN-3 in 2024.",service:null,critics:null,srcs:[S.bpJude,S.inforumJude,S.alphaJude],website:"https://www.tadjude.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated",t:"Small business owner and practicing attorney, cited as part of his campaign biography.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]}],
+    offices:[
+     {d:"1972",t:"Elected to the Minnesota House of Representatives at age 20, the youngest person ever elected to the Minnesota Legislature.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]},
+     {d:"1970s (following House service)",t:"Served six years in the Minnesota State Senate.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]},
+     {d:"Undated, 11-year term",t:"District court judge, Minnesota's 10th Judicial District.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]},
+     {d:"2022",t:"Ran for Minnesota Attorney General; lost the Republican nomination to Jim Schultz.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]},
+     {d:"2024",t:"Ran for Minnesota's 3rd Congressional District against Rep. Kelly Morrison.",s:[["InForum","https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state"]]},
+     {d:"2025-09-12",t:"Announced his candidacy for Minnesota Secretary of State in the 2026 election.",s:[["Ballotpedia","https://ballotpedia.org/Tad_Jude"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:[{d:"2026",t:"Campaign message centers on \"transparency in elections,\" positioning himself against what he frames as declining public trust in the state's election administration.",s:[["AlphaNews","https://alphanews.org/tad-jude-launches-run-for-secretary-of-state-on-promise-of-transparency-in-elections/"]]}]
+   }},
+  {name:"Wendy Phillips",party:"GOP",says:"Says \"there is so little trust in our current election system, and I'd like to rebuild that trust\"; wants voter ID, cleaner voter rolls, watermarked hand-counted paper ballots, one-day elections, and an end to mail-in voting with few exceptions.",known:"Oronoco resident; longtime business owner; former Olmsted County GOP chair; moved to MN from California six years ago.",service:"MNGOP State Executive Board member; chair, Olmsted County BPOU; previously the GOP-endorsed candidate for a Rochester-area State House seat.",critics:null,srcs:[S.bpPhillips,S.kimtPhillips,S.kttcPhillips],website:"https://www.wendyforsos.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated",t:"Described as a longtime business owner; specific companies not named in available sources.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]}],
+    offices:[
+     {d:"Undated",t:"Oronoco zoning and planning commissioner.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]},
+     {d:"Undated",t:"MNGOP State Executive Board member; chair, Olmsted County BPOU; former chair, Olmsted County GOP.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]},
+     {d:"Prior cycle (undated)",t:"Ran as the GOP-endorsed candidate for a State House seat in the Rochester suburbs; did not win.",s:[["Ballotpedia","https://ballotpedia.org/Wendy_Phillips"]]},
+     {d:"2026-01-05",t:"Announced her campaign for Minnesota Secretary of State.",s:[["KTTC","https://www.kttc.com/2026/01/05/oronoco-native-wendy-phillips-announces-campaign-mn-secretary-state/"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:[{d:"2026",t:"Platform includes targeting \"businesses that exploit taxpayers,\" alongside voter-roll cleanup and voter ID.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]}]
+   }}
+ ]},
+{id:"mn-auditor",office:"State Auditor",lvl:"Statewide",open:true,
+ why:"The state's financial watchdog. Incumbent Julie Blaha isn't running — seven candidates want the job, including 2022 GOP governor nominee Scott Jensen.",
+ cands:[
+  stub("Zack Filipovich","DFL","Accountant; former Duluth City Councilor (2014–2022).",S.bpAud,"https://www.zackformn.com/"),
+  stub("Adam Jennings","DFL","Mayor of Tonka Bay (2021–present). Dropped out after losing the DFL endorsement — not on the Aug. 11 primary ballot.",S.bpAud,"https://www.adamforauditor.com/"),
+  stub("Ben Schierer","DFL","Former mayor of Fergus Falls (2017–2025). Left the race to become Amy Klobuchar's Lieutenant Governor running mate — not on the Aug. 11 auditor primary ballot.",S.bpAud,"https://www.benforminnesota.com/"),
+  stub("Dan Wolgamott","DFL","DFL state representative, District 14B (2019–present).",S.bpAud,"https://www.danformn.com/"),
+  {name:"Elliott Engen",party:"GOP",says:"Originally pitched expanding the State Auditor's office and increasing accountability — but never filed for the office.",known:"Gen Z Republican state representative (HD 36A) since 2023; assistant minority leader; abandoned this auditor bid before the June 2, 2026 filing deadline and instead re-filed for his House seat after a DWI arrest and ethics hearing.",service:"Assistant minority leader, MN House Republican caucus.",critics:null,srcs:[S.bpEngen,S.kstpEngen,S.yahooEngen,S.fox9Engen],website:"https://www.elliottengen.com/",
+   dr:{
+    bills:null,
+    companies:null,
+    offices:[
+     {d:"2023-01-03",t:"Took office in the Minnesota House of Representatives, District 36A.",s:[["Ballotpedia","https://ballotpedia.org/Elliott_Engen"]]},
+     {d:"2026 (before June 2)",t:"Announced, then abandoned, a campaign for Minnesota State Auditor.",s:[["KSTP","https://kstp.com/kstp-news/top-news/republican-representative-engen-announces-bid-for-minnesota-auditor/"],["FOX 9","https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026"]]},
+     {d:"2026-06-02 (by)",t:"Filed instead for re-election to his House District 36A seat.",s:[["FOX 9","https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:[{d:"2026",t:"Auditor-campaign message emphasized expanding the office and increasing government accountability.",s:[["Yahoo News","https://www.yahoo.com/news/politics/articles/rep-engen-drops-financial-watchdog-161407000.html"]]}]
+   }},
+  {name:"Nate George",party:"GOP",badge:"GOP endorsed",says:"Running on accountability and fiscal responsibility — pledges rigorous oversight of local government spending and follow-up to ensure fraud is actually prosecuted once found.",known:"Air Force veteran; mayor of Braham, MN; director of licensing and investigations for the Mille Lacs Band of Ojibwe's Gaming Regulatory Authority.",service:"Endorsed by the Republican Party of Minnesota for State Auditor.",critics:"MinnPost reported his campaign falsely claimed on social media he was a \"certified fraud examiner\"; the campaign later corrected the claim.",srcs:[S.bpGeorge,S.mngopGeorge,S.minnpostGeorge,S.kstpGeorge],website:"https://nategeorgeformnstateauditor.com/",
+   dr:{
+    bills:null,
+    companies:[
+     {d:"Undated (current)",t:"Director of licensing and investigations, Mille Lacs Band of Ojibwe Gaming Regulatory Authority.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]},
+     {d:"Undated",t:"Air Force veteran.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]}
+    ],
+    offices:[
+     {d:"Undated (current)",t:"Mayor of Braham, Minnesota.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]},
+     {d:"2026",t:"Received the Republican Party of Minnesota's endorsement for State Auditor.",s:[["MN GOP","https://mngop.com/republican-party-of-minnesota-congratulates-nate-george-on-earning-gop-endorsement-for-state-auditor-2/"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:[
+     {d:"2026",t:"Central campaign message is accountability for local-government spending and proactive follow-up to ensure fraud, once identified, is actually prosecuted.",s:[["nategeorgeformnstateauditor.com","https://nategeorgeformnstateauditor.com/"]]},
+     {d:"2026-07",t:"Faced press scrutiny after his campaign claimed on social media he was a \"certified fraud examiner,\" a credential he does not hold; the campaign later corrected the claim.",s:[["MinnPost","https://www.minnpost.com/elections/2026/07/nate-george-state-auditor-resume-claims-certified-fraud-examiner/"],["KSTP","https://kstp.com/kstp-news/local-news/gop-endorsed-candidate-for-state-auditor-clarifies-posts-that-misstated-qualifications/"]]}
+    ]
+   }},
+  {name:"Scott Jensen",party:"GOP",says:"Says his experience working in the audit section of a bank and chairing Senate committees qualifies him for the auditor's role.",known:"Physician; former MN State Senator (District 47, 2017–2021); 2022 GOP nominee for governor; withdrew from the 2026 governor's race on Feb. 9, 2026 to run for auditor instead.",service:null,critics:null,srcs:[S.bpJensenAud,S.kttcJensen,S.mprJensen,S.lrlJensen],website:"https://www.drscottjensen.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated",t:"Owner/physician, Catalyst Medical Clinic PA; cites prior experience in a bank's audit section as relevant qualification.",s:[["Ballotpedia","https://ballotpedia.org/Scott_Jensen_(Minnesota)"]]}],
+    offices:[
+     {d:"2017-01–2021-01-05",t:"Minnesota State Senate, District 47.",s:[["MN Legislative Reference Library","https://www.lrl.mn.gov/legdb/fulldetail?id=15484"]]},
+     {d:"2022",t:"Republican nominee for Governor of Minnesota; lost to incumbent Gov. Tim Walz.",s:[["Ballotpedia","https://ballotpedia.org/Scott_Jensen_(Minnesota)"]]},
+     {d:"2025",t:"Declared candidacy for Governor in the 2026 race.",s:[["Ballotpedia","https://ballotpedia.org/Scott_Jensen_(Minnesota)"]]},
+     {d:"2026-02-09",t:"Withdrew from the governor's race and announced a run for State Auditor instead.",s:[["KTTC","https://www.kttc.com/2026/02/09/scott-jensen-withdraws-minnesota-governors-race-pursue-state-auditor-position/"],["MPR News","https://www.mprnews.org/story/2026/02/09/jensen-drops-out-gop-race-minnesota-governor-run-state-auditor"]]}
+    ],
+    rallies:null,petitions:null,
+    covid:null,
+    guns:null,
+    trump:null,
+    fraud:null
+   }},
+  stub("Jay Reeves","OTH","Listed for the general election; affiliation to verify.",S.bpAud)
+  /* Jay Reeves: no dedicated official campaign website found as of 2026-08-11 */
+ ]},
+{id:"mn-ag",office:"Attorney General",lvl:"Statewide",open:false,
+ why:"The state's top lawyer. Keith Ellison seeks a third term against Republican Ron Schutz.",
+ cands:[
+  {name:"Keith Ellison",party:"DFL",badge:"Incumbent",says:"Running for a third term; platform details pending.",known:"AG since 2019; former congressman; led the Derek Chauvin prosecution.",service:"Former DFL congressman and DNC deputy chair; two-term statewide officeholder.",critics:null,srcs:[S.wikiAG],website:"https://www.keithellison.org/"},
+  {name:"Ron Schutz",party:"GOP",badge:"GOP endorsed",says:"Running on cracking down on violent crime, an \"aggressive\" approach to preventing and prosecuting fraud, and giving the AG authority to take over cases county attorneys decline to prosecute.",known:"Trial lawyer; nearly 38 years at Robins Kaplan LLP (chairman 2019–2024); Army JAG Corps veteran; named to Forbes' Top 200 lawyers.",service:"Unanimously endorsed by the MN GOP at the Duluth convention.",critics:"MN DFL Chair Richard Carlbom called him \"a corporate shill ready to invite Trump to occupy our cities, pollute our water, and erode the rights of everyday Minnesotans.\"",srcs:[S.wikiAG,S.bpSchutz,S.stribSchutz,S.mprSchutz],website:"https://www.ronformnag.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"~1986–2024",t:"Partner at Robins Kaplan LLP, a roughly 200-lawyer litigation firm; served as firm Chairman from 2019–2024.",s:[["Hoodline","https://hoodline.com/2026/03/top-twin-cities-trial-star-ditches-power-firm-to-take-on-keith-ellison/"]]},
+      {d:"2026-03 (approx.)",t:"Left Robins Kaplan to run for Attorney General.",s:[["Hoodline","https://hoodline.com/2026/03/top-twin-cities-trial-star-ditches-power-firm-to-take-on-keith-ellison/"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026-03 (approx.)",t:"Entered the race for Minnesota Attorney General.",s:[["Star Tribune","https://www.startribune.com/republican-ron-schutz-enters-race-for-minnesota-attorney-general/601488275"]]},
+      {d:"2026-05-29",t:"Unanimously endorsed by the Republican Party of Minnesota at the state convention in Duluth.",s:[["MPR News","https://www.mprnews.org/story/2026/05/29/republicans-endorse-trial-lawyer-ron-schutz-for-attorney-general"]]}],
+    rallies:null,
+    petitions:null,
+    covid:null,
+    guns:null,
+    trump:[{d:"2026-03-25",t:"Declined to commit to opposing a Trump administration action in the abstract: \"My goal is to protect the citizens of Minnesota. I doubt if President Trump is going to be... taking some action that would be blatantly illegal.\"",s:[["KTTC","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"]]},
+      {d:"2026-03-25",t:"Criticized incumbent AG Ellison's 54 lawsuits against the Trump administration as making the office \"the litigation wing of the DFL party.\"",s:[["KTTC","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"]]},
+      {d:"2026",t:"MN DFL Chair Richard Carlbom called him \"a corporate shill ready to invite Trump to occupy our cities, pollute our water, and erode the rights of everyday Minnesotans.\"",s:[["Minnesota DFL","https://dfl.org/dfl-party-statement-on-ron-schutzs-run-for-attorney-general/"]]}],
+    fraud:[{d:"2026-03-25",t:"Says a \"massive culture of fraud\" has taken hold of Minnesota state government and pledges to \"aggressively use\" AG powers to investigate and prosecute it, calling Ellison's approach \"completely reactive.\"",s:[["KTTC","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"]]},
+      {d:"2026-03-25",t:"Called Minnesota the \"land of 10,000 frauds,\" referencing the state's Medicaid/Feeding Our Future-era scandals.",s:[["KTTC","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"]]},
+      {d:"2026-03-25",t:"Proposed giving the attorney general authority to take over criminal prosecutions from county attorneys who decline to act within a set time period.",s:[["KTTC","https://www.kttc.com/2026/03/25/one-on-one-republican-minnesota-attorney-general-candidate-ron-schutz/"]]}]
+   }}
+ ]},
+{id:"sd49",office:"State Senate — District 49",lvl:"Legislature",open:true,
+ why:"Your state senator (all of Eden Prairie is in SD 49). Longtime Sen. Steve Cwodzinski is retiring — a rare three-way open race.",
+ cands:[
+  {name:"Krish Subrahmanian",party:"DFL",badge:"DFL endorsed",says:"Platform details pending.",known:"Filed May 20 for the open seat.",service:"Won the DFL endorsement for SD 49.",critics:null,srcs:[S.epl1],website:"https://www.krishforsenate.com/"},
+  {name:"Dustin DuFault",party:"GOP",badge:"GOP endorsed",says:"Campaign emphasizes accountability, lower taxes, \"real transparency,\" and better schools — running to \"restore transparency, cut waste, and take Minnesota back.\"",known:"Minnetonka patent attorney; founder of DuFault Law Firm, P.C.; grew up on a farm in the Red River Valley; earned a B.S. in Chemical Engineering before law school.",service:"Endorsed by Senate District 49 Republicans.",critics:null,srcs:[S.epl2,S.dufaultSite,S.dufaultLaw],website:"https://dufaultformn.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated (current)",t:"Founder/lead attorney, DuFault Law Firm, P.C., a patent, trademark, and business-litigation practice.",s:[["dufault-law.com","https://www.dufault-law.com/about"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026",t:"Running for the open Minnesota Senate District 49 seat; endorsed by Senate District 49 Republicans.",s:[["EP Local News","https://eplocalnews.org/2026/05/28/gop-endorses-candidates-for-eden-prairie-area-legislative-races/"]]}],
+    rallies:null, petitions:null, covid:null, guns:null, trump:null,
+    fraud:[{d:"Campaign platform",t:"Broadly emphasizes \"cutting waste\" and \"real transparency\" in state government, without a detailed itemized fraud-prevention plan located in available sources.",s:[["dufaultformn.com","https://dufaultformn.com/"]]}]
+   }},
+  {name:"Kris Babler",party:"IND",says:"Platform details pending.",known:"Eden Prairie independent; announced in April 2026.",service:"Running outside both parties.",critics:null,srcs:[S.epl1],website:"https://krisbabler.com/"}
+ ]},
+{id:"h49a",office:"State House — 49A",lvl:"Legislature",open:false,
+ why:"North of Highway 5? This is your House race. First-term DFL Rep. Alex Falconer defends against GOP-endorsed Jeff Houdek.",
+ cands:[
+  {name:"Alex Falconer",party:"DFL",badge:"Incumbent",says:"Platform details pending.",known:"First-term DFL House member from Eden Prairie; won 49A in 2024.",service:"Holds 49A for the DFL.",critics:null,srcs:[S.epl4,S.epl1],website:"https://www.alexforhouse.org/"},
+  {name:"Jeff Houdek",party:"GOP",badge:"GOP endorsed",says:"Platform details pending.",known:"Eden Prairie resident; inactive CPA and certified fraud examiner; former president, COO and CFO.",service:"Endorsed by SD 49 Republicans at a June 16 special convention.",critics:null,srcs:[S.epl3],website:"https://houdekformn.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated",t:"Principal Consultant, President, COO, and CFO, Viability LLC (MN).",s:[["LinkedIn","https://www.linkedin.com/in/jeffhoudek/"]]},
+      {d:"Undated",t:"Partner, Argos Risk.",s:[["LinkedIn","https://www.linkedin.com/in/jeffhoudek/"]]},
+      {d:"Undated",t:"President, Dahl Administration.",s:[["LinkedIn","https://www.linkedin.com/in/jeffhoudek/"]]},
+      {d:"Undated",t:"Wealth management advisor, Stockwalk Group; earlier roles include audit senior at EY and sales at The Home Depot.",s:[["LinkedIn","https://www.linkedin.com/in/jeffhoudek/"]]},
+      {d:"Credential",t:"Inactive CPA and Certified Fraud Examiner (CFE).",s:[["EP Local News","https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026-06-16",t:"Endorsed by Senate District 49 Republicans at a special convention for the House 49A race against incumbent DFL Rep. Alex Falconer.",s:[["EP Local News","https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/"]]}],
+    rallies:null, petitions:null, covid:null, guns:null, trump:null,
+    fraud:[{d:"Note",t:"No direct policy statement located, but his Certified Fraud Examiner credential and executive financial background are central to his campaign framing.",s:[["EP Local News","https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/"]]}]
+   }}
+ ]},
+{id:"h49b",office:"State House — 49B",lvl:"Legislature",open:false,
+ why:"South of Highway 5? This one's yours. Four-term DFL Rep. Carlie Kotyza-Witthuhn faces GOP-endorsed Wendy Cregg.",
+ cands:[
+  {name:"Carlie Kotyza-Witthuhn",party:"DFL",badge:"Incumbent",says:"Platform details pending.",known:"Fourth-term DFL incumbent from Eden Prairie.",service:"Four terms holding 49B for the DFL.",critics:null,srcs:[S.epl1],website:"https://www.carlieforhouse.com/"},
+  {name:"Wendy Cregg",party:"GOP",badge:"GOP endorsed",says:"Campaign centers on \"restoring accountability\" in Minnesota government, drawing on her background combating insurance fraud.",known:"Eden Prairie resident and former nurse practitioner; certified Family Nurse Practitioner; spent 7 years as a fraud investigator at Optum/UnitedHealth Group.",service:"Endorsed by SD 49 Republicans.",critics:null,srcs:[S.epl2,S.creggAnnounce],website:"https://creggformn.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"~2013–2020 (approx.)",t:"Fraud investigator, Optum (a UnitedHealth Group subsidiary), handling large and complex fraud cases; nominated for the UHG Sages of Clinical Service Award.",s:[["Hometown Source","https://www.hometownsource.com/sun_sailor/free/eden-prairies-cregg-announces-republican-bid-for-hd-49b/article_d79bb7c1-a9af-41b9-b4b4-ca9ed3fd42b4.html"]]},
+      {d:"Undated",t:"Practicing family nurse practitioner.",s:[["EP Local News","https://eplocalnews.org/2026/05/28/gop-endorses-candidates-for-eden-prairie-area-legislative-races/"]]}],
+    offices:[{d:"—",t:"Has never held elected office.",s:null},
+      {d:"2026",t:"Announced her Republican bid for House District 49B; endorsed by Senate District 49 Republicans.",s:[["Hometown Source","https://www.hometownsource.com/sun_sailor/free/eden-prairies-cregg-announces-republican-bid-for-hd-49b/article_d79bb7c1-a9af-41b9-b4b4-ca9ed3fd42b4.html"]]}],
+    rallies:[{d:"2026-06 (approx.)",t:"A reader letter describes hearing her speak \"to a group of people for the first time\" in mid-June 2026 — appears to be a local campaign meet-and-greet rather than a large rally.",s:[["EP Local News reader letter","https://eplocalnews.org/2026/06/23/cregg-would-restore-accountability-in-minnesota/"]]}],
+    petitions:null, covid:null, guns:null, trump:null,
+    fraud:[{d:"Career basis for campaign message",t:"Seven years as a fraud investigator for Optum/UnitedHealth Group underpins her \"restore accountability\" campaign framing.",s:[["Hometown Source","https://www.hometownsource.com/sun_sailor/free/eden-prairies-cregg-announces-republican-bid-for-hd-49b/article_d79bb7c1-a9af-41b9-b4b4-ca9ed3fd42b4.html"],["EP Local News reader letter","https://eplocalnews.org/2026/06/23/cregg-would-restore-accountability-in-minnesota/"]]}]
+   }}
+ ]},
+{id:"hc-attorney",office:"Hennepin County Attorney",lvl:"County",open:true,
+ why:"The county's top prosecutor. Mary Moriarty isn't running again; five candidates debate how tough or reform-minded the office should be. Nonpartisan — the primary picks two finalists.",
+ cands:[
+  {name:"Anders Folk",party:"NP",says:"\"Restoring public safety… bringing back common sense to criminal justice\"; faults poor collaboration with law enforcement.",known:"Former Acting U.S. Attorney for Minnesota; Jones Day partner; former Marine; Biden DOJ official.",service:"Nonpartisan race; endorsed by Sheriff Dawanna Witt.",critics:"Lost the DFL endorsement contest to Frazier.",srcs:[S.fox9,S.ccx,S.stribW,S.minnlaw],website:"https://www.andersfolk.com/"},
+  {name:"Cedrick Frazier",party:"NP",badge:"DFL endorsed",says:"Platform details pending; announced shortly after Moriarty stepped aside.",known:"DFL state rep (New Hope/Crystal) since 2020; vice chair of Public Safety & Judiciary committees; former public defender and labor attorney.",service:"Won the Hennepin County DFL endorsement; claims labor backing.",critics:"Rivals emphasize the prosecutorial experience he lacks compared to the career prosecutors in the race.",srcs:[S.fox9,S.stribF,S.ccx],website:"https://www.cedrickfrazier.org/"},
+  {name:"Diane M. Krenz",party:"NP",says:"Says the office has \"become politicized\" and abandoned effective sentencing guidelines; wants a renewed focus on prosecuting repeat offenders, law enforcement relationships, and victims' rights.",known:"Former prosecutor with four decades in the Hennepin County Attorney's Office.",service:"Running strictly nonpartisan.",critics:null,srcs:[S.fox9,S.ccx,S.stribKrenz,S.eplKrenz],website:"https://www.dianekrenz.com/",
+   dr:{
+    bills:null,
+    companies:null,
+    offices:[
+     {d:"~1986–2026 (approx. 40 years)",t:"Assistant Hennepin County Attorney, handling gang, gun, property, and white-collar crime cases.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]},
+     {d:"2026",t:"Filed as an independent, nonpartisan candidate for Hennepin County Attorney to succeed Mary Moriarty.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]}
+    ],
+    rallies:[{d:"2026",t:"Participated in a League of Women Voters Hennepin County Attorney candidate forum.",s:[["CCX Media","https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/"]]}],
+    petitions:null,covid:null,
+    guns:[{d:"Career (undated)",t:"Prosecuted gun-related cases as part of her four decades in the Hennepin County Attorney's Office; no separate policy stance located.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]}],
+    trump:null,
+    fraud:null
+   }},
+  {name:"Hao Nguyen",party:"NP",says:"Concerned about the office's liberal use of plea bargains; stresses case-by-case prosecutorial judgment over sweeping, statistics-driven policies.",known:"Former assistant Ramsey County attorney, 15 years prosecuting; ex-corrections officer, police officer and sheriff's deputy; came to the U.S. as a refugee.",service:null,critics:null,srcs:[S.fox9,S.ccx,S.mmNguyen,S.eplNguyen],website:"https://www.hao4hennepin.com/",
+   dr:{
+    bills:null,
+    companies:[{d:"Undated (current)",t:"Senior-level manager in a metro-area prosecutor's office overseeing more than 300 employees.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]}],
+    offices:[
+     {d:"Undated",t:"Assistant Ramsey County Attorney for 15 years.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]},
+     {d:"Undated (earlier career)",t:"Corrections officer, police officer, and sheriff's deputy, prior to becoming a prosecutor.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]},
+     {d:"2025-09",t:"Announced his candidacy for Hennepin County Attorney.",s:[["Minneapoli Media","https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county"]]}
+    ],
+    rallies:[{d:"2026",t:"Participated in a League of Women Voters Hennepin County Attorney candidate forum.",s:[["CCX Media","https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/"]]}],
+    petitions:null,covid:null,
+    guns:[{d:"2025-09",t:"Endorsed by Shanasha Whitson, founder of Mothers Against Gun Violence, in his campaign announcement (context, not a Nguyen policy statement itself).",s:[["Minneapoli Media","https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county"]]}],
+    trump:null,
+    fraud:null
+   }},
+  {name:"Matt Pelikan",party:"NP",says:"Says progressives have \"turned a blind eye\" to drug-use harms in the county.",known:"Partner at Madel PA; \"lifelong Minnesotan and Democrat.\"",service:"Won the 2018 DFL endorsement for state Attorney General.",critics:null,srcs:[S.fox9,S.ccx],website:"https://mattpelikan.com/"}
+ ]},
+{id:"hc-sheriff",office:"Hennepin County Sheriff",lvl:"County",open:false,
+ why:"Runs the county jail and sheriff's office. Incumbent Dawanna Witt faces repeat challenger Joseph Banks, after a bruising fight over immigration enforcement cost her the DFL endorsement. New: federal officials are threatening Witt with criminal charges days before the primary — see her profile.",
+ cands:[
+  {name:"Dawanna Witt",party:"NP",badge:"Incumbent",says:"Her office says it does not hold people for ICE or tip agents to releases.",known:"Elected 2022 — first Black person and first woman to lead the department.",service:"The lone Democrat in the race, but withdrew from the DFL endorsement process after stalling at 58% (60% needed).",critics:"Criticized over deputies tackling and arresting protesters at the Whipple Federal Building during Operation Metro Surge.",srcs:[S.stribW],website:"https://sheriffwitt.org/",
+   update:"Breaking, Aug. 6–7: Witt says federal officials sent letters warning she could face criminal witness-tampering charges over her office's refusal to give ICE access to inmates for deportation. She says there's \"no legal basis\" for the threat. A conservative outlet (Townhall) frames the story differently, as ICE responding to her non-cooperation policy — five days before the Aug. 11 primary.",updateSrcs:[S.mprWitt,S.hoodline,S.townhall]},
+  {name:"Joseph Banks",party:"NP",says:"Wants regular community \"listening sessions,\" more community-based programming, and visible, engaged deputies.",known:"20+ years in law enforcement; former chief of the Lower Sioux, Upper Sioux, and Morton PDs; CEO of Banks Securities Inc.; licensed bail bondsman; co-founder of the Twin Cities Recovery Project.",service:"Ran against Witt in 2022, finishing second; filed again for 2026.",critics:null,srcs:[S.hts,S.bpBanks,S.ccxBanks,S.srBanks],website:"https://www.banks4sheriff.com/",
+   dr:{
+    bills:null,
+    companies:[
+     {d:"Undated (current)",t:"CEO/president, Banks Securities Inc., which assists with criminal-expungement resources.",s:[["Spokesman-Recorder","https://spokesman-recorder.com/2022/05/20/meet-hennepin-county-sheriff-candidate-joseph-banks/"]]},
+     {d:"Undated (current)",t:"Licensed bail bondsman; co-founder, Twin Cities Recovery Project.",s:[["Ballotpedia","https://ballotpedia.org/Joseph_Banks"]]}
+    ],
+    offices:[
+     {d:"Undated (career, prior to candidacy)",t:"Chief of police, Lower Sioux, Upper Sioux, and Morton, Minnesota police departments.",s:[["Spokesman-Recorder","https://spokesman-recorder.com/2022/05/20/meet-hennepin-county-sheriff-candidate-joseph-banks/"]]},
+     {d:"2022",t:"Ran for Hennepin County Sheriff; finished second in both the primary and general election to Dawanna Witt.",s:[["Hometown Source","https://www.hometownsource.com/sun_current/free/dawanna-witt-joseph-banks-lead-in-the-hennepin-county-sheriff-race/article_bfc6f5de-1861-11ed-b805-f7a118bff2bb.html"]]},
+     {d:"2026",t:"Filed again for Hennepin County Sheriff.",s:[["Hometown Source","https://www.hometownsource.com/sun_sailor/free/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html"]]}
+    ],
+    rallies:null,petitions:null,covid:null,guns:null,trump:null,
+    fraud:null
+   }}
+ ]},
+{id:"ep-mayor",office:"Eden Prairie Mayor",lvl:"Local",open:false,
+ why:"Filing closed July 28 and Mayor Ron Case was the only candidate to file — the race is uncontested as filed. The new term runs Jan 1, 2027 through Dec 31, 2030.",
+ cands:[
+  {name:"Ron Case",party:"NP",badge:"Incumbent",says:"No 2026 platform statements located yet.",known:"Completing his second term as mayor after five and a half terms on the City Council. Taught in Eden Prairie schools 1979\u20132012, then worked at UnitedHealth Group until retiring in 2024; doctorate in leadership from St. Mary's.",service:"Served on the City's Heritage Preservation Commission and chaired the Suburban Rate Authority and the Southwest Suburban Cable Commission.",critics:null,srcs:[S.eplFile,S.epBioCase],website:"https://roncaseformayor.org/"}
+ ]},
+{id:"ep-council",office:"Eden Prairie City Council (2 seats)",lvl:"Local",open:false,
+ why:"Seven candidates filed for two at-large seats \u2014 the most crowded local race on your ballot. Both incumbents, Mark Freiberg and Kathy Nelson, are running again. Nonpartisan, no primary: all seven names go straight to the November ballot.",
+ cands:[
+  {name:"Mark Freiberg",party:"NP",badge:"Incumbent",says:"No 2026 platform statements located yet.",known:"Completing his second term on the council; 30 years in real estate and housing finance. Eden Prairie resident since 1981.",service:"Heritage Preservation Commission 2013\u201316 and Planning Commission 2016\u201318; involved with the Eden Prairie Community Foundation, Historical Society and Rotary Club.",critics:null,srcs:[S.eplFile,S.epBioFrei],website:"https://markfreibergwinsep.com/"},
+  {name:"Kathy Nelson",party:"NP",badge:"Incumbent",says:"No 2026 platform statements located yet.",known:"Completing her fifth term on the council \u2014 the longest-serving member on the ballot. Eden Prairie resident since 1992.",service:"Southwest LRT Policy Board and Eden Prairie Community Foundation board; represents the City on the Fire Relief Association; longtime Planning Commission member before her election.",critics:null,srcs:[S.eplFile,S.epBioNel],website:"https://kathynelson.org/"},
+  {name:"Dirk Tedmon",party:"NP",says:"No platform statements for the council race yet. In his earlier 2026 state Senate bid, his campaign put education at the center and listed LGBTQ+ rights among its priorities.",known:"Executive director of marketing and communications at Eden Prairie Schools; previously worked in the Obama administration.",service:"Sought the DFL endorsement in state Senate District 49 earlier this year before filing for council.",critics:null,srcs:[S.eplFile,S.dirkSite,S.dfl49]},
+  {name:"Greg Lehman",party:"NP",says:"No 2026 platform statements located yet.",known:"Ran for the Eden Prairie City Council once before, on the 2022 general-election ballot. 30-year career in technical support plus 21 years working part time at a children's hospital.",service:"Career roundtable speaker at Eden Prairie High School; 12 humanitarian service trips to six countries, per his 2022 candidate survey.",critics:null,srcs:[S.eplFile,S.bpLehman]},
+  {name:"Tony Arndt",party:"NP",says:null,known:"Filed for one of the two at-large seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true},
+  {name:"Brad Canham",party:"NP",says:null,known:"Filed for one of the two at-large seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true},
+  {name:"Tina Culbertson",party:"NP",says:null,known:"Filed for one of the two at-large seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true}
+ ]},
+{id:"ep-school",office:"School Board \u2014 ISD 272 (4 seats)",lvl:"Local",open:false,
+ why:"Six candidates for four seats, four-year terms. Two sitting members \u2014 Steve Bartz and DD Dwivedy \u2014 chose not to file, so at least two new faces join the board.",
+ cands:[
+  {name:"Aaron Casper",party:"NP",badge:"Incumbent",says:"No 2026 platform statements located yet.",known:"First elected to the board in 2019 and reelected in 2022.",service:null,critics:null,srcs:[S.eplFile]},
+  {name:"Abby Libsack",party:"NP",badge:"Incumbent",says:"No 2026 platform statements located yet.",known:"First elected to the board in 2022.",service:null,critics:null,srcs:[S.eplFile],website:"https://www.abbyforep.com/"},
+  {name:"Kellie Stecher",party:"NP",says:"No platform statements for the school board race yet. In her earlier 2026 state Senate bid, her campaign highlighted reproductive rights, health care and mental health care access, and gender and racial equity.",known:"OB-GYN physician, writer and speaker; co-founder of Patient Care Heroes.",service:"Sought the DFL endorsement in state Senate District 49 earlier this year; backed by the Stonewall DFL, but the SD49 convention endorsed Krish Subrahmanian.",critics:null,srcs:[S.eplFile,S.stecherSite,S.stecherEpl]},
+  {name:"Madalynn Gerold",party:"NP",says:null,known:"Filed for one of the four seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true},
+  {name:"Mariana \u201cMari\u201d Verdugo",party:"NP",says:null,known:"Filed for one of the four seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true,website:"https://www.mariforep.com/"},
+  {name:"Laura Wall",party:"NP",says:null,known:"Filed for one of the four seats; no further sourced information yet.",service:null,critics:null,srcs:[S.eplFile],stub:true}
+ ]},
+{id:"judicial",office:"Judges (4th Judicial District)",lvl:"County",open:false,pending:true,
+ why:"District-court judgeships appear at the bottom of your ballot; most incumbents run unopposed. Contested seats will be listed once sample ballots post on MyBallotMN.",cands:[]}
+];
+const FACTS=[
+ "Five of your races are OPEN SEATS — Senate, Governor, State Auditor, your state Senate district, and County Attorney. That almost never happens all at once.",
+ "Gov. Tim Walz dropped his re-election bid in January 2026 — and Sen. Amy Klobuchar jumped into the governor's race two weeks later.",
+ "The Flanagan vs. Craig Senate primary is already the most expensive primary in Minnesota history (~$12M in outside spending and counting).",
+ "A record SEVEN Republicans are on the primary ballot for governor — including MyPillow founder Mike Lindell.",
+ "All of Eden Prairie sits in one state Senate district (49) — but Highway 5 decides whether your House race is 49A or 49B.",
+ "Minnesota says 'DFL,' not 'Democrat' — the Democratic-Farmer-Labor Party, a 1944 merger.",
+ "Judges and city races are nonpartisan in Minnesota — no party labels on that part of your ballot.",
+ "Your primary vote on Aug 11 matters extra this year: the nonpartisan County Attorney primary cuts five candidates down to just two.",
+ "Eden Prairie's mayoral race is uncontested — Ron Case was the only one who filed — but the City Council race drew a crowded field of seven for two seats.",
+ "Two sitting Eden Prairie school board members chose not to seek re-election, guaranteeing at least two new faces on the board in January."
+];
+
+/* ---------- SOUND ---------- */
+let soundOn=true, actx=null;
+function beep(f,d=0.07,type="sine",g=0.05){
+  if(!soundOn)return;
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+  const o=actx.createOscillator(),v=actx.createGain();
+  o.type=type;o.frequency.value=f;v.gain.value=g;
+  o.connect(v);v.connect(actx.destination);o.start();
+  v.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+d);o.stop(actx.currentTime+d);}catch(e){}
+}
+const click=()=>beep(520,.05,"triangle");
+const chime=()=>{beep(660,.09);setTimeout(()=>beep(880,.12),90);};
+const tada=()=>{[523,659,784].forEach((f,i)=>setTimeout(()=>beep(f,.15),i*110));};
+
+/* ---------- THEMES ---------- */
+const THEMES=[
+ {id:"light",name:"Classic Light",emoji:"☀️",desc:"The original warm paper look",sw:["#f6f4ef","#2f6fed","#12a06b","#e8a13a"]},
+ {id:"dark",name:"Classic Dark",emoji:"🌙",desc:"Easy on the eyes at night",sw:["#141a21","#2f6fed","#12a06b","#e8a13a"]},
+ {id:"modern",name:"Modern",emoji:"✨",desc:"Crisp, minimal, indigo",sw:["#fafbfc","#4f46e5","#0ea5e9","#f59e0b"]},
+ {id:"retro",name:"Retro Gamer",emoji:"👾",desc:"Pixel-era neon & hard shadows",sw:["#1a1033","#ff2e97","#00e5a0","#ffd23f"]},
+ {id:"l337",name:"l337",emoji:"💻",desc:"Green-on-black terminal glow",sw:["#050a05","#2aff5d","#00ccff","#ffe600"]},
+ {id:"cowboy",name:"Cowboy",emoji:"🤠",desc:"Dusty parchment & saddle leather",sw:["#f3e3c3","#a0522d","#6b8e23","#b8860b"]},
+ {id:"forest",name:"Forest",emoji:"🌲",desc:"Deep pines & mossy greens",sw:["#122019","#4caf7d","#a3c65c","#e0b34c"]},
+ {id:"underwater",name:"Underwater",emoji:"🐠",desc:"Deep-lake blues & bubbles",sw:["#06283d","#00c2d8","#37e0b0","#ffcf6e"]},
+ {id:"rave",name:"Rave",emoji:"🪩",desc:"Neon magenta, glow & hue-shift",sw:["#0b0212","#ff00c8","#00ffe1","#ccff00"]},
+ {id:"winter",name:"North Shore Winter",emoji:"❄️",desc:"Frosted ice blues",sw:["#eef4f9","#2b7bb9","#5aa8c9","#c68b3f"]},
+ {id:"fair",name:"State Fair",emoji:"🎡",desc:"Carnival cream & midway red",sw:["#fff4e0","#d94f30","#2a9d8f","#e9a319"]},
+ {id:"newsprint",name:"Newsprint",emoji:"📰",desc:"Broadsheet serif & ink",sw:["#efece4","#8a1c1c","#38536b","#9c7a2e"]}
+];
+function loadPref(){try{return localStorage.getItem("miw-theme")}catch(e){return null}}
+function savePref(v){try{localStorage.setItem("miw-theme",v)}catch(e){}}
+let theme=loadPref()||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+if(!THEMES.some(t=>t.id===theme))theme="light";
+function applyTheme(){
+  document.body.dataset.theme=theme;
+  savePref(theme);
+  const grid=document.getElementById("themegrid");
+  if(grid)grid.querySelectorAll(".swatch").forEach(s=>s.classList.toggle("cur",s.dataset.id===theme));
+}
+applyTheme();
+document.getElementById("themesBtn").onclick=()=>{
+  modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+   <h3>🎨 Pick your vibe</h3>
+   <p class="sub" style="margin-top:6px">Applies instantly and is remembered next time you open the app.</p>
+   <div class="themegrid" id="themegrid">`+
+   THEMES.map(t=>`<div class="swatch ${t.id===theme?"cur":""}" data-id="${t.id}" onclick="setTheme('${t.id}')">
+     <div class="strip">${t.sw.map(c=>`<i style="background:${c}"></i>`).join("")}</div>
+     <b>${t.emoji} ${t.name}</b><small>${t.desc}</small></div>`).join("")+
+   `</div>`;
+  overlay.classList.add("show");click();
+};
+function setTheme(id){theme=id;applyTheme();tada();}
+document.getElementById("soundBtn").onclick=function(){soundOn=!soundOn;this.textContent=soundOn?"🔊":"🔇";if(soundOn)chime();};
+
+/* ---------- LEAN SUMMARY (printer / share) ---------- */
+const LVL_EMOJI={Federal:"🇺🇸",Statewide:"🏛️",Legislature:"🏢",County:"🏙️",Local:"🏘️"};
+function goldPicks(){
+ const rows=[];
+ RACES.forEach(r=>{
+  const rm=medals[r.id];
+  if(!rm)return;
+  const goldName=Object.keys(rm).find(n=>rm[n]==="🥇");
+  if(!goldName)return;
+  const cand=r.cands.find(c=>c.name===goldName)||{};
+  rows.push({office:r.office,lvl:r.lvl,name:goldName,party:cand.party,website:cand.website});
+ });
+ return rows;
+}
+function buildSummaryText(){
+ const rows=goldPicks();
+ const dateStr=new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
+ const lines=["🗳️ My Minnesota 2026 Election Leans","📍 Eden Prairie, Hennepin County  •  🗓️ Primary Aug 11 — General Nov 3",""];
+ if(!rows.length){
+  lines.push("I haven't marked any 🥇 top picks yet — open the Meanwhile in Minnesota guide and tap a medal on your favorite candidates!");
+ }else{
+  rows.forEach(row=>{
+   const emoji=LVL_EMOJI[row.lvl]||"🗳️";
+   const partyLabel=row.party&&PARTY[row.party]?PARTY[row.party].label:row.party;
+   lines.push(`${emoji} ${row.office}`);
+   lines.push(`   🥇 ${row.name}${partyLabel?`  (${partyLabel})`:""}`);
+   if(row.website)lines.push(`   🌐 ${row.website.replace(/^https?:\/\//,"").replace(/\/$/,"")}`);
+   lines.push("");
+  });
+  lines.push(`✅ ${rows.length} race${rows.length===1?"":"s"} with a top pick so far.`);
+ }
+ lines.push("");
+ lines.push(`Made with the "Meanwhile in Minnesota" voter guide — ${dateStr}`);
+ lines.push("Always double-check candidate info and polling details before you vote!");
+ return lines.join("\n");
+}
+function openPrintSummary(){
+ const text=buildSummaryText();
+ modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+  <h3>🖨️ Summarize &amp; share my leans</h3>
+  <p class="sub" style="margin-top:6px">This pulls together every race where you've marked a 🥇 top pick into one tidy, emoji-friendly summary — ready to copy into a text or email, or print for your fridge. Nothing here is sent anywhere; it's built right in your browser from your own picks.</p>
+  <div class="summaryBox" id="summaryBox">${text.replace(/</g,"&lt;")}</div>
+  <div class="summaryActions">
+   <button class="summaryBtn" id="copySummaryBtn" onclick="copySummary()">📋 Copy to clipboard</button>
+   <button class="summaryBtn" onclick="window.print()">🖨️ Print</button>
+  </div>`;
+ overlay.classList.add("show");click();
+}
+function copySummary(){
+ const text=buildSummaryText();
+ const btn=document.getElementById("copySummaryBtn");
+ const done=()=>{if(!btn)return;const old=btn.textContent;btn.textContent="✅ Copied!";btn.classList.add("copied");tada();setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied");},1800);};
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+  navigator.clipboard.writeText(text).then(done).catch(()=>fallbackCopy(text,done));
+ }else{fallbackCopy(text,done);}
+}
+function fallbackCopy(text,cb){
+ try{
+  const ta=document.createElement("textarea");
+  ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
+  document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);
+  cb();
+ }catch(e){}
+}
+document.getElementById("printBtn").onclick=openPrintSummary;
+
+/* ---------- COUNTDOWNS & STATS ---------- */
+const day=864e5,now=new Date();
+const daysToPrim=Math.max(0,Math.ceil((new Date("2026-08-11")-now)/day));
+document.getElementById("cdPrim").textContent=daysToPrim;
+document.getElementById("cdGen").textContent=Math.max(0,Math.ceil((new Date("2026-11-03")-now)/day));
+if(daysToPrim<=7){const cdp=document.getElementById("cdPrim").parentElement;
+  const urgent=document.createElement("div");urgent.className="tag upd";urgent.style.marginTop="8px";urgent.style.display="inline-block";
+  urgent.textContent=daysToPrim<=1?"🔥 Tomorrow or today!":"🔥 This week!";cdp.appendChild(urgent);}
+function count(el,target){let n=0;const step=Math.max(1,Math.round(target/40));
+  const t=setInterval(()=>{n=Math.min(target,n+step);el.textContent=n;if(n>=target)clearInterval(t);},30);}
+count(document.getElementById("stRaces"),RACES.length);
+count(document.getElementById("stCands"),RACES.reduce((a,r)=>a+r.cands.length,0));
+count(document.getElementById("stOpen"),RACES.filter(r=>r.open).length);
+
+/* ---------- WHAT'S NEW ---------- */
+const WHATS_NEW=[
+ {label:"Hennepin County Sheriff",text:"Incumbent Dawanna Witt says feds threatened her with witness-tampering charges over ICE non-cooperation — 5 days before the primary.",rid:"hc-sheriff",ci:0},
+ {label:"US Senate (DFL primary)",text:"A Flanagan-aligned poll shows her primary lead over Craig widening to 14 points (partisan source — read with caution).",rid:"us-senate",ci:1},
+ {label:"Governor",text:"Klobuchar, Demuth, Qualls & Lindell held their first joint debate, at Farmfest on Aug. 5.",rid:"mn-governor",ci:0},
+ {label:"Eden Prairie local races",text:"Candidate field is now final — nobody withdrew by the July 30 deadline.",rid:"ep-council",ci:0}
+];
+const wn=document.getElementById("whatsnewList");
+wn.innerHTML=WHATS_NEW.map(w=>`<li><b>${w.label}:</b> ${w.text} <a href="javascript:void(0)" onclick="jumpTo('${w.rid}',${w.ci})">See details →</a></li>`).join("");
+function jumpTo(rid,ci){
+ const el=document.getElementById("race-"+rid);
+ if(el)el.scrollIntoView({behavior:"smooth",block:"center"});
+ setTimeout(()=>openCand(rid,ci),350);
+}
+
+/* ---------- FACTS ---------- */
+let fi=0;const factText=document.getElementById("factText");
+function showFact(){factText.style.animation="none";void factText.offsetWidth;factText.style.animation="";factText.textContent=FACTS[fi];}
+function nextFact(){fi=(fi+1)%FACTS.length;showFact();beep(700,.06,"triangle");}
+showFact();
+
+/* ---------- CHARTS ---------- */
+const openChart=document.getElementById("openChart");
+openChart.innerHTML=RACES.filter(r=>!r.pending).map(r=>`
+ <div class="bar"><div class="lbl">${r.office}</div>
+ <div class="track"><div class="fill" data-w="100" style="background:${r.open?"var(--gold)":"var(--accent)"}"></div></div>
+ <div class="val" style="font-size:.75rem;width:auto;color:${r.open?"var(--gold)":"var(--accent)"}">${r.open?"OPEN SEAT":"incumbent"}</div></div>`).join("")+
+ `<div class="legend"><span><span class="dot" style="background:var(--gold)"></span>Open seat — no incumbent running</span>
+ <span><span class="dot" style="background:var(--accent)"></span>Incumbent seeking re-election</span></div>`;
+const crowd=document.getElementById("crowdChart");
+const maxC=Math.max(...RACES.map(r=>r.cands.length));
+crowd.innerHTML=RACES.filter(r=>!r.pending).map(r=>`
+ <div class="bar"><div class="lbl">${r.office}</div>
+ <div class="track"><div class="fill" data-w="${r.cands.length/maxC*100}" style="background:linear-gradient(90deg,var(--accent),var(--accent2))"></div></div>
+ <div class="val">${r.cands.length}</div></div>`).join("")+
+ `<div class="legend"><span>Number of candidates filed as of Aug 7 (all filing windows, including Eden Prairie local races, have closed)</span></div>`;
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");o.unobserve(e.target);}}),{threshold:.3})
+ .observe(openChart);
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");o.unobserve(e.target);}}),{threshold:.3})
+ .observe(crowd);
+
+/* ---------- TABS & RACES ---------- */
+const LEVELS=["All","Federal","Statewide","Legislature","County","Local"];
+let curLvl="All";const tabs=document.getElementById("tabs");
+LEVELS.forEach(l=>{const b=document.createElement("button");b.className="tab"+(l==="All"?" active":"");b.textContent=l;
+ b.onclick=()=>{curLvl=l;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t===b));click();renderRaces();};tabs.appendChild(b);});
+
+/* ---------- SAVED PREFERENCES: compare picks & medal leans ---------- */
+const MEDALS=["🥇","🥈","🥉"];
+function loadJSON(key,fallback){try{const v=localStorage.getItem(key);return v?JSON.parse(v):fallback;}catch(e){return fallback;}}
+function saveJSON(key,val){try{localStorage.setItem(key,JSON.stringify(val));}catch(e){}}
+
+// medals: {raceId: {candidateName: "🥇"|"🥈"|"🥉"}}
+let medals=loadJSON("miw-medals",{});
+function saveMedals(){saveJSON("miw-medals",medals);}
+function setMedal(rid,name,medal){
+ medals[rid]=medals[rid]||{};
+ const cur=medals[rid][name];
+ // clear this medal from whoever else in the race currently holds it
+ Object.keys(medals[rid]).forEach(n=>{if(medals[rid][n]===medal)delete medals[rid][n];});
+ if(cur===medal){delete medals[rid][name];beep(380,.05);}
+ else{medals[rid][name]=medal;beep(700+MEDALS.indexOf(medal)*120,.09,"triangle");}
+ if(Object.keys(medals[rid]).length===0)delete medals[rid];
+ saveMedals();renderRaces();
+ if(overlay.classList.contains("show"))refreshModalMedals(rid,name);
+}
+
+// compare selections: {raceId: [candidateName, ...]} — stored by name, resolved to indices at render time
+let selNames=loadJSON("miw-compare",{});
+function saveSel(){saveJSON("miw-compare",selNames);}
+function selIndices(rid){
+ const r=RACES.find(x=>x.id===rid);if(!r)return[];
+ return (selNames[rid]||[]).map(n=>r.cands.findIndex(c=>c.name===n)).filter(i=>i>=0);
+}
+function toggleSel(rid,i){
+ const r=RACES.find(x=>x.id===rid),name=r.cands[i].name;
+ selNames[rid]=selNames[rid]||[];
+ const at=selNames[rid].indexOf(name);
+ if(at>=0){selNames[rid].splice(at,1);beep(400,.05);}
+ else{if(selNames[rid].length>=2)selNames[rid].shift();selNames[rid].push(name);beep(600,.06);}
+ if(selNames[rid].length===0)delete selNames[rid];
+ saveSel();renderRaces();
+}
+
+function renderRaces(){
+ const host=document.getElementById("racelist");
+ host.innerHTML=RACES.filter(r=>curLvl==="All"||r.lvl===curLvl).map(r=>{
+  const hasUpdate=r.cands.some(c=>c.update);
+  const seatWord=r.id==="ep-council"?"top 2 for the 2 seats":r.id==="ep-school"?"top 4 for the 4 seats":"your favorite(s)";
+  const tags=`<span class="tag lvl">${r.lvl}</span>`+(r.open?`<span class="tag open">⭐ Open seat</span>`:(r.pending?"":`<span class="tag inc">Incumbent running</span>`))+(hasUpdate?`<span class="tag upd">🆕 New info</span>`:"");
+  const selIdx=selIndices(r.id);
+  const raceMedals=medals[r.id]||{};
+  const cards=r.cands.map((c,i)=>{
+    const p=PARTY[c.party];
+    const isSel=selIdx.includes(i);
+    const myMedal=raceMedals[c.name];
+    const medalBtns=MEDALS.map(m=>{
+      const takenByOther=Object.entries(raceMedals).some(([n,mm])=>mm===m&&n!==c.name);
+      const on=myMedal===m;
+      return `<button class="medalbtn ${on?"on":""} ${takenByOther?"taken":""}" title="${on?"Remove this lean":"Mark as "+m}" onclick="event.stopPropagation();setMedal('${r.id}','${c.name.replace(/'/g,"\\'")}','${m}')">${m}</button>`;
+    }).join("");
+    return `<div class="cand ${isSel?"sel":""}" onclick="openCand('${r.id}',${i})">
+      ${c.update?`<span class="newpill">🆕 NEW</span>`:""}
+      ${c.badge?`<span class="badge">${c.badge}</span>`:""}
+      <h4>${c.name}</h4>
+      <span class="partypill" style="background:${p.c}">${p.label}</span>
+      <div class="mini">${c.known||c.says||"Filed candidate — profile pending."}</div>
+      <div class="medalrow">${medalBtns}<span class="leanhint">your lean</span></div>
+      <button class="btn ghost" style="margin-top:8px;padding:4px 12px;font-size:.75rem" onclick="event.stopPropagation();toggleSel('${r.id}',${i})">${isSel?"⭐ Selected":"☆ Compare"}</button>
+      ${myMedal?`<span class="medalbadge">${myMedal}</span>`:""}
+    </div>`;}).join("");
+  const actions=r.cands.length>1?`<div class="raceactions">
+    <button class="btn primary" onclick="compare('${r.id}')">⚖️ Compare selected (${selIdx.length}/2)</button>
+    ${Object.keys(raceMedals).length?`<span class="pill" style="font-weight:600">Leaning: ${Object.keys(raceMedals).sort((a,b)=>MEDALS.indexOf(raceMedals[a])-MEDALS.indexOf(raceMedals[b])).map(n=>raceMedals[n]+" "+n).join("  ·  ")}</span>`:`<span class="pill" style="font-weight:600;opacity:.7">Mark ${seatWord} with 🥇🥈🥉</span>`}
+    </div>`:"";
+  const empty=r.pending?`<div class="emptynote">⏳ ${r.cands.length===0?"No candidates yet — this race's filing window is still ahead. Check back after July 28.":""}</div>`:"";
+  return `<section class="race" id="race-${r.id}">
+    <div class="racehead"><h3>${r.office}</h3><div class="tagrow">${tags}</div></div>
+    <p class="racewhy">${r.why}</p>
+    ${cards?`<div class="cards">${cards}</div>`:""}${actions}${empty}
+  </section>`;
+ }).join("");
+}
+renderRaces();
+
+/* ---------- MODALS ---------- */
+const overlay=document.getElementById("overlay"),modal=document.getElementById("modal");
+function closeModal(){overlay.classList.remove("show");beep(350,.05);}
+function srcLinks(list){return list&&list.length?`<div class="srcs">Sources: ${list.map(s=>`<a href="${s[1]}" target="_blank">${s[0]}</a>`).join(" · ")}</div>`:"";}
+function secHtml(t,v,fallback){return `<div class="detailsec"><h5>${t}</h5><p>${v||fallback}</p></div>`;}
+function medalPickerHtml(rid,name){
+ const raceMedals=medals[rid]||{};
+ const myMedal=raceMedals[name];
+ const btns=MEDALS.map(m=>{
+   const takenByOther=Object.entries(raceMedals).some(([n,mm])=>mm===m&&n!==name);
+   const on=myMedal===m;
+   return `<button class="medalbtn ${on?"on":""} ${takenByOther?"taken":""}" title="${on?"Remove this lean":"Mark as "+m}" onclick="setMedal('${rid}','${name.replace(/'/g,"\\'")}','${m}')">${m}</button>`;
+ }).join("");
+ return `<div class="modalmedals" id="modalMedals">${btns}<span class="leanhint">${myMedal?"You're leaning "+myMedal+" toward "+name:"Mark your lean for this race"}</span></div>`;
+}
+function refreshModalMedals(rid,name){
+ const host=document.getElementById("modalMedals");
+ if(host)host.outerHTML=medalPickerHtml(rid,name);
+}
+function openCand(rid,i){
+ const r=RACES.find(x=>x.id===rid),c=r.cands[i],p=PARTY[c.party];
+ modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+  <h3>${c.name}</h3>
+  <span class="partypill" style="background:${p.c};color:#fff;border-radius:999px;padding:3px 12px;font-size:.75rem;font-weight:800">${p.label}</span>
+  ${c.badge?` <span class="tag open" style="vertical-align:middle">${c.badge}</span>`:""}
+  <p class="sub" style="margin-top:8px">${r.office}</p>
+  ${c.update?`<div class="updatebox"><h5>🆕 New since our last update</h5><p>${c.update}</p>${srcLinks(c.updateSrcs)}</div>`:""}
+  ${secHtml("🎯 What they say they'll do",c.says,"No detailed platform on record yet — check their campaign site or Vote411 closer to the election.")}
+  ${secHtml("🏅 What they're known for",c.known,"Little public record gathered yet.")}
+  ${secHtml("🤝 Party track record",c.service,"Nothing notable on record.")}
+  ${secHtml("🗯️ What the opposition says",c.critics,"No notable public criticism recorded so far.")}
+  ${medalPickerHtml(rid,c.name)}
+  ${srcLinks(c.srcs)}
+  ${c.website?`<div class="srcs">🌐 Campaign website: <a href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,"").replace(/\/$/,"")}</a></div>`:""}
+  ${c.dr?`<div class="drBtnRow"><button class="drBtn" onclick="openDetailedResearch('${rid}',${i})">🔬 Detailed Research — bills, business ties, COVID &amp; 2A stances, Trump alignment, and more</button></div>`:""}`;
+ overlay.classList.add("show");chime();
+}
+const DR_CATS=[
+ ["bills","📜","Bills Authored or Co-Authored"],
+ ["companies","🏢","Companies & Management Roles"],
+ ["offices","🏛️","Political Offices Held"],
+ ["rallies","📣","Rallies & Major Public Events"],
+ ["petitions","✍️","Petitions"],
+ ["covid","🦠","COVID-19 Stance"],
+ ["guns","🔫","2nd Amendment / Gun Policy"],
+ ["trump","🇺🇸","Trump Alignment"],
+ ["fraud","🔎","Fraud & Welfare Views"]
+];
+function drItemHtml(it){
+ return `<div class="drItem"><span class="drDate">${it.d}</span><div class="drText">${it.t}</div>${it.s?`<div class="drSrcs">${it.s.map(x=>`<a href="${x[1]}" target="_blank">${x[0]}</a>`).join(" · ")}</div>`:""}</div>`;
+}
+function openDetailedResearch(rid,i){
+ const r=RACES.find(x=>x.id===rid),c=r.cands[i];
+ const body=DR_CATS.map(([key,icon,label])=>{
+   const items=c.dr[key];
+   const count=items&&items.length?items.length:0;
+   return `<div class="drCat"><h5>${icon} ${label}${count?`<span class="n">${count}</span>`:""}</h5>
+     ${count?`<div class="drTimeline">${items.map(drItemHtml).join("")}</div>`:`<div class="drEmpty">No information found.</div>`}
+   </div>`;
+ }).join("");
+ modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+  <button class="drBack" onclick="openCand('${rid}',${i})">← Back to ${c.name}'s profile</button>
+  <h3>🔬 Detailed Research — ${c.name}</h3>
+  <p class="sub" style="margin-top:4px">Nine fixed topics, listed oldest to newest. Anything not sourced is marked "No information found" rather than guessed.</p>
+  ${body}`;
+ overlay.classList.add("show");chime();
+}
+function compare(rid){
+ const picks=selIndices(rid);
+ if(picks.length!==2){beep(300,.12,"sawtooth",.03);
+   modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button><h3>Pick two to compare ⚖️</h3>
+   <p class="sub" style="margin-top:10px">Tap the ☆ Compare button on exactly two candidate cards in this race, then hit Compare again.</p>`;
+   overlay.classList.add("show");return;}
+ const r=RACES.find(x=>x.id===rid),[a,b]=picks.map(i=>r.cands[i]);
+ const row=(label,ka)=>`<tr><td>${label}</td><td>${a[ka]||"—"}</td><td>${b[ka]||"—"}</td></tr>`;
+ modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+  <h3>⚖️ ${r.office}</h3><p class="sub">Side-by-side — decide for yourself.</p>
+  <table class="cmptable">
+   <tr><td></td><th>${a.name}<br><span class="partypill" style="background:${PARTY[a.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[a.party].label}</span>${a.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${a.badge}</span>`:""}</th>
+   <th>${b.name}<br><span class="partypill" style="background:${PARTY[b.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[b.party].label}</span>${b.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${b.badge}</span>`:""}</th></tr>
+   ${row("Plans","says")}${row("Known for","known")}${row("Party record","service")}${row("Critics say","critics")}
+  </table>
+  ${srcLinks([...(a.srcs||[]),...(b.srcs||[])].filter((s,i,arr)=>arr.findIndex(x=>x[1]===s[1])===i))}`;
+ overlay.classList.add("show");tada();
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+</script>
+</body>
+</html>

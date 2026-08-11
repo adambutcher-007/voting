@@ -1,0 +1,44 @@
+---
+name: Adam Jennings
+slug: adam-jennings
+party: DFL
+office: State Auditor
+district: statewide
+race_slug: mn-state-auditor
+status: withdrawn
+incumbent: false
+website: https://www.adamforauditor.com/
+last_updated: 2026-08-11
+sources:
+  - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
+    accessed: 2026-07-11
+    note: listed as primary candidate
+---
+
+## Platform
+
+*No information gathered yet.*
+
+## Background & Record
+
+Mayor of Tonka Bay (2021-present). ([source](https://ballotpedia.org/Minnesota_Auditor_election,_2026))
+
+## Party Service
+
+*No information gathered yet.*
+
+## Opposition & Criticism
+
+*No information gathered yet.*
+
+## Endorsements
+
+*No information gathered yet.*
+
+## Campaign Finance
+
+*No information gathered yet.* See [MN Campaign Finance Board](https://cfb.mn.gov/).
+
+## News & Notes
+
+Dropped out of the State Auditor race after losing the DFL endorsement contest; not on the Aug. 11, 2026 primary ballot for this office. Retained here for reference. ([search summary, via adamforauditor.com news archive](https://www.adamforauditor.com/news/adam-jennings-announces-campaign-for-minnesota-state-auditor))
