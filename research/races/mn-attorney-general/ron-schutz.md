@@ -5,10 +5,10 @@ party: Republican
 office: Attorney General
 district: statewide
 race_slug: mn-attorney-general
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.ronformnag.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://en.wikipedia.org/wiki/2026_Minnesota_Attorney_General_election
     accessed: 2026-07-11
@@ -26,6 +26,9 @@ sources:
   - url: https://dfl.org/dfl-party-statement-on-ron-schutzs-run-for-attorney-general/
     accessed: 2026-08-11
     note: opposing-party statement
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -54,7 +57,11 @@ Unanimously endorsed by the Republican Party of Minnesota at the state conventio
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Republican Party's unanimous endorsement and advances unopposed from the GOP side to face incumbent DFL AG Keith Ellison on Nov. 3 ([MN GOP](https://mngop.com/attorney-general-ron-schutz-wins/)). Considered one of Minnesota's closest races this fall; is emphasizing Ellison's approval ratings and the Feeding Our Future fraud scandal as vulnerabilities ([Star Tribune](https://www.startribune.com/minnesota-attorney-general-keith-ellison-ron-schutz/601868722)).
+
 *No information gathered yet.*
+
+**2026-08-12:** Unopposed in the Republican primary (22,232 votes, 100%); advances to face DFL incumbent Keith Ellison on Nov. 3 ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

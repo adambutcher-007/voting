@@ -5,10 +5,10 @@ party: Republican
 office: Secretary of State
 district: statewide
 race_slug: mn-secretary-of-state
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.tadjude.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://ballotpedia.org/Minnesota_Secretary_of_State_election,_2026
     accessed: 2026-07-11
@@ -23,6 +23,9 @@ sources:
     accessed: 2026-08-10
   - url: https://www.tadjude.com/media.html
     accessed: 2026-08-10
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -51,7 +54,11 @@ Age 73, of Maple Grove, Minnesota. St. Cloud native. Was the youngest person eve
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 Republican primary over Wendy Phillips, 60.3%–39.8% ([Duluth News Tribune](https://www.duluthnewstribune.com/news/minnesota/jude-wins-gop-race-for-minnesota-secretary-of-state)). Advances to face three-term incumbent Steve Simon on Nov. 3. Has suggested Simon "had something to hide" for resisting a federal DOJ request for sensitive voter registration data; Simon disputes the legality of that request ([Duluth News Tribune](https://www.duluthnewstribune.com/news/minnesota/jude-wins-gop-race-for-minnesota-secretary-of-state)).
+
 Jude and Wendy Phillips are the two Republicans running in the August 11, 2026 primary for Secretary of State ([InForum](https://www.inforum.com/news/minnesota/tad-jude-announces-bid-for-minnesota-secretary-of-state)).
+
+**2026-08-12:** Won the Aug. 11 Republican primary for Secretary of State with 15,176 votes (64.92%) over Wendy Phillips (35.08%); advances to face DFL incumbent Steve Simon on Nov. 3 ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

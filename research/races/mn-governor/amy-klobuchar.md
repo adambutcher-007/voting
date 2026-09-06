@@ -5,10 +5,10 @@ party: DFL
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.amyklobuchar.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026
     accessed: 2026-07-11
@@ -18,6 +18,9 @@ sources:
     accessed: 2026-07-11
   - url: https://www.mprnews.org/story/2026/08/05/klobuchar-demuth-qualls-lindell-tangle-in-farmfest-debate-as-the-vie-to-be-next-governor
     accessed: 2026-08-07
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -46,6 +49,10 @@ Continues to far out-raise GOP candidates ([Minnesota Reformer](https://minnesot
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 DFL primary in a landslide (89.7%) and advances to face Republican nominee Lisa Demuth on Nov. 3 ([MPR News](https://www.mprnews.org/story/2026/08/11/amy-klobuchar-kendall-qualls-lisa-demuth-mike-lindell-seek-nods-in-minnesota-governors-race)). As of early September, polling from PollingSource shows her leading Demuth 51.5%–36% (a D+15.5 margin), rated "Safe D" ([PollingSource](https://pollingsource.com/governors/MN)).
+
 Leads all GOP candidates in a Minnesota Poll, though many independents are undecided ([Star Tribune](https://www.startribune.com/minnesota-poll-klobuchar-leads-all-gop-candidates-for-governor/601850018)).
 
 **Updated 2026-08-07:** Appeared alongside Demuth, Qualls, and Lindell at a Farmfest debate on Aug. 5 — the field's first joint appearance — focused on rural and agricultural policy ([MPR News](https://www.mprnews.org/story/2026/08/05/klobuchar-demuth-qualls-lindell-tangle-in-farmfest-debate-as-the-vie-to-be-next-governor)).
+
+**2026-08-12:** Won the Aug. 11 DFL primary for governor with 26,887 votes (88.94%), advancing to face Republican nominee Lisa Demuth on Nov. 3 in the first all-woman general-election matchup for MN governor ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).

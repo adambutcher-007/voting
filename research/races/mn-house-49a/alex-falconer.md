@@ -8,7 +8,7 @@ race_slug: mn-house-49a
 status: filed
 incumbent: true
 website: https://www.alexforhouse.org/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/06/24/2026-ballots-take-shape-for-eden-prairie-voters/
     accessed: 2026-07-11
@@ -41,5 +41,7 @@ Holds 49A for the DFL ([EP Local News](https://eplocalnews.org/2024/11/06/falcon
 See [MN Campaign Finance Board](https://cfb.mn.gov/).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary was held (one candidate per party); Falconer advances directly to face Republican Jeff Houdek on Nov. 3.
 
 *No information gathered yet.*

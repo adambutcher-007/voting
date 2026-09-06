@@ -5,10 +5,10 @@ party: Republican
 office: US Senator
 district: statewide
 race_slug: us-senate
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://www.schwarzeforsenate.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.kttc.com/2026/07/28/one-on-one-with-us-senate-candidate-adam-schwarze/
     accessed: 2026-08-11
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -51,6 +54,8 @@ Minnesota GOP endorsement ([Star Tribune](https://www.startribune.com/adam-schwa
 ## News & Notes
 
 *No information gathered yet.*
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for US Senate, finishing third with 5,674 votes (22.81%); Michele Tafoya won the nomination with 55.82% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

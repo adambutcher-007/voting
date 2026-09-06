@@ -5,10 +5,10 @@ party: Republican
 office: US Senator
 district: statewide
 race_slug: us-senate
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://micheletafoya.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.foxnews.com/media/the-view-coronavirus-vaccines-choice
     accessed: 2026-08-11
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,7 +53,11 @@ None from the state party; lost endorsement to Schwarze ([Star Tribune](https://
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 Republican primary with 52.1% of the vote over Adam Schwarze and Royce White ([MPR News](https://www.mprnews.org/story/2026/08/11/michele-tafoya-wins-republican-nomination-for-senate)). Advances to face DFL nominee Peggy Flanagan on Nov. 3. Says Minnesotans feel "embarrassed" by recent progressive primary wins and is campaigning on government accountability, fraud, inflation, crime, and border security, aligned with President Trump ([The Hill](https://thehill.com/homenews/campaign/6028783-michele-tafoya-minnesota-senate/)). Republicans haven't won a statewide Minnesota race since 2006; Tafoya is aiming to attract independents.
+
 A May 2026 Quantus Insights poll of likely GOP primary voters put her at 52%, roughly 43 points ahead of her nearest rival ([WLT Report — partisan outlet](https://wltreport.com/2026/05/24/michele-tafoya-opens-commanding-lead-in-minnesota-gop-senate-primary/)).
+
+**2026-08-12:** Won the Aug. 11 Republican primary for US Senate with 13,885 votes (55.82%), advancing to face DFL nominee Peggy Flanagan on Nov. 3 ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

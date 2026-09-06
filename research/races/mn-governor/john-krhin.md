@@ -5,10 +5,10 @@ party: Republican
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://krhin4gov.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026
     accessed: 2026-07-11
@@ -21,6 +21,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.bemidjipioneer.com/news/gop-governor-hopeful-john-krhin-visits-bemidji-connects-with-local-churches
     accessed: 2026-08-11
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,6 +53,8 @@ Born in Chisholm, Minnesota, the youngest of eight children of Peter Krhin, a na
 ## News & Notes
 
 *No information gathered yet.*
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for governor, finishing with 204 votes (0.81%); Lisa Demuth won the nomination ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

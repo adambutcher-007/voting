@@ -8,7 +8,7 @@ race_slug: mn-house-49b
 status: filed
 incumbent: false
 website: https://creggformn.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/05/28/gop-endorses-candidates-for-eden-prairie-area-legislative-races/
     accessed: 2026-07-11
@@ -47,7 +47,7 @@ See [MN Campaign Finance Board](https://cfb.mn.gov/).
 
 ## News & Notes
 
-*No information gathered yet.*
+**2026-09-05 general-election update:** No primary was held (one candidate per party); Cregg advances directly to face incumbent DFL Rep. Carlie Kotyza-Witthuhn on Nov. 3.
 
 ## Detailed Research
 

@@ -8,7 +8,7 @@ race_slug: eden-prairie-mayor
 status: filed
 incumbent: true
 website: https://roncaseformayor.org/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/
     accessed: 2026-07-29
@@ -46,5 +46,7 @@ The mayor's office is nonpartisan. Case has served the City on commissions and t
 Eden Prairie city candidates file campaign finance reports with the City; reports are posted at [City of Eden Prairie](https://www.edenprairiemn.gov/city-government/elections/city-council-candidate-information/city-council-campaign-finance-reports).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** Running unopposed for a third term as mayor; no other candidate filed, so Case is the only name that will appear for this office on the Nov. 3 ballot ([EP Local News](https://eplocalnews.org/2026/08/20/ron-case-unopposed-in-bid-for-third-term-as-eden-prairie-mayor/)). Has served 30 years on the City Council total, including eight as mayor.
 
 The mayor's seat carries a term running Jan. 1, 2027 through Dec. 31, 2030 ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Candidate lists are not final: those who filed had until 5 p.m. Thursday, July 30, 2026 to withdraw ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Filings can be viewed through the [Minnesota Secretary of State's candidate-filing website](https://candidates.sos.mn.gov/).

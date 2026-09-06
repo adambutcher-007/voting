@@ -5,10 +5,10 @@ party: nonpartisan
 office: Hennepin County Attorney
 district: Hennepin County
 race_slug: hennepin-county-attorney
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://www.dianekrenz.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.dianekrenz.com/
     accessed: 2026-08-11
+  - url: https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -51,6 +54,8 @@ Running as an independent, nonpartisan candidate ([FOX 9](https://www.fox9.com/n
 ## News & Notes
 
 Running to succeed outgoing Hennepin County Attorney Mary Moriarty, in a five-candidate nonpartisan primary field also including Anders Folk, Cedrick Frazier, Hao Nguyen, and Matt Pelikan (a sixth candidate, University of Minnesota law professor Francis Shen, was also mentioned in some reporting); the top two finishers in the Aug. 11 primary advance to the Nov. 3 general election ([Star Tribune](https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490)). Participated in an LWV candidate forum ([CCX Media](https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 nonpartisan primary, finishing third with 46,150 votes, behind top-two finishers Cedrick Frazier and Anders Folk ([Star Tribune](https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120), accessed 2026-08-12).
 
 ## Detailed Research
 

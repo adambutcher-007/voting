@@ -5,10 +5,10 @@ party: Republican
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://mikelindellgov.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://news.ballotpedia.org/2026/06/11/record-high-seven-candidates-running-in-minnesotas-republican-gubernatorial-primary/
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-09
   - url: https://www.pbs.org/newshour/amp/politics/mypillow-founder-and-trump-ally-mike-lindell-to-run-for-minnesota-governor-in-2026
     accessed: 2026-08-09
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -53,6 +56,8 @@ See [MN Campaign Finance Board](https://cfb.mn.gov/).
 One of three leading GOP candidates by endorsements and media attention ([Ballotpedia News](https://news.ballotpedia.org/2026/06/11/record-high-seven-candidates-running-in-minnesotas-republican-gubernatorial-primary/)).
 
 **Updated 2026-08-07:** Debated Klobuchar, Demuth, and Qualls at Farmfest on Aug. 5 ([Minnesota Reformer](https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for governor, finishing second with 8,200 votes (32.56%); Lisa Demuth won with 44.74% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

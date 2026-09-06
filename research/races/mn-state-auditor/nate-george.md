@@ -5,10 +5,10 @@ party: Republican
 office: State Auditor
 district: statewide
 race_slug: mn-state-auditor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://nategeorgeformnstateauditor.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
     accessed: 2026-07-11
@@ -23,6 +23,9 @@ sources:
     accessed: 2026-08-10
   - url: https://nategeorgeformnstateauditor.com/
     accessed: 2026-08-10
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -52,6 +55,8 @@ Republican Party of Minnesota state endorsement for State Auditor ([MN GOP](http
 ## News & Notes
 
 Campaign headquarters listed at 1109 Hilltop Street, Braham, MN 55006 ([nategeorgeformnstateauditor.com](https://nategeorgeformnstateauditor.com/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for State Auditor, finishing second with 6,158 votes (26.13%) to Scott Jensen's 66.84% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

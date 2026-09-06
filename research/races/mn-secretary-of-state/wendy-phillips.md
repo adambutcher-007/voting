@@ -5,10 +5,10 @@ party: Republican
 office: Secretary of State
 district: statewide
 race_slug: mn-secretary-of-state
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://www.wendyforsos.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_Secretary_of_State_election,_2026
     accessed: 2026-07-11
@@ -21,6 +21,9 @@ sources:
     accessed: 2026-08-10
   - url: https://www.wendyforsos.com/
     accessed: 2026-08-10
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,6 +53,8 @@ Former chair, Olmsted County Republican Party; former MNGOP State Executive Boar
 ## News & Notes
 
 Announced her campaign January 5, 2026 ([KTTC](https://www.kttc.com/2026/01/05/oronoco-native-wendy-phillips-announces-campaign-mn-secretary-state/)). Phillips and Tad Jude are the two Republicans running in the August 11, 2026 primary for Secretary of State.
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for Secretary of State, finishing with 8,200 votes (35.08%) to Tad Jude's 64.92% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

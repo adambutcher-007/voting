@@ -5,10 +5,10 @@ party: Republican
 office: State Auditor
 district: statewide
 race_slug: mn-state-auditor
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.drscottjensen.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
   - url: https://www.lrl.mn.gov/legdb/fulldetail?id=15484
     accessed: 2026-08-10
     note: MN Legislative Reference Library legislator record
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,7 +53,11 @@ Physician; earned an undergraduate degree and a medical degree from the Universi
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 Republican primary and advances to face DFL nominee Zack Filipovich and independent Jay Reeves on Nov. 3 ([FOX 9](https://www.fox9.com/news/minnesota-state-auditor-gop-primary-results-2026)).
+
 Jensen's switch from the governor's race to the auditor's race reshaped both the 2026 GOP gubernatorial primary (leaving Kendall Qualls, Lisa Demuth, and Mike Lindell as the main contenders) and the auditor primary ([MPR News](https://www.mprnews.org/story/2026/02/09/jensen-drops-out-gop-race-minnesota-governor-run-state-auditor)).
+
+**2026-08-12:** Won the Aug. 11 Republican primary for State Auditor with 15,754 votes (66.84%); advances to face DFL nominee Zack Filipovich on Nov. 3 ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

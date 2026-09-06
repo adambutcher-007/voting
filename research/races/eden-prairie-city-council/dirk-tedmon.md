@@ -8,7 +8,7 @@ race_slug: eden-prairie-city-council
 status: filed
 incumbent: false
 website: https://forwardwithdirk.com/
-last_updated: 2026-07-29
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/
     accessed: 2026-07-29
@@ -46,5 +46,7 @@ City council races are nonpartisan. Earlier in 2026 Tedmon was among the candida
 Eden Prairie city candidates file campaign finance reports with the City; reports are posted at [City of Eden Prairie](https://www.edenprairiemn.gov/city-government/elections/city-council-candidate-information/city-council-campaign-finance-reports).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** Filed for one of two at-large City Council seats; no primary held, advances directly to the Nov. 3 general election. Executive director of strategic growth and engagement for Eden Prairie Schools since 2022; 15+ years in public relations, communications, and marketing, largely in public-service roles; previously worked in the Obama administration in Washington, D.C. Lists affordability (child care, housing) and support for local businesses as leading priorities, along with simplifying city processes for businesses and opposing discrimination ([EP Local News](https://eplocalnews.org/2026/04/10/why-dirk-tedmon-stands-out/)).
 
 Candidate lists are not final: those who filed had until 5 p.m. Thursday, July 30, 2026 to withdraw ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Filings can be viewed through the [Minnesota Secretary of State's candidate-filing website](https://candidates.sos.mn.gov/).

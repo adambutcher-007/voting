@@ -5,15 +5,18 @@ party: nonpartisan
 office: Hennepin County Attorney
 district: Hennepin County
 race_slug: hennepin-county-attorney
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://mattpelikan.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list
     accessed: 2026-07-11
   - url: https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/
     accessed: 2026-07-11
+  - url: https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -43,3 +46,5 @@ Won the DFL endorsement for Minnesota Attorney General in 2018 ([FOX 9](https://
 ## News & Notes
 
 Participated in LWV candidate forum ([CCX Media](https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 nonpartisan primary, finishing fifth with 17,648 votes ([Star Tribune](https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120), accessed 2026-08-12).

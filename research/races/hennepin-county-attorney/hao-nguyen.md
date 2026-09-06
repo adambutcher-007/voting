@@ -5,10 +5,10 @@ party: nonpartisan
 office: Hennepin County Attorney
 district: Hennepin County
 race_slug: hennepin-county-attorney
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://www.hao4hennepin.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.hao4hennepin.com/
     accessed: 2026-08-11
+  - url: https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -51,6 +54,8 @@ Endorsed by Hennepin County Sheriff Dawanna Witt, Ramsey County Attorney John Ch
 ## News & Notes
 
 Announced his candidacy in September 2025 ([Minneapoli Media](https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county)). Running to succeed outgoing Hennepin County Attorney Mary Moriarty in a nonpartisan primary field that also includes Diane Krenz, Anders Folk, Cedrick Frazier, and Matt Pelikan; the top two finishers advance to the Nov. 3 general election. Participated in an LWV candidate forum ([CCX Media](https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 nonpartisan primary, finishing fourth with 36,424 votes ([Star Tribune](https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120), accessed 2026-08-12).
 
 ## Detailed Research
 

@@ -5,15 +5,18 @@ party: nonpartisan
 office: Hennepin County Attorney
 district: Hennepin County
 race_slug: hennepin-county-attorney
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.cedrickfrazier.org/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://www.startribune.com/hennepin-county-attorney-race-cedrick-frazier-dfl-endorsement/601856726
     accessed: 2026-07-11
   - url: https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list
     accessed: 2026-07-11
+  - url: https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -42,4 +45,8 @@ Hennepin County DFL endorsement; claims labor backing ([Star Tribune](https://ww
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 nonpartisan primary with 87,447 votes (first place) and advances to face Anders Folk on Nov. 3 ([Star Tribune](https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120)).
+
 Participated in LWV candidate forum ([CCX Media](https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/)).
+
+**2026-08-12:** Led the Aug. 11 nonpartisan primary (top two advance) with 87,447 votes, ahead of Anders Folk (55,610); the two face off on Nov. 3 ([Star Tribune](https://www.startribune.com/cedrick-frazier-wins-hennepin-county-attorney-primary-advances-to-face-anders-folk/601875120), accessed 2026-08-12).

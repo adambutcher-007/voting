@@ -8,7 +8,7 @@ race_slug: mn-state-auditor
 status: withdrawn
 incumbent: false
 website: https://www.elliottengen.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
     accessed: 2026-07-11
@@ -21,6 +21,9 @@ sources:
     accessed: 2026-08-10
   - url: https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026
     accessed: 2026-08-10
+  - url: https://kstp.com/kstp-news/top-news/elliott-engen-drops-bid-for-auditor-files-for-new-term-in-minnesota-house-after-dwi-arrest/
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,6 +53,8 @@ Faced a Minnesota House ethics committee hearing in April 2026 after being arres
 ## News & Notes
 
 **Withdrew from the State Auditor race.** Engen announced a campaign for State Auditor but failed to file for that office before the June 2, 2026 filing deadline, instead re-filing for his existing House District 36A seat ([Fox 9](https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026), [Yahoo News](https://www.yahoo.com/news/politics/articles/rep-engen-drops-financial-watchdog-161407000.html)). He is retained in this repository for historical/reference purposes but is **not** on the 2026 State Auditor primary ballot.
+
+**2026-08-12:** Quietly ended his State Auditor bid after a March 2026 DWI arrest and instead filed by the June 2 deadline for re-election to his MN House seat (District 36A) ([KSTP](https://kstp.com/kstp-news/top-news/elliott-engen-drops-bid-for-auditor-files-for-new-term-in-minnesota-house-after-dwi-arrest/), accessed 2026-08-12).
 
 ## Detailed Research
 

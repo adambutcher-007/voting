@@ -8,7 +8,7 @@ race_slug: mn-house-49a
 status: filed
 incumbent: false
 website: https://houdekformn.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/
     accessed: 2026-07-11
@@ -41,6 +41,8 @@ SD 49 GOP endorsement ([EP Local News](https://eplocalnews.org/2026/06/18/houdek
 See [MN Campaign Finance Board](https://cfb.mn.gov/).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary was held (one candidate per party); Houdek advances directly to face incumbent DFL Rep. Alex Falconer on Nov. 3. Also serves on the executive leadership team of a Minnesota nonprofit facilitating local, national, and international service opportunities ([search-aggregated bio](https://eplocalnews.org/2026/06/18/houdek-endorsed-by-republicans-in-house-49a-race/)).
 
 *No information gathered yet.*
 

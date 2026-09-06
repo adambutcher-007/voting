@@ -5,10 +5,10 @@ party: Republican
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: null
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026
     accessed: 2026-07-11
@@ -19,6 +19,9 @@ sources:
     accessed: 2026-08-11
   - url: https://en.wikipedia.org/wiki/2024_United_States_Senate_election_in_Minnesota
     accessed: 2026-08-11
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -48,6 +51,8 @@ Retiree, born May 9, 1956 in Park Rapids, Minnesota, now living in Minneapolis (
 ## News & Notes
 
 No official campaign website could be located via search as of 2026-08-10; his public presence appears limited to voter-guide/tracking sites (Ballotpedia, VoteSmart, BallotReady, iVoterGuide). No site found.
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for governor, finishing with 63 votes (0.25%) ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

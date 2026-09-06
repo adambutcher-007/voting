@@ -162,6 +162,11 @@ p.sub{color:var(--muted);margin-bottom:16px;font-size:.95rem}
 .cand .partypill{display:inline-block;font-size:.7rem;font-weight:800;color:#fff;border-radius:999px;padding:3px 9px;margin:6px 0}
 .cand .mini{font-size:.82rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .cand .badge{position:absolute;top:10px;right:10px;font-size:.65rem;font-weight:800;border-radius:999px;padding:3px 8px;background:var(--gold);color:#fff}
+.cand .resultbadge{position:absolute;top:10px;left:10px;font-size:.62rem;font-weight:800;border-radius:999px;padding:3px 8px;color:#fff}
+.resultbadge.win{background:var(--green,#12a06b)}
+.resultbadge.out{background:#8a8a8a}
+.tag.resultwin{background:color-mix(in srgb,var(--green,#12a06b) 20%,transparent);color:var(--green,#12a06b);border:1px solid var(--green,#12a06b)}
+.tag.resultout{background:color-mix(in srgb,#8a8a8a 20%,transparent);color:#8a8a8a;border:1px solid #8a8a8a}
 .cand .medalbadge{position:absolute;bottom:8px;right:10px;font-size:1.5rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));animation:pop .35s ease}
 .medalrow{display:flex;gap:6px;margin-top:8px;align-items:center}
 .medalbtn{border:1.5px solid var(--line);background:var(--bg);border-radius:10px;width:32px;height:32px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,border-color .2s,filter .2s;opacity:.55}
@@ -244,14 +249,13 @@ footer a{color:var(--accent)}
     <p>Everything on your fall 2026 Minnesota ballot — who's running, what they say they'll do, and what their critics say — in plain English. No jargon, no spin, sources included.</p>
     <div class="badgesrow">
       <span class="pill">📍 Eden Prairie · Hennepin County</span>
-      <span class="pill">🗳️ Primary: Aug 11</span>
+      <span class="pill">✅ Primary decided: Aug 11</span>
       <span class="pill">🍂 General: Nov 3</span>
-      <span class="pill">📅 Updated Aug 7, 2026</span>
+      <span class="pill">📅 Updated Sep 5, 2026</span>
     </div>
   </section>
 
   <div class="countdowns">
-    <div class="cd"><h3>Primary Election</h3><div class="num" id="cdPrim">—</div><small>days until Aug 11 · narrows every crowded race to finalists</small></div>
     <div class="cd gen"><h3>General Election</h3><div class="num" id="cdGen">—</div><small>days until Nov 3 · the one that decides it all</small></div>
   </div>
 
@@ -263,7 +267,7 @@ footer a{color:var(--accent)}
   </div>
 
   <div class="whatsnew" id="whatsnew">
-    <h4>🆕 What's new since your last visit<span class="freshtag">Aug 7</span></h4>
+    <h4>🆕 What's new since your last visit<span class="freshtag">Sep 5</span></h4>
     <ul id="whatsnewList"></ul>
   </div>
 
@@ -277,8 +281,8 @@ footer a{color:var(--accent)}
   <p class="sub">An "open seat" means no incumbent is running — a genuinely fresh choice. You have a remarkable number of them this year.</p>
   <div class="chartcard" id="openChart"></div>
 
-  <h2 class="sect">How crowded is each primary?</h2>
-  <p class="sub">More bars = more choices on August 11. Tap any race below to meet the candidates.</p>
+  <h2 class="sect">Your Nov 3 general-election ballot</h2>
+  <p class="sub">Every race below now shows only the candidates confirmed for the Nov. 3 ballot. Tap any race to meet them.</p>
   <div class="chartcard" id="crowdChart"></div>
 
   <h2 class="sect">The races</h2>
@@ -414,28 +418,11 @@ const stub = (name,party,note,src,website)=>({name,party,says:null,known:note||n
 
 const RACES=[
 {id:"us-senate",office:"U.S. Senate",lvl:"Federal",open:true,
- why:"Sen. Tina Smith is retiring, so Minnesota picks a brand-new senator. The Flanagan–Craig DFL primary has become the most expensive primary in state history. New: fresh (partisan-sponsored) polling shows Flanagan's lead widening — see both profiles.",
+ why:"Sen. Tina Smith is retiring, so Minnesota picks a brand-new senator. Lt. Gov. Peggy Flanagan won the most expensive primary in state history to earn the DFL nod; she faces Republican Michele Tafoya on Nov. 3.",
  cands:[
-  {name:"Angie Craig",party:"DFL",says:"Runs as a pragmatic moderate, leaning on her agriculture-policy work as ranking member of the House Agriculture Committee.",known:"U.S. Rep for MN-2 since flipping a Republican-held district in 2018.",service:"Held a swing district for the DFL four times; sought but lost the 2026 party endorsement.",critics:"Flanagan attacks her Laken Riley Act vote (she says she regrets it) and the ~$12M in outside PAC money backing her.",srcs:[S.cbsSen,S.axios1,S.nbc1,S.strib1],website:"https://angiecraig.com/",
-   update:"A Flanagan-aligned (DLGA-commissioned) poll taken July 23–24 shows her trailing 32%–46%, a wider gap than a month earlier — though earlier nonpartisan KSTP/SurveyUSA polling had her modestly ahead. Read the DLGA poll as a partisan source.",updateSrcs:[S.mnRefSen,S.nativeNews]},
-  {name:"Peggy Flanagan",party:"DFL",badge:"DFL endorsed",says:"Runs as a staunch progressive; campaigns against ICE enforcement tactics and outside corporate money in the primary.",known:"Lieutenant Governor under Tim Walz; former chair of the Democratic Lt. Governors Association.",service:"Won the 2026 DFL endorsement; two terms as lieutenant governor.",critics:"Craig's campaign says she took millions in corporate money at the DLGA — including from an ICE-contractor — and faces questions over Medicaid fraud on the Walz administration's watch.",srcs:[S.kare,S.axios1,S.kaal,S.cbsSen],website:"https://peggyflanagan.com/",
+    {name:"Peggy Flanagan",party:"DFL",badge:"DFL endorsed",says:"Runs as a staunch progressive; campaigns against ICE enforcement tactics and outside corporate money in the primary.",known:"Lieutenant Governor under Tim Walz; former chair of the Democratic Lt. Governors Association.",service:"Won the 2026 DFL endorsement; two terms as lieutenant governor.",critics:"Craig's campaign says she took millions in corporate money at the DLGA — including from an ICE-contractor — and faces questions over Medicaid fraud on the Walz administration's watch.",srcs:[S.kare,S.axios1,S.kaal,S.cbsSen],website:"https://peggyflanagan.com/",
    update:"A poll commissioned by her own allies (the DLGA) shows her lead over Craig widening to 14 points (46%–32%), roughly double a prior 7-point edge. Treat this as a partisan-sponsored poll — earlier nonpartisan polling had shown Craig slightly ahead.",updateSrcs:[S.mnRefSen,S.nativeNews]},
-  stub("Billy Nord","DFL","Filed in the DFL primary; little public information yet.",S.bpSen,"https://billynordforminnesota.carrd.co/"),
-  {name:"Adam Schwarze",party:"GOP",badge:"GOP endorsed",says:"Pitches himself as an uncompromising conservative closely aligned with President Trump.",known:"Former Navy SEAL — Marine after 9/11, Iraq combat, embassy security, then nine SEAL deployments across 70 countries.",service:"Won the MN GOP endorsement with ~63% of delegates after six convention ballots.",critics:"Tafoya argues a hardliner can't win statewide; a May poll showed him far behind her among primary voters.",srcs:[S.strib2,S.minnpost1],website:"https://www.schwarzeforsenate.com/",
-   dr:{
-    bills:null,
-    companies:null,
-    offices:[{d:"—",t:"Has never held elected office.",s:null},
-      {d:"2026-05-29",t:"Won the Minnesota GOP US Senate endorsement on the sixth ballot at the state convention in Duluth, with roughly 63% of delegates.",s:[["MPR News","https://www.mprnews.org/story/2026/05/29/schwarze-wins-gop-endorsement-in-us-senate-race"],["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]}],
-    rallies:null,
-    petitions:null,
-    covid:[{d:"2020",t:"Says he entered politics after being arrested for allegedly violating Hawaii's COVID-19 quarantine rules by visiting a grocery store.",s:[["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]}],
-    guns:[{d:"2026-06 (approx.)",t:"Clashed with primary rival Michele Tafoya, saying she is \"out of step with the party\" on guns and abortion.",s:[["MinnPost","https://www.minnpost.com/elections/2026/05/gop-primary-awaits-after-schwarze-tops-tafoya-for-partys-u-s-senate-endorsement/"]]}],
-    trump:[{d:"General",t:"Pitches himself as an uncompromising conservative closely aligned with President Trump.",s:[["Star Tribune","https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122"]]},
-      {d:"2026-06-01",t:"After defeating Tafoya for the endorsement, blasted Washington's \"establishment class,\" positioning himself as an outsider in the Trump mold.",s:[["political.org","https://political.org/2026/06/01/minnesota-gop-endorsed-senate-candidate-adam-schwarze-blasts-dcs-establishment-class-after-defeating-michele-tafoya/"]]}],
-    fraud:null
-   }},
-  {name:"Michele Tafoya",party:"GOP",says:"Argues her appeal to moderates and independents is the GOP's best shot at ending a two-decade statewide losing streak.",known:"Former NFL sideline reporter and broadcaster; led one May primary poll by ~43 points.",service:"Lost the party endorsement to Schwarze and is running in the primary anyway.",critics:"Party loyalists fault her for bucking the convention's endorsement.",srcs:[S.strib2,S.minnpost1],website:"https://micheletafoya.com/",
+      {name:"Michele Tafoya",party:"GOP",says:"Argues her appeal to moderates and independents is the GOP's best shot at ending a two-decade statewide losing streak.",known:"Former NFL sideline reporter and broadcaster; led one May primary poll by ~43 points.",service:"Lost the party endorsement to Schwarze and is running in the primary anyway.",critics:"Party loyalists fault her for bucking the convention's endorsement.",srcs:[S.strib2,S.minnpost1],website:"https://micheletafoya.com/",
    dr:{
     bills:null,
     companies:null,
@@ -450,53 +437,13 @@ const RACES=[
       {d:"2026",t:"Has since aligned more closely with Trump's platform; said she'd be \"honored\" to have his endorsement, adding \"if he wants to support or endorse, I would welcome it,\" while stressing she is running her own campaign.",s:[["NOTUS","https://www.notus.org/2026-election/republican-top-senate-recruit-minnesota-michele-tafoya-interview"]]}],
     fraud:null
    }},
-  {name:"Royce White",party:"GOP",says:null,known:"Former NBA player; previous statewide GOP candidate.",service:"Eliminated during the six-round 2026 endorsement balloting; staying in the primary.",critics:null,srcs:[S.strib2,S.bpSen],website:"https://roycewhite.us/",
-   dr:{
-    bills:null,
-    companies:[{d:"Undated",t:"Founder and CEO, Anxious Minds, Inc., a mental-health advocacy nonprofit.",s:[["Good Men Project","https://goodmenproject.com/featured-content/an-open-letter-to-the-nba-a-call-to-action-on-mental-health-mkdn/"]]},
-      {d:"Undated",t:"Worked as a radio/podcast host, including commentary critiquing fiat currency, central banking, and U.S. foreign policy.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]}],
-    offices:[{d:"2022",t:"Ran for the Republican nomination for US House, MN-5; lost the primary to Cicely Davis, 48.0% to 37.2%.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
-      {d:"2024",t:"Won the Republican US Senate primary, then lost the general election to incumbent Sen. Amy Klobuchar (D), roughly 56%–40%.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
-      {d:"2026",t:"Declared candidacy again for US Senate; running in the Aug. 11 Republican primary against Adam Schwarze and Michele Tafoya.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"],["Star Tribune","https://www.startribune.com/mn-senate-republican-gop-candidates-tuesday-primary-election-tafoya-schwarze-white/601874785"]]}],
-    rallies:null,
-    petitions:[{d:"2016–2018",t:"Publicly campaigned via open letters and media appearances urging the NBA and NBPA to adopt a formal mental-health policy for players; four doctors co-signed his open letter.",s:[["Good Men Project","https://goodmenproject.com/featured-content/an-open-letter-to-the-nba-a-call-to-action-on-mental-health-mkdn/"]]},
-      {d:"2018-05",t:"Succeeded: the NBPA hired its first mental health director, with the hire crediting White (among other players) as instrumental in prompting the change.",s:[["NBC News","https://www.nbcnews.com/health/mental-health/how-two-nba-players-larry-sanders-royce-white-are-bringing-n1004351"]]}],
-    covid:[{d:"2024",t:"Campaign platform called COVID-19 mandates a \"globalist COVID-19 power grab attempt to snatch away freedom\" and pledged to \"hold those responsible for the COVID-19 deceit accountable.\"",s:[["Ballotpedia, quoting campaign site","https://ballotpedia.org/Royce_White"]]}],
-    guns:[{d:"2026",t:"\"The 2ND amendment is a constitutional right that can never be infringed upon. It is one of the most important political mechanisms to safeguard the freedoms of citizens in this country.\"",s:[["roycewhite.us/issues","https://roycewhite.us/issues/"]]}],
-    trump:[{d:"2024",t:"Campaign site said his priorities \"can be addressed on day 1 of Donald Trump's presidency,\" aligning his platform explicitly with a Trump administration.",s:[["Ballotpedia","https://ballotpedia.org/Royce_White"]]},
-      {d:"2026",t:"Received an endorsement from Trump advisor Steve Bannon during his 2026 Senate run.",s:[["The Week","https://theweek.com/politics/royce-white-amy-klobuchar-minnesota-jews-women-republicans"]]},
-      {d:"2026",t:"Has called for Trump to serve an unconstitutional third term.",s:[["The Week","https://theweek.com/politics/royce-white-amy-klobuchar-minnesota-jews-women-republicans"],["Star Tribune","https://www.startribune.com/mn-senate-republican-gop-candidates-tuesday-primary-election-tafoya-schwarze-white/601874785"]]}],
-    fraud:[{d:"2022",t:"Not a policy statement, but a controversy about his own campaign's conduct: his 2022 US House campaign amended finance reports labeling 30+ expenditures — including retail purchases and an alleged $1,200 reimbursement to a Miami strip club — as \"non-authorized,\" claiming personal reimbursement; reporting found over $157,000 in donor funds went to personal expenses.",s:[["Star Tribune","https://www.startribune.com/royce-white-campaign-claims-to-reimburse-non-authorized-charges-on-strip-club-retail-water-parks/600381315"]]}]
-   }}
- ]},
+   ]},
 {id:"mn-governor",office:"Governor",lvl:"Statewide",open:true,
- why:"Gov. Walz quit the race in January — and U.S. Sen. Amy Klobuchar jumped in. A record seven Republicans are fighting for the other spot. New: the top four candidates held their first joint debate at Farmfest on Aug. 5.",
+ why:"Gov. Walz quit the race in January — and U.S. Sen. Amy Klobuchar jumped in, winning the DFL primary easily. Lisa Demuth topped a record seven-way GOP primary field. It's now Klobuchar vs. Demuth on Nov. 3 — Minnesota's first all-woman general-election matchup for governor.",
  cands:[
   {name:"Amy Klobuchar",party:"DFL",says:"Launched Jan 29, 2026; detailed platform still thin — rivals note her sparse campaign website.",known:"U.S. Senator since 2007, former Hennepin County Attorney, 2020 presidential candidate — historically Minnesota's biggest statewide vote-getter.",service:"Longtime DFL standard-bearer; far out-raising every GOP rival.",critics:"GOP attacks: slipping rural support, closeness to Walz and Biden (\"WalzThirdTerm.com\"), old reports about staff treatment, and low engagement in the race so far.",srcs:[S.bpGov,S.stribK,S.stribK2,S.cbsGov,S.refMoney],website:"https://www.amyklobuchar.com/",
    update:"Shared a debate stage with all three GOP rivals for the first time at Farmfest on Aug. 5, fielding questions on rural and agricultural policy.",updateSrcs:[S.mprFarmfest,S.mnRefFarmfest]},
-  {name:"Kendall Qualls",party:"GOP",badge:"GOP endorsed",says:"Runs as an outsider; hammers state spending and welfare fraud. Calls this race Klobuchar's \"first real test.\"",known:"Businessman and Army veteran; prior GOP candidate for Congress and governor.",service:"Won the 2026 MN GOP endorsement for governor.",critics:"Demuth says polling shows she, not Qualls, matches up best against Klobuchar.",srcs:[S.refQ,S.cbsGov],website:"https://kqformn.com/",
-   update:"Debated Klobuchar, Demuth, and Lindell at the Aug. 5 Farmfest forum.",updateSrcs:[S.mnRefFarmfest],
-   dr:{
-    bills:null,
-    companies:[{d:"1985–1990",t:"U.S. Army Field Artillery officer, rank of Captain, including a deployment near the Korean DMZ.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
-      {d:"~1990s–2010s",t:"Roughly 27 years at Fortune 100 healthcare companies — Johnson & Johnson, Roche Labs, Medtronic, and Covidien — rising to Global Vice President with P&L responsibility for an $850 million business unit.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
-      {d:"Current",t:"Vice President and Chief Commercial Officer, PotentiaMetrics, a healthcare data-analytics/AI company.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
-      {d:"2021-01",t:"Founded TakeCharge Minnesota, a conservative nonprofit advocacy group; Star Tribune later reported questions about the \"opaque\" nature of the nonprofit's political activity.",s:[["Star Tribune","https://www.startribune.com/as-he-runs-for-governor-kendall-qualls-faces-questions-about-his-nonprofits-political-activity/601863738"]]}],
-    offices:[{d:"2020",t:"Republican nominee, US House MN-3; lost to Democrat Dean Phillips by 11 points. Has never held elected office.",s:[["Equilar/LinkedIn bio aggregation","https://people.equilar.com/bio/person/kendall-qualls-triyam/43394083"]]},
-      {d:"2022",t:"Sought the GOP gubernatorial endorsement; lost to Scott Jensen.",s:null},
-      {d:"2026-05-30",t:"Won the Minnesota GOP gubernatorial endorsement after 10 ballots at the state convention in Duluth, defeating Lisa Demuth.",s:[["Northern News Now","https://northernnewsnow.com/2026/05/30/gop-delegates-weigh-candidates-governor-endorsement/"]]}],
-    rallies:[{d:"2026",t:"Met with roughly 40 Rochester-area gun owners to discuss gun policy.",s:[["KAALtv","https://kaaltv.com/news/minnesota-governor-candidate-talks-with-local-gun-owners-about-gun-control-policies/"]]},
-      {d:"2026-05-30",t:"Spoke at the Minnesota GOP state convention in Duluth upon winning the endorsement.",s:[["Northern News Now","https://northernnewsnow.com/2026/05/30/gop-delegates-weigh-candidates-governor-endorsement/"]]},
-      {d:"2026-08-05",t:"Debated Klobuchar, Demuth, and Lindell at the Farmfest candidate forum.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]}],
-    petitions:null,
-    covid:[{d:"Undated, low-confidence",t:"A policy-aggregation site (isidewith.com) attributed a general statement to Qualls describing the federal COVID-19 response as economically effective and citing vaccine approval as important to recovery — not independently verified against a primary source.",s:null}],
-    guns:[{d:"2026",t:"Told a gathering of Rochester-area gun owners: \"We don't have a second amendment problem... We have a mental health problem in our country,\" opposing further gun restrictions.",s:[["KAALtv","https://kaaltv.com/news/minnesota-governor-candidate-talks-with-local-gun-owners-about-gun-control-policies/"]]}],
-    trump:[{d:"2026-07-17",t:"After Trump endorsed rival Mike Lindell, Qualls said he was not shaken: \"President Trump is loyal to his people that have been loyal to him... I don't take it as a personal slight.\"",s:[["KAALtv","https://kaaltv.com/news/kendall-qualls-releases-statement-on-president-trumps-endorsement-of-mike-lindell-in-minnesota-gubernatorial-race/"]]},
-      {d:"2026-07-23",t:"Said he would govern by \"emulating Donald Trump,\" crediting Trump with \"saving\" the country, and pledged to support Trump's \"America First\" policies as governor.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/07/23/kendall-qualls-wants-to-cut-taxes-and-spending-and-apologize-to-law-enforcement/"]]}],
-    fraud:[{d:"2026-07-23",t:"Platform centers on cutting taxes and state spending; a dedicated, itemized anti-fraud plan comparable to rivals' was not located in available sources.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/07/23/kendall-qualls-wants-to-cut-taxes-and-spending-and-apologize-to-law-enforcement/"]]},
-      {d:"General messaging",t:"Criticizes state government spending and \"welfare fraud\" broadly.",s:[["CBS Minnesota","https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/"]]}]
-   }},
-  {name:"Lisa Demuth",party:"GOP",says:"Says she's the Republican who can actually beat Klobuchar in November, and ties Klobuchar to Walz via her WalzThirdTerm.com site.",known:"Speaker of the Minnesota House.",service:"Led House Republicans to the speakership; staying in the primary despite losing the endorsement.",critics:"Lindell and Qualls call her too willing to work with Democrats and blame her for not cutting spending or welfare fraud.",srcs:[S.cbsGov,S.refQ],website:"https://lisaformn.com/",
+    {name:"Lisa Demuth",party:"GOP",says:"Says she's the Republican who can actually beat Klobuchar in November, and ties Klobuchar to Walz via her WalzThirdTerm.com site.",known:"Speaker of the Minnesota House.",service:"Led House Republicans to the speakership; staying in the primary despite losing the endorsement.",critics:"Lindell and Qualls call her too willing to work with Democrats and blame her for not cutting spending or welfare fraud.",srcs:[S.cbsGov,S.refQ],website:"https://lisaformn.com/",
    update:"Made her case to farmers and ag-industry professionals at the Aug. 5 Farmfest debate.",updateSrcs:[S.mnRefFarmfest],
    dr:{
     bills:[{d:"Undated (MN House term)",t:"Chief-authored an early bill targeting daycare fraud.",s:[["AlphaNews","https://alphanews.org/karin-miller-a-window-into-the-leadership-of-lisa-demuth/"]]},
@@ -526,80 +473,7 @@ const RACES=[
       {d:"2026",t:"Helped implement work requirements for \"able-bodied\" welfare recipients in Minnesota.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]},
       {d:"Note",t:"A conservative-aligned opinion outlet (Action4Liberty) published a claim she \"funded the fraud she complains about\" — flagged as advocacy-source opinion, not independently verified.",s:null}]
    }},
-  {name:"Mike Lindell",party:"GOP",says:"Outsider pitch; attacks Demuth for cooperating with Democrats.",known:"MyPillow founder and prominent promoter of 2020 election-fraud claims.",service:"Longtime Trump ally; seeking Trump's endorsement.",critics:null,srcs:[S.cbsGov,S.bpGov7],website:"https://mikelindellgov.com/",
-   update:"Debated Klobuchar, Demuth, and Qualls at the Aug. 5 Farmfest forum.",updateSrcs:[S.mnRefFarmfest],
-   dr:{
-    bills:null,
-    companies:[{d:"1980s",t:"Operated small businesses in Carver County, MN, including carpet cleaning, lunch wagons, and bars/restaurants.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2004–2025",t:"Invented the \"MyPillow\" product and founded/led My Pillow, Inc. as CEO, growing it into a Minnesota manufacturing company.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020",t:"Named his son Darren Lindell as My Pillow's Chief Operating Officer, citing his own political ambitions.",s:[["Wikipedia, citing Politico","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025",t:"Stepped down from day-to-day leadership of My Pillow to campaign full-time for governor.",s:[["Newsweek","https://www.newsweek.com/mike-lindell-steps-down-from-mypillow-to-campaign-for-governor-of-minnesota-12284619"]]},
-      {d:"2021-04–2025-04",t:"Founder of FrankSpeech Network, Inc.; renamed Mike Lindell Media Corporation effective 2025-04-23, operating LindellTV.com (launched 2021-04-19) and Vocl.com (formerly FrankSocial, launched 2022-04).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"Undated",t:"Financial stake and board connection to Phoenix Biotechnology, tied to his 2020 promotion of oleandrin as a COVID-19 treatment.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2019",t:"Founded the Lindell Foundation, an addiction-recovery nonprofit, and the Lindell Recovery Network.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020-05",t:"Became Minnesota campaign chair for Trump's 2020 reelection campaign.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2023-01-27",t:"Ran for Chair of the Republican National Committee; lost, receiving 4 of 167 votes.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
-    offices:[{d:"—",t:"Has never held elected office.",s:null},
-      {d:"2020",t:"Reportedly considered running for MN governor in 2022, at Trump's urging, but ultimately did not run.",s:[["Wikipedia, citing Politico","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-12-03",t:"Filed paperwork to run in the 2026 Minnesota gubernatorial election.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-12-11",t:"Formally announced candidacy for Governor of Minnesota, live-streamed from his MyPillow factory in Shakopee.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"],["PBS NewsHour","https://www.pbs.org/newshour/amp/politics/mypillow-founder-and-trump-ally-mike-lindell-to-run-for-minnesota-governor-in-2026"]]}],
-    rallies:[{d:"2016-10-19",t:"Attended the final 2016 presidential debate in Las Vegas.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2016-11-06",t:"Spoke at a Trump campaign rally in Minneapolis.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2017",t:"Attended Trump's inauguration; sat with Trump at a White House industry roundtable.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2018-06-27",t:"Trump praised Lindell's \"business acumen\" at a Fargo, ND rally.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2018-10-04",t:"Spoke at a Trump rally in Rochester, Minnesota.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2019-08",t:"Spoke at the Conservative Political Action Conference (CPAC), calling Trump \"the greatest president in history.\"",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2019-08",t:"Spoke at Liberty University.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020-03",t:"Appeared with Trump at a White House coronavirus press briefing.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020-11–2020-12-14",t:"Sponsored and spoke at five stops on a two-week post-election \"election fraud\" bus tour ending in Washington, D.C.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2021-01-06",t:"Attended the Trump rally preceding the Capitol riot (did not enter the Capitol).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2021-08-10–2021-08-12",t:"Hosted a three-day \"Cyber Symposium\" in South Dakota promising \"irrefutable\" proof of 2020 election fraud; none was produced, and an outside cybersecurity expert called the data presented \"a pile of nothing.\"",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-12-11",t:"Governor campaign launch event at the MyPillow factory in Shakopee, streamed on LindellTV.",s:[["PBS NewsHour","https://www.pbs.org/newshour/amp/politics/mypillow-founder-and-trump-ally-mike-lindell-to-run-for-minnesota-governor-in-2026"]]},
-      {d:"2026-08-05",t:"Debated Klobuchar, Demuth, and Qualls at the Farmfest candidate forum.",s:[["Minnesota Reformer","https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/"]]}],
-    petitions:[{d:"2021-08",t:"Public $5 million \"prove me wrong\" data challenge tied to the Cyber Symposium — closest analog to a petition. A challenger's team was ruled by an arbitration panel to have disproven his election-data claims (2023-04-20); a federal court confirmed the $5M award (2024-02-21); the 8th Circuit later overturned that award in Lindell's favor (2025-07-23).",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
-    covid:[{d:"2020",t:"Promoted oleandrin, a cardiotoxic plant compound, as a COVID-19 treatment, including arranging a pitch meeting between Trump and a fellow board member of Phoenix Biotechnology, a company in which Lindell holds a financial stake; no scientific evidence supports oleandrin as safe or effective for this use.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020-03",t:"Said on Fox News that MyPillow's factories were being refocused on face-mask production at the Trump administration's request.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
-    guns:null,
-    trump:[{d:"2016-08",t:"First met Trump and became a vocal, avid supporter.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020-05",t:"Became Minnesota campaign chair for Trump's reelection campaign.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2020–ongoing",t:"Central, financially significant figure in efforts to overturn the 2020 election result on Trump's behalf, including funding lawsuits, a bus tour, documentaries, and the Cyber Symposium.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-12",t:"Received Trump's public endorsement for the 2026 Minnesota governor's race.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}],
-    fraud:[{d:"Note",t:"Lindell's public \"fraud\" focus is almost entirely about alleged election fraud, not welfare fraud; no welfare-specific statement found.",s:null},
-      {d:"2020-11–2021",t:"Central promoter of false claims that Dominion Voting Systems and Smartmatic conspired to rig the 2020 election.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2021-02-05",t:"Aired the \"Absolute Proof\" documentary on OANN.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2021-02-22",t:"Dominion filed a $1.3 billion defamation suit against Lindell and My Pillow.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2021-04-19",t:"My Pillow filed a $1.6 billion countersuit against Dominion alleging defamation.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2022-05",t:"A federal court dismissed Lindell/My Pillow's claims against Dominion and Smartmatic, finding some claims frivolous under Rule 11.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2023-08",t:"Said he would fly drones with wireless \"sniffing\" devices near polling places to detect internet-connected voting machines, framed as preventing voting fraud.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-06-16",t:"A federal jury in Colorado found Lindell liable for defaming Eric Coomer, a former Dominion security director, ordering Lindell and FrankSpeech to pay $2.3 million.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]},
-      {d:"2025-09-26",t:"A federal judge ruled Lindell had defamed Smartmatic with 51 false claims; damages proceedings ongoing.",s:[["Wikipedia","https://en.wikipedia.org/wiki/Mike_Lindell"]]}]
-   }},
-  stub("Rick DeVoe","DFL","Filed in the DFL primary.",S.bpGov), stub("Paul Ference","DFL","Filed in the DFL primary.",S.bpGov),
-  stub("Kobey Layne","DFL","Filed in the DFL primary.",S.bpGov), stub("Christopher Seymore","DFL","Filed in the DFL primary.",S.bpGov,"https://chrisseymoreforminnesotagovernore.blogspot.com/"),
-  {name:"Loner Blue",party:"GOP",says:null,known:"Retiree; perennial statewide candidate — sought the GOP nod for governor in 2022 and ran for US Senate in 2024, running again for governor in 2026 with running mate Andrew Maass.",service:null,critics:null,srcs:[S.bpLonerBlue],website:null,
-   dr:{
-    bills:null, companies:null,
-    offices:[{d:"—",t:"Has never held elected office.",s:null},
-      {d:"2022",t:"Ran for the Republican nomination for Governor of Minnesota.",s:[["Ballotpedia","https://ballotpedia.org/Loner_Blue"]]},
-      {d:"2024-08-13",t:"Lost the Republican primary for US Senate.",s:[["Wikipedia","https://en.wikipedia.org/wiki/2024_United_States_Senate_election_in_Minnesota"]]},
-      {d:"2026",t:"Running for governor again, with running mate Andrew Maass, on the Aug. 11 Republican primary ballot.",s:[["Ballotpedia","https://ballotpedia.org/Loner_Blue"]]}],
-    rallies:null, petitions:null, covid:null, guns:null, trump:null, fraud:null
-   }},
-  stub("Raul Estrada","GOP","Filed in the GOP primary.",S.bpGov,"https://raul2026-crushcommunism.com/"),
-  {name:"John Krhin",party:"GOP",says:"Describes himself as the \"values candidate\" and a \"constitutional conservative\" with an \"originalist view of the constitution\"; has said abortion is the biggest issue hurting Minnesota.",known:"Born in Chisholm, MN, youngest of 8 children; ordained minister since 1981; married to wife Julia for nearly 53 years, with 8 children and 34 grandchildren.",service:null,critics:null,srcs:[S.krhinSite,S.kttcKrhin],website:"https://krhin4gov.com/",
-   dr:{
-    bills:null,
-    companies:[{d:"1981–present",t:"Ordained minister of the Gospel, working as a pastor for decades.",s:[["krhin4gov.com","https://krhin4gov.com/about/"]]},
-      {d:"Undated",t:"Owns business property; describes over fifty years of leadership experience across ministry, business, labor, and property management.",s:[["krhin4gov.com","https://krhin4gov.com/about/"]]}],
-    offices:[{d:"—",t:"Has never held elected office.",s:null},
-      {d:"2026",t:"Declared candidacy for Governor of Minnesota in the Aug. 11 Republican primary.",s:[["Ballotpedia","https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026"]]}],
-    rallies:[{d:"2026-07 (ongoing)",t:"Conducting a \"prayer tour\" to all 87 Minnesota county seats to pray for local communities, public servants, and governing authorities; reached Brown County by mid-July and visited churches in Bemidji.",s:[["New Ulm Journal","https://www.nujournal.com/news/local-news/2026/07/11/gop-governor-candidates-prayer-tour-reaches-brown-county/"],["Bemidji Pioneer","https://www.bemidjipioneer.com/news/gop-governor-hopeful-john-krhin-visits-bemidji-connects-with-local-churches"]]}],
-    petitions:null, covid:null, guns:null,
-    trump:null,
-    fraud:[{d:"Note",t:"His stated top issue is abortion, not fraud or welfare policy.",s:[["KTTC","https://www.kttc.com/2026/05/14/one-on-one-with-minnesota-gubernatorial-candidate-john-krhin/"]]}]
-   }},
-  stub("Ross Nova","GOP","Filed in the GOP primary.",S.bpGov,"https://www.rossnovaforgovernor.com/")
- ]},
+               ]},
 {id:"us-house-mn3",office:"U.S. House — District 3",lvl:"Federal",open:false,
  why:"Eden Prairie's seat in Congress. Incumbent Kelly Morrison seeks a second term; two Republicans compete to face her.",
  cands:[
@@ -617,19 +491,9 @@ const RACES=[
     rallies:null,petitions:null,covid:null,guns:null,trump:null,
     fraud:null
    }},
-  {name:"Jeremy Westby",party:"GOP",says:"Signed the U.S. Term Limits pledge to support congressional term limits.",known:"Previously ran as a Republican U.S. House candidate for MN-2 in 2022.",service:null,critics:null,srcs:[S.bpWestby,S.termlimitsWestby],website:"https://westbyforcongress.com/",
-   dr:{
-    bills:null,
-    companies:null,
-    offices:[
-     {d:"2022",t:"Ran as a Republican U.S. House candidate for Minnesota's 2nd Congressional District (unsuccessful).",s:[["Ballotpedia","https://ballotpedia.org/Jeremy_Westby"]]},
-     {d:"2026",t:"Filed as a Republican candidate for U.S. House, Minnesota's 3rd Congressional District.",s:[["FEC.gov","https://www.fec.gov/data/candidate/H6MN03162/"]]}
-    ],
-    rallies:null,petitions:null,covid:null,guns:null,trump:null,fraud:null
-   }}
- ]},
+   ]},
 {id:"mn-sos",office:"Secretary of State",lvl:"Statewide",open:false,
- why:"Minnesota's chief elections officer. Incumbent Steve Simon runs again; Tad Jude and Wendy Phillips compete in the GOP primary.",
+ why:"Minnesota's chief elections officer. Incumbent Steve Simon runs unopposed on the DFL side; Tad Jude won the GOP primary and faces him Nov. 3.",
  cands:[
   {name:"Steve Simon",party:"DFL",badge:"Incumbent",says:"Platform details pending.",known:"Secretary of State since 2015; former DFL legislator; known for expanding voter access.",service:"Multi-term statewide DFL officeholder.",critics:null,srcs:[S.bpSos],website:"https://www.stevesimonmn.com/"},
   {name:"Tad Jude",party:"GOP",says:"Running on a promise of \"transparency in elections,\" citing his experience as a legislator, district judge, attorney and small business owner.",known:"Age 73, of Maple Grove; was the youngest person ever elected to the MN Legislature (1972, age 20); later six years in the state Senate; 11 years as a 10th Judicial District court judge; ran for AG in 2022 and MN-3 in 2024.",service:null,critics:null,srcs:[S.bpJude,S.inforumJude,S.alphaJude],website:"https://www.tadjude.com/",
@@ -647,57 +511,12 @@ const RACES=[
     rallies:null,petitions:null,covid:null,guns:null,trump:null,
     fraud:[{d:"2026",t:"Campaign message centers on \"transparency in elections,\" positioning himself against what he frames as declining public trust in the state's election administration.",s:[["AlphaNews","https://alphanews.org/tad-jude-launches-run-for-secretary-of-state-on-promise-of-transparency-in-elections/"]]}]
    }},
-  {name:"Wendy Phillips",party:"GOP",says:"Says \"there is so little trust in our current election system, and I'd like to rebuild that trust\"; wants voter ID, cleaner voter rolls, watermarked hand-counted paper ballots, one-day elections, and an end to mail-in voting with few exceptions.",known:"Oronoco resident; longtime business owner; former Olmsted County GOP chair; moved to MN from California six years ago.",service:"MNGOP State Executive Board member; chair, Olmsted County BPOU; previously the GOP-endorsed candidate for a Rochester-area State House seat.",critics:null,srcs:[S.bpPhillips,S.kimtPhillips,S.kttcPhillips],website:"https://www.wendyforsos.com/",
-   dr:{
-    bills:null,
-    companies:[{d:"Undated",t:"Described as a longtime business owner; specific companies not named in available sources.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]}],
-    offices:[
-     {d:"Undated",t:"Oronoco zoning and planning commissioner.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]},
-     {d:"Undated",t:"MNGOP State Executive Board member; chair, Olmsted County BPOU; former chair, Olmsted County GOP.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]},
-     {d:"Prior cycle (undated)",t:"Ran as the GOP-endorsed candidate for a State House seat in the Rochester suburbs; did not win.",s:[["Ballotpedia","https://ballotpedia.org/Wendy_Phillips"]]},
-     {d:"2026-01-05",t:"Announced her campaign for Minnesota Secretary of State.",s:[["KTTC","https://www.kttc.com/2026/01/05/oronoco-native-wendy-phillips-announces-campaign-mn-secretary-state/"]]}
-    ],
-    rallies:null,petitions:null,covid:null,guns:null,trump:null,
-    fraud:[{d:"2026",t:"Platform includes targeting \"businesses that exploit taxpayers,\" alongside voter-roll cleanup and voter ID.",s:[["KIMT","https://www.kimt.com/news/wendy-phillips-promises-fresh-ideas-in-minnesota-secretary-of-state-race/article_903cfc75-1711-4a4a-be81-181cbd1d6495.html"]]}]
-   }}
- ]},
+   ]},
 {id:"mn-auditor",office:"State Auditor",lvl:"Statewide",open:true,
- why:"The state's financial watchdog. Incumbent Julie Blaha isn't running — seven candidates want the job, including 2022 GOP governor nominee Scott Jensen.",
+ why:"The state's financial watchdog. Incumbent Julie Blaha isn't running. DFLer Zack Filipovich, Republican (and 2022 GOP governor nominee) Scott Jensen, and independent Jay Reeves all advance to Nov. 3.",
  cands:[
   stub("Zack Filipovich","DFL","Accountant; former Duluth City Councilor (2014–2022).",S.bpAud,"https://www.zackformn.com/"),
-  stub("Adam Jennings","DFL","Mayor of Tonka Bay (2021–present). Dropped out after losing the DFL endorsement — not on the Aug. 11 primary ballot.",S.bpAud,"https://www.adamforauditor.com/"),
-  stub("Ben Schierer","DFL","Former mayor of Fergus Falls (2017–2025). Left the race to become Amy Klobuchar's Lieutenant Governor running mate — not on the Aug. 11 auditor primary ballot.",S.bpAud,"https://www.benforminnesota.com/"),
-  stub("Dan Wolgamott","DFL","DFL state representative, District 14B (2019–present).",S.bpAud,"https://www.danformn.com/"),
-  {name:"Elliott Engen",party:"GOP",says:"Originally pitched expanding the State Auditor's office and increasing accountability — but never filed for the office.",known:"Gen Z Republican state representative (HD 36A) since 2023; assistant minority leader; abandoned this auditor bid before the June 2, 2026 filing deadline and instead re-filed for his House seat after a DWI arrest and ethics hearing.",service:"Assistant minority leader, MN House Republican caucus.",critics:null,srcs:[S.bpEngen,S.kstpEngen,S.yahooEngen,S.fox9Engen],website:"https://www.elliottengen.com/",
-   dr:{
-    bills:null,
-    companies:null,
-    offices:[
-     {d:"2023-01-03",t:"Took office in the Minnesota House of Representatives, District 36A.",s:[["Ballotpedia","https://ballotpedia.org/Elliott_Engen"]]},
-     {d:"2026 (before June 2)",t:"Announced, then abandoned, a campaign for Minnesota State Auditor.",s:[["KSTP","https://kstp.com/kstp-news/top-news/republican-representative-engen-announces-bid-for-minnesota-auditor/"],["FOX 9","https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026"]]},
-     {d:"2026-06-02 (by)",t:"Filed instead for re-election to his House District 36A seat.",s:[["FOX 9","https://www.fox9.com/news/rep-engen-drops-financial-watchdog-state-auditor-bid-files-mn-house-reelection-june-2026"]]}
-    ],
-    rallies:null,petitions:null,covid:null,guns:null,trump:null,
-    fraud:[{d:"2026",t:"Auditor-campaign message emphasized expanding the office and increasing government accountability.",s:[["Yahoo News","https://www.yahoo.com/news/politics/articles/rep-engen-drops-financial-watchdog-161407000.html"]]}]
-   }},
-  {name:"Nate George",party:"GOP",badge:"GOP endorsed",says:"Running on accountability and fiscal responsibility — pledges rigorous oversight of local government spending and follow-up to ensure fraud is actually prosecuted once found.",known:"Air Force veteran; mayor of Braham, MN; director of licensing and investigations for the Mille Lacs Band of Ojibwe's Gaming Regulatory Authority.",service:"Endorsed by the Republican Party of Minnesota for State Auditor.",critics:"MinnPost reported his campaign falsely claimed on social media he was a \"certified fraud examiner\"; the campaign later corrected the claim.",srcs:[S.bpGeorge,S.mngopGeorge,S.minnpostGeorge,S.kstpGeorge],website:"https://nategeorgeformnstateauditor.com/",
-   dr:{
-    bills:null,
-    companies:[
-     {d:"Undated (current)",t:"Director of licensing and investigations, Mille Lacs Band of Ojibwe Gaming Regulatory Authority.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]},
-     {d:"Undated",t:"Air Force veteran.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]}
-    ],
-    offices:[
-     {d:"Undated (current)",t:"Mayor of Braham, Minnesota.",s:[["Ballotpedia","https://ballotpedia.org/Nate_George"]]},
-     {d:"2026",t:"Received the Republican Party of Minnesota's endorsement for State Auditor.",s:[["MN GOP","https://mngop.com/republican-party-of-minnesota-congratulates-nate-george-on-earning-gop-endorsement-for-state-auditor-2/"]]}
-    ],
-    rallies:null,petitions:null,covid:null,guns:null,trump:null,
-    fraud:[
-     {d:"2026",t:"Central campaign message is accountability for local-government spending and proactive follow-up to ensure fraud, once identified, is actually prosecuted.",s:[["nategeorgeformnstateauditor.com","https://nategeorgeformnstateauditor.com/"]]},
-     {d:"2026-07",t:"Faced press scrutiny after his campaign claimed on social media he was a \"certified fraud examiner,\" a credential he does not hold; the campaign later corrected the claim.",s:[["MinnPost","https://www.minnpost.com/elections/2026/07/nate-george-state-auditor-resume-claims-certified-fraud-examiner/"],["KSTP","https://kstp.com/kstp-news/local-news/gop-endorsed-candidate-for-state-auditor-clarifies-posts-that-misstated-qualifications/"]]}
-    ]
-   }},
-  {name:"Scott Jensen",party:"GOP",says:"Says his experience working in the audit section of a bank and chairing Senate committees qualifies him for the auditor's role.",known:"Physician; former MN State Senator (District 47, 2017–2021); 2022 GOP nominee for governor; withdrew from the 2026 governor's race on Feb. 9, 2026 to run for auditor instead.",service:null,critics:null,srcs:[S.bpJensenAud,S.kttcJensen,S.mprJensen,S.lrlJensen],website:"https://www.drscottjensen.com/",
+            {name:"Scott Jensen",party:"GOP",says:"Says his experience working in the audit section of a bank and chairing Senate committees qualifies him for the auditor's role.",known:"Physician; former MN State Senator (District 47, 2017–2021); 2022 GOP nominee for governor; withdrew from the 2026 governor's race on Feb. 9, 2026 to run for auditor instead.",service:null,critics:null,srcs:[S.bpJensenAud,S.kttcJensen,S.mprJensen,S.lrlJensen],website:"https://www.drscottjensen.com/",
    dr:{
     bills:null,
     companies:[{d:"Undated",t:"Owner/physician, Catalyst Medical Clinic PA; cites prior experience in a bank's audit section as relevant qualification.",s:[["Ballotpedia","https://ballotpedia.org/Scott_Jensen_(Minnesota)"]]}],
@@ -790,43 +609,13 @@ const RACES=[
    }}
  ]},
 {id:"hc-attorney",office:"Hennepin County Attorney",lvl:"County",open:true,
- why:"The county's top prosecutor. Mary Moriarty isn't running again; five candidates debate how tough or reform-minded the office should be. Nonpartisan — the primary picks two finalists.",
+ why:"The county's top prosecutor. Mary Moriarty isn't running again. The nonpartisan primary narrowed a five-way field to DFL-endorsed Cedrick Frazier and former U.S. Attorney Anders Folk, who face off Nov. 3.",
  cands:[
   {name:"Anders Folk",party:"NP",says:"\"Restoring public safety… bringing back common sense to criminal justice\"; faults poor collaboration with law enforcement.",known:"Former Acting U.S. Attorney for Minnesota; Jones Day partner; former Marine; Biden DOJ official.",service:"Nonpartisan race; endorsed by Sheriff Dawanna Witt.",critics:"Lost the DFL endorsement contest to Frazier.",srcs:[S.fox9,S.ccx,S.stribW,S.minnlaw],website:"https://www.andersfolk.com/"},
-  {name:"Cedrick Frazier",party:"NP",badge:"DFL endorsed",says:"Platform details pending; announced shortly after Moriarty stepped aside.",known:"DFL state rep (New Hope/Crystal) since 2020; vice chair of Public Safety & Judiciary committees; former public defender and labor attorney.",service:"Won the Hennepin County DFL endorsement; claims labor backing.",critics:"Rivals emphasize the prosecutorial experience he lacks compared to the career prosecutors in the race.",srcs:[S.fox9,S.stribF,S.ccx],website:"https://www.cedrickfrazier.org/"},
-  {name:"Diane M. Krenz",party:"NP",says:"Says the office has \"become politicized\" and abandoned effective sentencing guidelines; wants a renewed focus on prosecuting repeat offenders, law enforcement relationships, and victims' rights.",known:"Former prosecutor with four decades in the Hennepin County Attorney's Office.",service:"Running strictly nonpartisan.",critics:null,srcs:[S.fox9,S.ccx,S.stribKrenz,S.eplKrenz],website:"https://www.dianekrenz.com/",
-   dr:{
-    bills:null,
-    companies:null,
-    offices:[
-     {d:"~1986–2026 (approx. 40 years)",t:"Assistant Hennepin County Attorney, handling gang, gun, property, and white-collar crime cases.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]},
-     {d:"2026",t:"Filed as an independent, nonpartisan candidate for Hennepin County Attorney to succeed Mary Moriarty.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]}
-    ],
-    rallies:[{d:"2026",t:"Participated in a League of Women Voters Hennepin County Attorney candidate forum.",s:[["CCX Media","https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/"]]}],
-    petitions:null,covid:null,
-    guns:[{d:"Career (undated)",t:"Prosecuted gun-related cases as part of her four decades in the Hennepin County Attorney's Office; no separate policy stance located.",s:[["Star Tribune","https://www.startribune.com/longtime-assistant-hennepin-county-attorney-diane-krenz-running-for-top-job-to-replace-mary-moriarty/601663490"]]}],
-    trump:null,
-    fraud:null
-   }},
-  {name:"Hao Nguyen",party:"NP",says:"Concerned about the office's liberal use of plea bargains; stresses case-by-case prosecutorial judgment over sweeping, statistics-driven policies.",known:"Former assistant Ramsey County attorney, 15 years prosecuting; ex-corrections officer, police officer and sheriff's deputy; came to the U.S. as a refugee.",service:null,critics:null,srcs:[S.fox9,S.ccx,S.mmNguyen,S.eplNguyen],website:"https://www.hao4hennepin.com/",
-   dr:{
-    bills:null,
-    companies:[{d:"Undated (current)",t:"Senior-level manager in a metro-area prosecutor's office overseeing more than 300 employees.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]}],
-    offices:[
-     {d:"Undated",t:"Assistant Ramsey County Attorney for 15 years.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]},
-     {d:"Undated (earlier career)",t:"Corrections officer, police officer, and sheriff's deputy, prior to becoming a prosecutor.",s:[["FOX 9","https://www.fox9.com/news/whos-running-hennepin-county-attorney-2026-election-list"]]},
-     {d:"2025-09",t:"Announced his candidacy for Hennepin County Attorney.",s:[["Minneapoli Media","https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county"]]}
-    ],
-    rallies:[{d:"2026",t:"Participated in a League of Women Voters Hennepin County Attorney candidate forum.",s:[["CCX Media","https://ccxmedia.org/news/five-hennepin-county-attorney-candidates-make-case-to-voters-at-lwv-forum/"]]}],
-    petitions:null,covid:null,
-    guns:[{d:"2025-09",t:"Endorsed by Shanasha Whitson, founder of Mothers Against Gun Violence, in his campaign announcement (context, not a Nguyen policy statement itself).",s:[["Minneapoli Media","https://minneapolimedia.town.news/g/coon-rapids-mn/n/335692/senior-ramsey-county-attorney-announces-candidacy-hennepin-county"]]}],
-    trump:null,
-    fraud:null
-   }},
-  {name:"Matt Pelikan",party:"NP",says:"Says progressives have \"turned a blind eye\" to drug-use harms in the county.",known:"Partner at Madel PA; \"lifelong Minnesotan and Democrat.\"",service:"Won the 2018 DFL endorsement for state Attorney General.",critics:null,srcs:[S.fox9,S.ccx],website:"https://mattpelikan.com/"}
+  {name:"Cedrick Frazier",party:"NP",badge:"DFL endorsed",says:"Platform details pending; announced shortly after Moriarty stepped aside.",known:"DFL state rep (New Hope/Crystal) since 2020; vice chair of Public Safety & Judiciary committees; former public defender and labor attorney.",service:"Won the Hennepin County DFL endorsement; claims labor backing.",critics:"Rivals emphasize the prosecutorial experience he lacks compared to the career prosecutors in the race.",srcs:[S.fox9,S.stribF,S.ccx],website:"https://www.cedrickfrazier.org/"}
  ]},
 {id:"hc-sheriff",office:"Hennepin County Sheriff",lvl:"County",open:false,
- why:"Runs the county jail and sheriff's office. Incumbent Dawanna Witt faces repeat challenger Joseph Banks, after a bruising fight over immigration enforcement cost her the DFL endorsement. New: federal officials are threatening Witt with criminal charges days before the primary — see her profile.",
+ why:"Runs the county jail and sheriff's office. No primary was held — incumbent Dawanna Witt faces repeat challenger Joseph Banks directly on Nov. 3, after a bruising fight over immigration enforcement cost her the DFL endorsement.",
  cands:[
   {name:"Dawanna Witt",party:"NP",badge:"Incumbent",says:"Her office says it does not hold people for ICE or tip agents to releases.",known:"Elected 2022 — first Black person and first woman to lead the department.",service:"The lone Democrat in the race, but withdrew from the DFL endorsement process after stalling at 58% (60% needed).",critics:"Criticized over deputies tackling and arresting protesters at the Whipple Federal Building during Operation Metro Surge.",srcs:[S.stribW],website:"https://sheriffwitt.org/",
    update:"Breaking, Aug. 6–7: Witt says federal officials sent letters warning she could face criminal witness-tampering charges over her office's refusal to give ICE access to inmates for deportation. She says there's \"no legal basis\" for the threat. A conservative outlet (Townhall) frames the story differently, as ICE responding to her non-cooperation policy — five days before the Aug. 11 primary.",updateSrcs:[S.mprWitt,S.hoodline,S.townhall]},
@@ -875,15 +664,58 @@ const RACES=[
 {id:"judicial",office:"Judges (4th Judicial District)",lvl:"County",open:false,pending:true,
  why:"District-court judgeships appear at the bottom of your ballot; most incumbents run unopposed. Contested seats will be listed once sample ballots post on MyBallotMN.",cands:[]}
 ];
+const BALLOT_STATUS = {
+ "us-senate":{
+  "Peggy Flanagan":["Won the DFL primary (57%) — on the Nov. 3 ballot","win"],
+  "Michele Tafoya":["Won the GOP primary (52%) — on the Nov. 3 ballot","win"]
+ },
+ "mn-governor":{
+  "Amy Klobuchar":["Won the DFL primary (90%) — on the Nov. 3 ballot","win"],
+  "Lisa Demuth":["Won the GOP primary (43%) — on the Nov. 3 ballot","win"]
+ },
+ "us-house-mn3":{
+  "Kelly Morrison":["Unopposed in the DFL primary — on the Nov. 3 ballot","win"],
+  "Tyler Bass":["Won the GOP primary (55%) — on the Nov. 3 ballot","win"]
+ },
+ "mn-sos":{
+  "Steve Simon":["Unopposed in the DFL primary — on the Nov. 3 ballot","win"],
+  "Tad Jude":["Won the GOP primary (60%) — on the Nov. 3 ballot","win"]
+ },
+ "mn-auditor":{
+  "Zack Filipovich":["Unopposed in the DFL primary — on the Nov. 3 ballot","win"],
+  "Scott Jensen":["Won the GOP primary (67%) — on the Nov. 3 ballot","win"],
+  "Jay Reeves":["Independent — no primary — on the Nov. 3 ballot","win"]
+ },
+ "mn-ag":{
+  "Keith Ellison":["Won the DFL primary (81%) — on the Nov. 3 ballot","win"],
+  "Ron Schutz":["Unopposed in the GOP primary — on the Nov. 3 ballot","win"]
+ },
+ "hc-attorney":{
+  "Cedrick Frazier":["Top finisher in the nonpartisan primary — on the Nov. 3 ballot","win"],
+  "Anders Folk":["2nd-place finisher in the nonpartisan primary — on the Nov. 3 ballot","win"]
+ },
+ "hc-sheriff":{
+  "Dawanna Witt":["No primary held (only 2 filed) — on the Nov. 3 ballot","win"],
+  "Joseph Banks":["No primary held (only 2 filed) — on the Nov. 3 ballot","win"]
+ }
+};
+RACES.forEach(r=>{
+ const res=BALLOT_STATUS[r.id];
+ if(!res)return;
+ r.cands.forEach(c=>{
+  const hit=res[c.name];
+  if(hit){c.result=hit[0];c.resultClass=hit[1];}
+ });
+});
 const FACTS=[
- "Five of your races are OPEN SEATS — Senate, Governor, State Auditor, your state Senate district, and County Attorney. That almost never happens all at once.",
- "Gov. Tim Walz dropped his re-election bid in January 2026 — and Sen. Amy Klobuchar jumped into the governor's race two weeks later.",
- "The Flanagan vs. Craig Senate primary is already the most expensive primary in Minnesota history (~$12M in outside spending and counting).",
- "A record SEVEN Republicans are on the primary ballot for governor — including MyPillow founder Mike Lindell.",
- "All of Eden Prairie sits in one state Senate district (49) — but Highway 5 decides whether your House race is 49A or 49B.",
+ "It's official: Klobuchar vs. Demuth for governor and Flanagan vs. Tafoya for US Senate on the Nov. 3 ballot — Minnesota's first all-woman general-election matchup for governor.",
+ "The Flanagan vs. Craig Senate primary was the most expensive primary in Minnesota history (~$12M+ in outside spending) — Flanagan won it, 56.95% to 41.36%.",
+ "Of the seven Republicans who ran in the primary for governor, Lisa Demuth won with 44.74% — ahead of Mike Lindell (32.56%) and party-endorsed Kendall Qualls (20.58%).",
+ "Gov. Tim Walz dropped his re-election bid in January 2026 — and Sen. Amy Klobuchar jumped into the governor's race two weeks later; she won the DFL primary with 88.94%.",
+ "All of Eden Prairie sits in one state Senate district (49) — but Highway 5 decides whether your House race is 49A or 49B. Neither had a primary contest.",
  "Minnesota says 'DFL,' not 'Democrat' — the Democratic-Farmer-Labor Party, a 1944 merger.",
  "Judges and city races are nonpartisan in Minnesota — no party labels on that part of your ballot.",
- "Your primary vote on Aug 11 matters extra this year: the nonpartisan County Attorney primary cuts five candidates down to just two.",
+ "The nonpartisan Hennepin County Attorney primary cut five candidates to two: Cedrick Frazier (87,447 votes) and Anders Folk (55,610) advance to Nov. 3.",
  "Eden Prairie's mayoral race is uncontested — Ron Case was the only one who filed — but the City Council race drew a crowded field of seven for two seats.",
  "Two sitting Eden Prairie school board members chose not to seek re-election, guaranteeing at least two new faces on the board in January."
 ];
@@ -1010,12 +842,11 @@ document.getElementById("printBtn").onclick=openPrintSummary;
 
 /* ---------- COUNTDOWNS & STATS ---------- */
 const day=864e5,now=new Date();
-const daysToPrim=Math.max(0,Math.ceil((new Date("2026-08-11")-now)/day));
-document.getElementById("cdPrim").textContent=daysToPrim;
-document.getElementById("cdGen").textContent=Math.max(0,Math.ceil((new Date("2026-11-03")-now)/day));
-if(daysToPrim<=7){const cdp=document.getElementById("cdPrim").parentElement;
+const daysToGen=Math.max(0,Math.ceil((new Date("2026-11-03")-now)/day));
+document.getElementById("cdGen").textContent=daysToGen;
+if(daysToGen<=7){const cdg=document.getElementById("cdGen").parentElement;
   const urgent=document.createElement("div");urgent.className="tag upd";urgent.style.marginTop="8px";urgent.style.display="inline-block";
-  urgent.textContent=daysToPrim<=1?"🔥 Tomorrow or today!":"🔥 This week!";cdp.appendChild(urgent);}
+  urgent.textContent=daysToGen<=1?"🔥 Tomorrow or today!":"🔥 This week!";cdg.appendChild(urgent);}
 function count(el,target){let n=0;const step=Math.max(1,Math.round(target/40));
   const t=setInterval(()=>{n=Math.min(target,n+step);el.textContent=n;if(n>=target)clearInterval(t);},30);}
 count(document.getElementById("stRaces"),RACES.length);
@@ -1024,10 +855,10 @@ count(document.getElementById("stOpen"),RACES.filter(r=>r.open).length);
 
 /* ---------- WHAT'S NEW ---------- */
 const WHATS_NEW=[
- {label:"Hennepin County Sheriff",text:"Incumbent Dawanna Witt says feds threatened her with witness-tampering charges over ICE non-cooperation — 5 days before the primary.",rid:"hc-sheriff",ci:0},
- {label:"US Senate (DFL primary)",text:"A Flanagan-aligned poll shows her primary lead over Craig widening to 14 points (partisan source — read with caution).",rid:"us-senate",ci:1},
- {label:"Governor",text:"Klobuchar, Demuth, Qualls & Lindell held their first joint debate, at Farmfest on Aug. 5.",rid:"mn-governor",ci:0},
- {label:"Eden Prairie local races",text:"Candidate field is now final — nobody withdrew by the July 30 deadline.",rid:"ep-council",ci:0}
+ {label:"Governor",text:"It's official: Amy Klobuchar (DFL) vs. Lisa Demuth (GOP) on Nov. 3 — early polling shows Klobuchar leading ~51.5% to 36%.",rid:"mn-governor",ci:0},
+ {label:"US Senate",text:"Peggy Flanagan (DFL) vs. Michele Tafoya (GOP) advance to the Nov. 3 general.",rid:"us-senate",ci:0},
+ {label:"Hennepin County Attorney",text:"The nonpartisan primary narrowed a five-person field to Cedrick Frazier and Anders Folk, who face off Nov. 3.",rid:"hc-attorney",ci:1},
+ {label:"State Senate & House 49A/49B",text:"Local candidate forums are set: SD/HD 49 forum Sept. 10, hosted by Eden Prairie Local News.",rid:"sd49",ci:0}
 ];
 const wn=document.getElementById("whatsnewList");
 wn.innerHTML=WHATS_NEW.map(w=>`<li><b>${w.label}:</b> ${w.text} <a href="javascript:void(0)" onclick="jumpTo('${w.rid}',${w.ci})">See details →</a></li>`).join("");
@@ -1125,6 +956,7 @@ function renderRaces(){
     }).join("");
     return `<div class="cand ${isSel?"sel":""}" onclick="openCand('${r.id}',${i})">
       ${c.update?`<span class="newpill">🆕 NEW</span>`:""}
+      ${c.result?`<span class="resultbadge ${c.resultClass||''}">${c.result}</span>`:""}
       ${c.badge?`<span class="badge">${c.badge}</span>`:""}
       <h4>${c.name}</h4>
       <span class="partypill" style="background:${p.c}">${p.label}</span>
@@ -1172,6 +1004,7 @@ function openCand(rid,i){
   <h3>${c.name}</h3>
   <span class="partypill" style="background:${p.c};color:#fff;border-radius:999px;padding:3px 12px;font-size:.75rem;font-weight:800">${p.label}</span>
   ${c.badge?` <span class="tag open" style="vertical-align:middle">${c.badge}</span>`:""}
+  ${c.result?` <span class="tag ${c.resultClass==='win'?'resultwin':'resultout'}" style="vertical-align:middle">${c.result}</span>`:""}
   <p class="sub" style="margin-top:8px">${r.office}</p>
   ${c.update?`<div class="updatebox"><h5>🆕 New since our last update</h5><p>${c.update}</p>${srcLinks(c.updateSrcs)}</div>`:""}
   ${secHtml("🎯 What they say they'll do",c.says,"No detailed platform on record yet — check their campaign site or Vote411 closer to the election.")}
@@ -1225,8 +1058,8 @@ function compare(rid){
  modal.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
   <h3>⚖️ ${r.office}</h3><p class="sub">Side-by-side — decide for yourself.</p>
   <table class="cmptable">
-   <tr><td></td><th>${a.name}<br><span class="partypill" style="background:${PARTY[a.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[a.party].label}</span>${a.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${a.badge}</span>`:""}</th>
-   <th>${b.name}<br><span class="partypill" style="background:${PARTY[b.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[b.party].label}</span>${b.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${b.badge}</span>`:""}</th></tr>
+   <tr><td></td><th>${a.name}<br><span class="partypill" style="background:${PARTY[a.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[a.party].label}</span>${a.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${a.badge}</span>`:""}${a.result?` <span style="font-size:.7rem;color:${a.resultClass==='win'?'var(--green,#12a06b)':'#8a8a8a'};font-weight:800">${a.result}</span>`:""}</th>
+   <th>${b.name}<br><span class="partypill" style="background:${PARTY[b.party].c};color:#fff;border-radius:999px;padding:2px 10px;font-size:.7rem">${PARTY[b.party].label}</span>${b.badge?` <span style="font-size:.7rem;color:var(--gold);font-weight:800">${b.badge}</span>`:""}${b.result?` <span style="font-size:.7rem;color:${b.resultClass==='win'?'var(--green,#12a06b)':'#8a8a8a'};font-weight:800">${b.result}</span>`:""}</th></tr>
    ${row("Plans","says")}${row("Known for","known")}${row("Party record","service")}${row("Critics say","critics")}
   </table>
   ${srcLinks([...(a.srcs||[]),...(b.srcs||[])].filter((s,i,arr)=>arr.findIndex(x=>x[1]===s[1])===i))}`;

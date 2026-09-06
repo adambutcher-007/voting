@@ -8,11 +8,14 @@ race_slug: mn-state-auditor
 status: withdrawn
 incumbent: false
 website: https://www.adamforauditor.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
     accessed: 2026-07-11
     note: listed as primary candidate
+  - url: https://www.valleynewslive.com/2026/08/12/zack-filipovich-wins-dfl-primary-minnesota-state-auditor/
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -42,3 +45,5 @@ Mayor of Tonka Bay (2021-present). ([source](https://ballotpedia.org/Minnesota_A
 ## News & Notes
 
 Dropped out of the State Auditor race after losing the DFL endorsement contest; not on the Aug. 11, 2026 primary ballot for this office. Retained here for reference. ([search summary, via adamforauditor.com news archive](https://www.adamforauditor.com/news/adam-jennings-announces-campaign-for-minnesota-state-auditor))
+
+**2026-08-12:** Dropped out of the DFL State Auditor race after losing the party's endorsement, leaving Zack Filipovich unopposed on the Aug. 11 primary ballot ([Valley News Live](https://www.valleynewslive.com/2026/08/12/zack-filipovich-wins-dfl-primary-minnesota-state-auditor/), accessed 2026-08-12).

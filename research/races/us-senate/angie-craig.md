@@ -5,10 +5,10 @@ party: DFL
 office: US Senator
 district: statewide
 race_slug: us-senate
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://angiecraig.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/United_States_Senate_election_in_Minnesota,_2026
     accessed: 2026-07-11
@@ -26,6 +26,9 @@ sources:
   - url: https://nativenewsonline.net/currents/new-poll-shows-peggy-flanagan-expanding-lead-in-minnesota-democratic-u-s-senate-primary/
     accessed: 2026-08-07
     note: reports a DLGA (Flanagan-aligned)-commissioned poll; partisan source
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -57,3 +60,5 @@ Race has drawn record outside spending; North Star Dawn PAC backs Craig ([Star T
 Debated Flanagan on C-SPAN; they sparred over AIPAC and immigration ([C-SPAN](https://www.c-span.org/program/campaign-2026/minnesota-us-senate-primary-debate-between-lt-gov-peggy-flanagan-and-rep-angie-craig/681707), [Alpha News — conservative outlet](https://alphanews.org/angie-craig-and-peggy-flanagan-spar-over-aipac-immigration-during-u-s-senate-debate/)).
 
 **Updated 2026-08-07:** A DLGA-commissioned (Flanagan-aligned) poll taken July 23–24 shows her trailing Flanagan 32%–46%, a wider gap than a month earlier; earlier nonpartisan KSTP/SurveyUSA polling had shown her modestly ahead, so read both with their sponsors in mind ([Minnesota Reformer](https://minnesotareformer.com/2026/07/31/state-of-the-race-for-u-s-senate/), [Native News Online — reporting the DLGA poll](https://nativenewsonline.net/currents/new-poll-shows-peggy-flanagan-expanding-lead-in-minnesota-democratic-u-s-senate-primary/)). Outside spending remains heavily in her favor (~$11.9M via North Star Dawn PAC) ([Minnesota Reformer](https://minnesotareformer.com/2026/07/31/state-of-the-race-for-u-s-senate/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 DFL primary for US Senate, finishing second with 12,654 votes (41.36%) to Peggy Flanagan's 56.95% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).

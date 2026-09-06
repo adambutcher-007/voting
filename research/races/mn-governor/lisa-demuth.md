@@ -5,10 +5,10 @@ party: Republican
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://lisaformn.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/
     accessed: 2026-07-11
@@ -38,6 +38,9 @@ sources:
     accessed: 2026-08-09
   - url: https://house.mn.gov/members/profile/news/15498/49989
     accessed: 2026-08-09
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -66,9 +69,13 @@ Trails Klobuchar in fundraising ([Minnesota Reformer](https://minnesotareformer.
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 Republican primary with 43.4% of the vote, defeating Trump-endorsed Mike Lindell and party-endorsed Kendall Qualls ([NBC News](https://www.nbcnews.com/politics/2026-election/minnesota-gop-picks-lisa-demuth-trump-backed-mike-lindell-governor-dem-rcna591630)). Advances to face DFL nominee Amy Klobuchar on Nov. 3. As of early September, trails Klobuchar 36%–51.5% in the PollingSource average ([PollingSource](https://pollingsource.com/governors/MN)).
+
 One poll shows she performs best against Klobuchar among GOP candidates ([CBS Minnesota](https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/)). Seeking President Trump's endorsement along with Qualls and Lindell ([CBS Minnesota](https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/)).
 
 **Updated 2026-08-07:** Debated Klobuchar, Qualls, and Lindell at Farmfest on Aug. 5, making her pitch to farmers and ag-industry professionals ([Minnesota Reformer](https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/)).
+
+**2026-08-12:** Won the Aug. 11 Republican primary for governor with 11,268 votes (44.74%), ahead of Mike Lindell (32.56%) and Kendall Qualls (20.58%); advances to face DFL nominee Amy Klobuchar on Nov. 3 ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

@@ -5,10 +5,10 @@ party: Republican
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://kqformn.com/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://minnesotareformer.com/2026/05/30/kendall-qualls-wins-gop-endorsement-for-governor/
     accessed: 2026-07-11
@@ -28,6 +28,9 @@ sources:
     accessed: 2026-08-09
   - url: https://minnesotareformer.com/2026/07/23/kendall-qualls-wants-to-cut-taxes-and-spending-and-apologize-to-law-enforcement/
     accessed: 2026-08-09
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -59,6 +62,8 @@ Trails Klobuchar in fundraising ([Minnesota Reformer](https://minnesotareformer.
 Says the race will be Klobuchar's "first real test" ([CBS Minnesota](https://www.cbsnews.com/minnesota/news/demuth-qualls-minnesota-primary-governor-election/)).
 
 **Updated 2026-08-07:** Debated Klobuchar, Demuth, and Lindell at Farmfest on Aug. 5 ([Minnesota Reformer](https://minnesotareformer.com/2026/08/05/minnesotas-candidates-for-governor-make-their-case-to-farmers-ag-industry-pros/)).
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for governor, finishing third with 5,183 votes (20.58%); Lisa Demuth won with 44.74% ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

@@ -8,7 +8,7 @@ race_slug: mn-senate-49
 status: filed
 incumbent: false
 website: https://dufaultformn.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/05/28/gop-endorses-candidates-for-eden-prairie-area-legislative-races/
     accessed: 2026-07-11
@@ -43,6 +43,8 @@ SD 49 GOP endorsement ([EP Local News](https://eplocalnews.org/2026/05/28/gop-en
 See [MN Campaign Finance Board](https://cfb.mn.gov/).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary was held; all three filed candidates (DuFault, DFL-endorsed Krish Subrahmanian, and independent Kris Babler) advance directly to the Nov. 3 general election for the open seat being vacated by DFL Sen. Steve Cwodzinski. A Senate & House District 49 candidate forum is scheduled for Sept. 10, 2026, hosted by Eden Prairie Local News ([EP Local News](https://eplocalnews.org/events/senate-house-district-49-candidate-forum/?occurrence=2026-09-10)).
 
 *No information gathered yet.*
 

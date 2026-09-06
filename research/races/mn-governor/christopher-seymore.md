@@ -5,10 +5,10 @@ party: DFL
 office: Governor
 district: statewide
 race_slug: mn-governor
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://chrisseymoreforminnesotagovernore.blogspot.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_gubernatorial_and_lieutenant_gubernatorial_election,_2026
     accessed: 2026-07-11
@@ -18,6 +18,9 @@ sources:
   - url: https://chrisseymoreforminnesotagovernore.blogspot.com/?m=1
     accessed: 2026-08-11
     note: campaign blog, not a dedicated campaign website
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -47,3 +50,5 @@ In 1993, founded LCORPS (Life-Changing Out Reach Programs & Services), a nonprof
 ## News & Notes
 
 *No information gathered yet.*
+
+**2026-08-12:** Did not win the Aug. 11 DFL gubernatorial primary; Amy Klobuchar won the nomination with 88.94% of the vote. The MN SOS's published results table lists only seven DFL tickets (Klobuchar, Layne, and five minor-vote tickets) and does not report a separate Seymore vote line ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).

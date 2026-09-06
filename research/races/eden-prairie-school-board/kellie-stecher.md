@@ -8,7 +8,7 @@ race_slug: eden-prairie-school-board
 status: filed
 incumbent: false
 website: https://drkelliestecher49.com/
-last_updated: 2026-07-29
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/
     accessed: 2026-07-29
@@ -49,5 +49,7 @@ For her 2026 state Senate bid — not the school board race — Stecher's campai
 *No information gathered yet.*
 
 ## News & Notes
+
+**2026-09-05 general-election update:** Filed for one of four School Board seats; no primary held, advances directly to the Nov. 3 general election. Board-certified OB-GYN practicing in Minnesota since 2013; earned a Master of Science in Law from Northwestern Pritzker School of Law (Jan. 2025); moved to Eden Prairie in 2016 and both of her children attend Eden Prairie Schools. Priorities include incorporating parent/teacher input, school safety, student opportunity and resources, and supporting/retaining teachers ([EP Local News](https://eplocalnews.org/2026/08/21/meet-the-six-eden-prairie-school-board-candidates/)). Campaign site: votekellie.org.
 
 Candidate lists are not final: those who filed had until 5 p.m. Thursday, July 30, 2026 to withdraw ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Filings can be viewed through the [Minnesota Secretary of State's candidate-filing website](https://candidates.sos.mn.gov/).

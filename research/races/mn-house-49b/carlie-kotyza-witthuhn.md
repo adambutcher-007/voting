@@ -8,7 +8,7 @@ race_slug: mn-house-49b
 status: filed
 incumbent: true
 website: https://www.carlieforhouse.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/06/24/2026-ballots-take-shape-for-eden-prairie-voters/
     accessed: 2026-07-11
@@ -39,5 +39,7 @@ Four terms holding an Eden Prairie seat for the DFL ([EP Local News](https://epl
 See [MN Campaign Finance Board](https://cfb.mn.gov/).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary was held (one candidate per party); Kotyza-Witthuhn advances directly to face Republican Wendy Cregg on Nov. 3, seeking a third term.
 
 *No information gathered yet.*

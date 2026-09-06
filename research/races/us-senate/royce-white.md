@@ -5,10 +5,10 @@ party: Republican
 office: US Senator
 district: statewide
 race_slug: us-senate
-status: filed
+status: eliminated-in-primary
 incumbent: false
 website: https://roycewhite.us/
-last_updated: 2026-08-10
+last_updated: 2026-08-12
 sources:
   - url: https://www.startribune.com/adam-schwarze-wins-republican-gop-minnesota-senate-endorsement-michele-tafoya-primary/601845122
     accessed: 2026-07-11
@@ -26,6 +26,9 @@ sources:
     accessed: 2026-08-09
   - url: https://roycewhite.us/issues/
     accessed: 2026-08-09
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -55,6 +58,8 @@ His 2022 US House campaign submitted amended finance reports labeling more than 
 ## News & Notes
 
 *No information gathered yet.*
+
+**2026-08-12:** Eliminated in the Aug. 11 Republican primary for US Senate, finishing with 2,620 votes (10.53%) ([MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=AllwithoutJudicial&electionDate=8%2F11%2F2026%2012%3A00%3A00%20AM), accessed 2026-08-12).
 
 ## Detailed Research
 

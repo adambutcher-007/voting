@@ -5,10 +5,10 @@ party: Republican
 office: US Representative
 district: MN-3
 race_slug: us-house-mn3
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://bassforcongress.com/
-last_updated: 2026-08-10
+last_updated: 2026-09-05
 sources:
   - url: https://ballotpedia.org/Minnesota's_3rd_Congressional_District_election,_2026
     accessed: 2026-07-11
@@ -21,6 +21,12 @@ sources:
     accessed: 2026-08-10
   - url: https://bassforcongress.com/about/
     accessed: 2026-08-10
+  - url: https://www.hometownsource.com/press_and_news/psa/primary-results-bass-wins-in-3rd-congressional-district-will-face-morrison/article_4064bd52-698e-4112-a764-d89c61e2ea5c.html
+    accessed: 2026-08-12
+    note: primary results
+  - url: https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=USRepresentative&districtId=558
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -49,7 +55,11 @@ High school diploma from Blooming Prairie High School; bachelor's degree from Lu
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Won the Aug. 11 Republican primary with 55.4% of the vote over Quentin Wittrock ([Hometown Source](https://www.hometownsource.com/abc_newspapers/news/local/primary-results-bass-wins-in-3rd-congressional-district-will-face-morrison/article_d338df83-02a2-450e-b2ae-2e2f3230765b.html)). Advances to face incumbent DFL Rep. Kelly Morrison on Nov. 3.
+
 Bass and Jeremy Westby were the two Republicans on the August 11, 2026 primary ballot for MN-3, with the winner facing incumbent DFL Rep. Kelly Morrison in November ([hometownsource.com](https://www.hometownsource.com/abc_newspapers/free/3-candidates-file-in-third-congressional-district/article_1e14c605-3f5b-4e67-ae1a-c32818471212.html)).
+
+**2026-08-12:** Won the Aug. 11 Republican primary for US House MN-3 with 22,589 votes (55.43%) over Quentin Wittrock (44.57%); advances to face DFL incumbent Kelly Morrison on Nov. 3 ([hometownsource.com](https://www.hometownsource.com/press_and_news/psa/primary-results-bass-wins-in-3rd-congressional-district-will-face-morrison/article_4064bd52-698e-4112-a764-d89c61e2ea5c.html), accessed 2026-08-12; [MN SOS official results](https://electionresults.sos.mn.gov/Results/Index?ersElectionId=200&scenario=USRepresentative&districtId=558), accessed 2026-08-12).
 
 ## Detailed Research
 

@@ -8,7 +8,7 @@ race_slug: eden-prairie-school-board
 status: filed
 incumbent: true
 website: https://www.abbyforep.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/
     accessed: 2026-07-29
@@ -40,5 +40,7 @@ School board races are nonpartisan. No civic or community service beyond her sch
 *No information gathered yet.*
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary held; advances directly to the Nov. 3 general election. A School Board candidate forum is scheduled for Sept. 16, 2026 ([EP Local News](https://eplocalnews.org/events/eden-prairie-school-board-candidate-forum-2026/?occurrence=2026-09-16)).
 
 Candidate lists are not final: those who filed had until 5 p.m. Thursday, July 30, 2026 to withdraw ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Filings can be viewed through the [Minnesota Secretary of State's candidate-filing website](https://candidates.sos.mn.gov/).

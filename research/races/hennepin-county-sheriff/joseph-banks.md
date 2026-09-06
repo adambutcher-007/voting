@@ -5,10 +5,10 @@ party: nonpartisan
 office: Hennepin County Sheriff
 district: Hennepin County
 race_slug: hennepin-county-sheriff
-status: filed
+status: advanced-to-general
 incumbent: false
 website: https://www.banks4sheriff.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://www.hometownsource.com/sun_sailor/free/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html
     accessed: 2026-07-11
@@ -22,6 +22,9 @@ sources:
     accessed: 2026-08-11
   - url: https://www.hometownsource.com/sun_current/free/dawanna-witt-joseph-banks-lead-in-the-hennepin-county-sheriff-race/article_bfc6f5de-1861-11ed-b805-f7a118bff2bb.html
     accessed: 2026-08-11
+  - url: https://www.hometownsource.com/psa/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -50,7 +53,11 @@ Nonpartisan race; *no information gathered yet.*
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Confirmed on the Nov. 3 general election ballot against incumbent Dawanna Witt (no primary was required; only two candidates filed for the single seat).
+
 Previously ran for Hennepin County Sheriff against Dawanna Witt in 2022, finishing second to Witt in both the primary (35,832 votes / 22.46%) and general election (roughly a 65–35 Witt advantage); filed again for the 2026 race ([Hometown Source](https://www.hometownsource.com/sun_current/free/dawanna-witt-joseph-banks-lead-in-the-hennepin-county-sheriff-race/article_bfc6f5de-1861-11ed-b805-f7a118bff2bb.html), [Ballotpedia](https://ballotpedia.org/Joseph_Banks)).
+
+**2026-08-12:** No primary was held for Hennepin County Sheriff; only Banks and incumbent Dawanna Witt filed for the single seat, so under Minnesota law both proceed directly to the Nov. 3 general election ([hometownsource.com](https://www.hometownsource.com/psa/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html), accessed 2026-08-12).
 
 ## Detailed Research
 

@@ -5,14 +5,17 @@ party: DFL
 office: State Auditor
 district: statewide
 race_slug: mn-state-auditor
-status: filed
+status: withdrawn
 incumbent: false
 website: https://www.danformn.com/
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 sources:
   - url: https://ballotpedia.org/Minnesota_Auditor_election,_2026
     accessed: 2026-07-11
     note: listed as primary candidate
+  - url: https://www.valleynewslive.com/2026/08/12/zack-filipovich-wins-dfl-primary-minnesota-state-auditor/
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -42,3 +45,5 @@ DFL state representative, District 14B (2019-present). ([source](https://ballotp
 ## News & Notes
 
 *No information gathered yet.*
+
+**2026-08-12:** Dropped out of the DFL State Auditor race after losing the party's endorsement, leaving Zack Filipovich unopposed on the Aug. 11 primary ballot ([Valley News Live](https://www.valleynewslive.com/2026/08/12/zack-filipovich-wins-dfl-primary-minnesota-state-auditor/), accessed 2026-08-12).

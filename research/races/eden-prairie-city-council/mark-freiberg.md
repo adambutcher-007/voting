@@ -8,7 +8,7 @@ race_slug: eden-prairie-city-council
 status: filed
 incumbent: true
 website: https://markfreibergwinsep.com/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/
     accessed: 2026-07-29
@@ -43,5 +43,7 @@ City council races are nonpartisan. Freiberg served on the City's Heritage Prese
 Eden Prairie city candidates file campaign finance reports with the City; reports are posted at [City of Eden Prairie](https://www.edenprairiemn.gov/city-government/elections/city-council-candidate-information/city-council-campaign-finance-reports).
 
 ## News & Notes
+
+**2026-09-05 general-election update:** No primary held; advances directly to the Nov. 3 general election alongside fellow incumbent Kathy Nelson and five challengers. A candidate forum is scheduled for Sept. 17, 2026 ([EP Local News](https://eplocalnews.org/events/eden-prairie-city-council-forum-2026/?occurrence=2026-09-17)).
 
 Candidate lists are not final: those who filed had until 5 p.m. Thursday, July 30, 2026 to withdraw ([EP Local News, 2026-07-29](https://eplocalnews.org/2026/07/29/seven-file-for-eden-prairie-city-council-six-for-school-board/)). Filings can be viewed through the [Minnesota Secretary of State's candidate-filing website](https://candidates.sos.mn.gov/).

@@ -5,10 +5,10 @@ party: nonpartisan
 office: Hennepin County Sheriff
 district: Hennepin County
 race_slug: hennepin-county-sheriff
-status: filed
+status: advanced-to-general
 incumbent: true
 website: https://sheriffwitt.org/
-last_updated: 2026-08-11
+last_updated: 2026-09-05
 sources:
   - url: https://www.startribune.com/hennepin-county-dfl-sheriff-endorsement/601856965
     accessed: 2026-07-11
@@ -21,6 +21,9 @@ sources:
   - url: https://townhall.com/news/amy-curtis/2026/08/07/ice-threatens-to-arrest-hennepin-co-sheriff-n2680860
     accessed: 2026-08-07
     note: conservative-leaning outlet; framing differs from MPR
+  - url: https://www.hometownsource.com/psa/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html
+    accessed: 2026-08-12
+    note: primary results
 ---
 
 ## Platform
@@ -49,4 +52,8 @@ No DFL endorsement (see above). She has endorsed Anders Folk for county attorney
 
 ## News & Notes
 
+**2026-09-05 general-election update:** Confirmed on the Nov. 3 general election ballot against Joseph Banks (no primary was required; only two candidates filed for the single seat).
+
 **New, Aug. 6–7, 2026:** Witt says federal officials (ICE/DOJ) sent letters warning she could face criminal witness-tampering charges over her office's refusal to give immigration agents access to inmates for deportation; she says there is "no legal basis" for the threat and has publicly pushed back ([MPR News](https://www.mprnews.org/story/2026/08/06/hennepin-county-sheriff-dawanna-witt-says-feds-threatened-to-arrest-her), [Hoodline](https://hoodline.com/2026/08/hennepin-sheriff-witt-faces-felony-threat-from-feds-fires-back-come-get-me/)). Conservative outlet Townhall covered the same story with different framing, characterizing it as ICE responding to her non-cooperation policy ([Townhall](https://townhall.com/news/amy-curtis/2026/08/07/ice-threatens-to-arrest-hennepin-co-sheriff-n2680860)). The story broke five days before the Aug. 11 primary.
+
+**2026-08-12:** No primary was held for Hennepin County Sheriff; only Witt and Joseph Banks filed for the single seat, so under Minnesota law both proceed directly to the Nov. 3 general election ([hometownsource.com](https://www.hometownsource.com/psa/2-file-for-hennepin-county-sheriff/article_61502721-8be7-4b4a-9a16-2d48212c113a.html), accessed 2026-08-12).
