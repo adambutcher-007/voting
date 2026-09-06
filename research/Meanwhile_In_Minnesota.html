@@ -162,7 +162,7 @@ p.sub{color:var(--muted);margin-bottom:16px;font-size:.95rem}
 .cand .partypill{display:inline-block;font-size:.7rem;font-weight:800;color:#fff;border-radius:999px;padding:3px 9px;margin:6px 0}
 .cand .mini{font-size:.82rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .cand .badge{position:absolute;top:10px;right:10px;font-size:.65rem;font-weight:800;border-radius:999px;padding:3px 8px;background:var(--gold);color:#fff}
-.cand .resultbadge{position:absolute;top:10px;left:10px;font-size:.62rem;font-weight:800;border-radius:999px;padding:3px 8px;color:#fff}
+.cand .resultbadge{display:inline-block;margin-top:8px;font-size:.62rem;font-weight:800;border-radius:999px;padding:3px 8px;color:#fff}
 .resultbadge.win{background:var(--green,#12a06b)}
 .resultbadge.out{background:#8a8a8a}
 .tag.resultwin{background:color-mix(in srgb,var(--green,#12a06b) 20%,transparent);color:var(--green,#12a06b);border:1px solid var(--green,#12a06b)}
@@ -956,7 +956,6 @@ function renderRaces(){
     }).join("");
     return `<div class="cand ${isSel?"sel":""}" onclick="openCand('${r.id}',${i})">
       ${c.update?`<span class="newpill">🆕 NEW</span>`:""}
-      ${c.result?`<span class="resultbadge ${c.resultClass||''}">${c.result}</span>`:""}
       ${c.badge?`<span class="badge">${c.badge}</span>`:""}
       <h4>${c.name}</h4>
       <span class="partypill" style="background:${p.c}">${p.label}</span>
@@ -964,6 +963,7 @@ function renderRaces(){
       <div class="medalrow">${medalBtns}<span class="leanhint">your lean</span></div>
       <button class="btn ghost" style="margin-top:8px;padding:4px 12px;font-size:.75rem" onclick="event.stopPropagation();toggleSel('${r.id}',${i})">${isSel?"⭐ Selected":"☆ Compare"}</button>
       ${myMedal?`<span class="medalbadge">${myMedal}</span>`:""}
+      ${c.result?`<div><span class="resultbadge ${c.resultClass||''}">${c.result}</span></div>`:""}
     </div>`;}).join("");
   const actions=r.cands.length>1?`<div class="raceactions">
     <button class="btn primary" onclick="compare('${r.id}')">⚖️ Compare selected (${selIdx.length}/2)</button>
